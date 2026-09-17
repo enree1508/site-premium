@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Premium Locação de Guindastes e Transportes: remoção industrial, içamento de cargas e transporte de cargas indivisíveis. Sede em São Luís/MA, atendimento em todo o Brasil.">
+<link rel="icon" href="n/logo-navy.png">
+<title>Premium Locação — Guindastes, Transportes e Remoção Industrial</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+<style>
+:root{
+  --navy:#183650; --cta:#234966; --foot:#1F415F; --foot-t:#B7CEE1; --gray:#797E82; --text:#333333; --text2:#4E5861;
+  --card:#F9F9F9; --ice:#FFFFFF; --teal:#5BBCCF; --white:#FFFFFF;
+  --font:"Source Sans Pro","Source Sans 3","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--white);color:var(--text);font:400 16px/1.5 var(--font);overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding-inline:16px}
+h1,h2,h3,h4,h5{margin:0;font-family:var(--font);text-transform:uppercase}
+.title{display:block;color:var(--gray);font-size:14px;font-weight:600;text-transform:uppercase;line-height:1.5}
+.subtitle{color:var(--navy);font-size:36px;font-weight:700;line-height:1.2;margin-top:4px}
+.boxed-btn{display:inline-block;background:var(--teal);color:#fff;font-size:15px;font-weight:600;text-transform:uppercase;padding:14px 38px;border-radius:3px;transition:background .25s}
+.boxed-btn:hover{background:var(--navy);color:#fff}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;background:#fff;box-shadow:0 2px 14px rgba(24,54,80,.10);transition:box-shadow .3s}
+.hdr.fix{box-shadow:0 4px 20px rgba(24,54,80,.18)}
+.hdr .container{display:flex;align-items:center;justify-content:space-between;height:90px;transition:height .3s}
+.hdr.fix .container{height:70px}
+.logo{display:block;line-height:0}
+.logo img{height:58px;width:auto;transition:height .3s}
+.hdr.fix .logo img{height:46px}
+.logo b{font-weight:900;font-size:27px;letter-spacing:.02em}
+.logo span{font-size:10.5px;font-weight:600;letter-spacing:.3em;opacity:.9}
+.menu{display:flex;align-items:center;list-style:none;margin:0;padding:0}
+.menu>li{position:relative}
+.menu>li>a{display:block;color:var(--navy);font-size:14px;font-weight:600;text-transform:uppercase;padding:30px 15px}
+.hdr.fix .menu>li>a{padding:22px 15px}
+.menu>li>a.on,.menu>li>a:hover{color:var(--teal)}
+.menu .dd::after{content:" ▾";font-size:11px}
+.sub{position:absolute;top:100%;left:0;min-width:230px;background:#fff;list-style:none;margin:0;padding:10px 0;box-shadow:0 10px 25px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s}
+.menu>li:hover .sub,.menu>li:focus-within .sub{opacity:1;visibility:visible;transform:none}
+.sub a{display:block;padding:8px 22px;color:var(--navy);font-size:14px;font-weight:600}
+.sub a:hover{color:var(--teal)}
+.burger{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.burger i{display:block;width:26px;height:3px;background:var(--navy);margin:5px 0}
+@media (max-width:991px){
+  .burger{display:block}
+  .menu{position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 12px 20px rgba(24,54,80,.12);flex-direction:column;align-items:stretch;padding:8px 15px 18px}
+  .menu:not(.open){display:none}
+  .menu>li>a,.hdr.fix .menu>li>a{padding:12px 0;border-bottom:1px solid #E6E8EE}
+  .sub{position:static;opacity:1;visibility:visible;transform:none;background:transparent;box-shadow:none;padding:4px 0 8px 14px}
+  .sub a{color:var(--text2);padding:5px 0}
+}
+
+/* hero */
+.hero{position:relative;height:658px;max-height:92vh;min-height:480px;background:#10263a url("n/hero-subestacao-drone.jpg") center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,54,80,.55) 0%,rgba(24,54,80,.1) 40%,rgba(24,54,80,.55) 100%)}
+.hero .container{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:90px}
+.hero-lights{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;mix-blend-mode:screen}
+.hero .container{z-index:2}
+.hero .line{width:90px;height:4px;background:var(--teal);margin-bottom:22px}
+.hero h1{color:#fff;font-size:72px;font-weight:700;line-height:1.05;text-shadow:0 2px 20px rgba(0,0,0,.25)}
+@media (max-width:767px){.hero{height:520px}.hero h1{font-size:44px}}
+
+/* cta */
+.cta{background:var(--cta);padding-block:70px;color:#fff}
+.cta .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.cta h2{font-size:30px;font-weight:700;line-height:1.25;max-width:760px}
+@media (max-width:991px){.cta .row{justify-content:center;text-align:center}.cta h2{font-size:24px}}
+
+/* serviços */
+.service-section{padding:111px 0 116px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:50px}
+@media (max-width:991px){.services{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.services{grid-template-columns:1fr}.subtitle{font-size:28px}}
+.svc{display:flex;gap:20px;background:var(--card);border-radius:3px;padding:45px 30px 30px;transition:background .3s,box-shadow .3s}
+.svc:hover{background:#fff;box-shadow:0 15px 40px rgba(24,54,80,.12)}
+.svc.svc-main,.svc.svc-main:hover{background:var(--navy)}.svc.svc-main h4{color:#fff}.svc.svc-main p{color:#D5DAE6}.svc.svc-main .svc-ico{border-color:#fff;color:#fff}
+.svc-ico{flex:none;width:60px;height:60px;border-radius:50%;border:2px solid var(--teal);color:var(--teal);display:grid;place-items:center}
+.svc h4{color:var(--navy);font-size:20px;font-weight:700;line-height:1.2;margin-bottom:6px}
+.svc p{margin:0;line-height:1.75}
+
+.video-full{background:#000}
+.video-full video{width:100%;height:712px;max-height:80vh;object-fit:cover}
+
+/* sobre */
+.about{position:relative;padding:110px 0;color:#fff;background:#0f2436 url("m/guindaste-trelica.jpg") center/cover no-repeat}
+.about::before{content:"";position:absolute;inset:0;background:rgba(24,54,80,.88)}
+.about .container{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:60px}
+@media (max-width:991px){.about .container{grid-template-columns:1fr}}
+.about .title{color:#fff}
+.about .subtitle{color:#fff}
+.about .quote{font-weight:700;font-size:18px;line-height:1.6;margin:28px 0 24px}
+.about h5{font-size:16px;font-weight:700}
+.about .role{font-size:14px;opacity:.85}
+.blks{display:grid;gap:34px}
+.blk{display:flex;gap:20px}
+.blk-ico{flex:none;width:52px;height:52px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center}
+.blk h4{font-size:20px;font-weight:600;margin-bottom:6px}
+.blk p{margin:0;color:#DDE8F1}
+
+/* fala da fundadora */
+.fala{padding:90px 0 100px;background:#fff}
+.fala-head{max-width:720px;margin:0 auto 46px}
+.fala-box{position:relative;max-width:720px;margin:0 auto;background:#fff;border:1px solid #E6E8EE;border-left:6px solid var(--teal);border-radius:4px;padding:48px 52px 36px;box-shadow:0 24px 60px -30px rgba(24,54,80,.35)}
+.aspas{position:absolute;top:-34px;left:40px;width:68px;height:68px;border-radius:50%;background:var(--navy);color:#fff;font:900 64px/1 Georgia,serif;display:grid;place-items:center;padding-top:22px}
+.fala-box blockquote{margin:0;color:var(--navy);font-size:26px;line-height:1.4;font-weight:600;text-wrap:balance}
+.fala-box figcaption{display:flex;align-items:center;gap:14px;margin-top:28px;padding-top:22px;border-top:1px solid #E6E8EE}
+.ini{flex:none;width:48px;height:48px;border-radius:50%;background:var(--card);color:var(--teal);font-weight:900;display:grid;place-items:center}
+.fala-box figcaption b{display:block;color:var(--navy);font-size:17px;text-transform:uppercase}
+.fala-box figcaption span{color:var(--gray);font-size:14px;line-height:1.45}
+.fala-box figcaption .ini{color:var(--teal);font-size:16px}
+@media (max-width:600px){.fala-box{padding:44px 24px 28px}.fala-box blockquote{font-size:21px}}
+/* carrossel */
+.carousel{overflow:hidden}
+.track{display:flex;transition:transform .8s ease}
+.track figure{margin:0;flex:0 0 25%;height:346px}
+.track img{width:100%;height:100%;object-fit:cover}
+@media (max-width:991px){.track figure{flex-basis:50%}}
+@media (max-width:560px){.track figure{flex-basis:100%}}
+
+/* essência */
+.essence{background:#fff;padding:110px 0;border-top:1px solid #EEF0F3;border-bottom:1px solid #EEF0F3}
+.essence .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media (max-width:991px){.essence .container{grid-template-columns:1fr}}
+.mv h3{color:var(--navy);font-size:20px;font-weight:700;margin-bottom:8px}
+.mv p{color:var(--navy);margin:0 0 26px;line-height:1.75}
+.mv p:last-child{margin-bottom:0}
+.essence .container.valores{display:block;margin-top:70px}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+@media (max-width:991px){.vals{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.vals{grid-template-columns:1fr}}
+.val{background:var(--card);border-radius:3px;padding:30px 28px;border-top:4px solid var(--teal)}
+.val h4{color:var(--navy);font-size:19px;font-weight:700;margin-bottom:8px}
+.val p{margin:0;color:var(--text2);line-height:1.6}
+
+/* clientes */
+.clients-sec{padding:100px 0}
+.clients{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border-top:1px solid #e6e6e6;border-left:1px solid #e6e6e6}
+@media (max-width:767px){.clients{grid-template-columns:repeat(2,1fr)}}
+.client{border-right:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;min-height:130px;display:grid;place-items:center;text-align:center;padding:18px;color:var(--navy);font-weight:900;font-size:19px;line-height:1.1;text-transform:uppercase;filter:grayscale(1);opacity:.8;transition:.3s}
+.client small{display:block;font-weight:600;font-size:12px;letter-spacing:.1em;color:var(--teal);margin-top:5px}
+.client:hover{opacity:1;filter:none;background:var(--card)}
+
+/* obras em movimento */
+.obras-sec{padding:0 0 100px;overflow:hidden}
+.mq{overflow:hidden;margin-top:18px}
+.mq:first-of-type{margin-top:40px}
+.mq-track{display:flex;gap:16px;width:max-content}
+.mq-a{animation:mqA 90s linear infinite alternate}
+.mq-b{animation:mqB 100s linear infinite alternate}
+.mq:hover .mq-track{animation-play-state:paused}
+@keyframes mqA{from{transform:translateX(0)}to{transform:translateX(calc(-100% + 100vw - 32px))}}
+@keyframes mqB{from{transform:translateX(calc(-100% + 100vw - 32px))}to{transform:translateX(0)}}
+.mq-item{position:relative;margin:0;height:320px;flex:none;overflow:hidden;border-radius:3px;background:var(--navy);box-shadow:0 12px 30px -20px rgba(24,54,80,.6)}
+.mq-item img{height:100%;width:auto;max-width:none;transform:scale(1.06);transition:transform .7s ease,filter .7s ease}
+.mq-item:hover img{transform:scale(1.14)}
+.mq-item::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-18deg);animation:brilho 6s ease-in-out infinite}
+.mq-b .mq-item::after{animation-delay:1.6s}
+@keyframes brilho{0%,70%{left:-60%}88%{left:130%}100%{left:130%}}
+.mq-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;background:linear-gradient(0deg,rgba(24,54,80,.78),rgba(24,54,80,0));color:#fff;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s}
+.mq-item:hover figcaption,.mq-item:focus-within figcaption{opacity:1;transform:none}
+.mq-item em{display:block;font-style:normal;color:#9FD8E6;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.mq-item b{display:block;font-size:13px;font-weight:600;letter-spacing:.01em;line-height:1.25;text-transform:none}
+@media (max-width:600px){.mq-item{height:220px}.mq-a{animation-duration:70s}.mq-b{animation-duration:80s}}
+@media (prefers-reduced-motion:reduce){.mq{overflow-x:auto}.mq-track{animation:none}.mq-item img{transform:none}.mq-item::after{display:none}}
+/* destaque */
+.destaque{padding:0 0 110px}
+.destaque .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media (max-width:991px){.destaque .container{grid-template-columns:1fr}}
+.d-img{position:relative;border-radius:3px;overflow:hidden;background:var(--navy);box-shadow:0 30px 60px -30px rgba(24,54,80,.6)}
+.d-img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,54,80,.75) 0%,rgba(24,54,80,0) 35%);pointer-events:none}
+.d-img img{transition:transform 1.2s}.d-img:hover img{transform:scale(1.04)}
+.d-badge{position:absolute;z-index:2;left:20px;top:20px;background:var(--teal);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:2px}
+.d-cred{position:absolute;z-index:2;left:20px;bottom:14px;color:#E6EAF2;font-size:12px}
+.d-img svg,.d-img img{width:100%;height:auto;display:block}
+.d-tx p{color:var(--text2);line-height:1.75;margin:18px 0 0}
+.d-list{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px}
+.d-list li{background:var(--card);padding:14px 18px;border-left:4px solid var(--teal)}
+.d-list b{display:block;font-size:13px;text-transform:uppercase;color:var(--gray);font-weight:600}
+/* teal */
+.teal{background:#fff;padding:90px 0;border-top:1px solid #EEF0F3}
+.teal .container{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media (max-width:991px){.teal .container{grid-template-columns:1fr}}
+.teal h2{color:var(--navy);font-size:28px;font-weight:800;line-height:1.2;margin-bottom:20px}
+.teal p{color:var(--text2);margin:0 0 14px;line-height:1.6}
+.teal img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:3px}
+
+/* bases */
+.bases-sec{padding:100px 0}
+.bases-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center;margin-top:40px}
+@media (max-width:991px){.bases-wrap{grid-template-columns:1fr}}
+.map{max-width:360px;width:100%;margin-inline:auto}
+.map svg{width:100%;height:auto;display:block}
+.pin{animation:ping 2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes ping{0%{opacity:.8;transform:scale(1)}100%{opacity:0;transform:scale(3)}}
+.bases{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media (max-width:560px){.bases{grid-template-columns:1fr}}
+.base{background:var(--card);border-radius:3px;padding:26px}
+.base h3{color:#000;font-size:18px;font-weight:600;margin-bottom:6px}
+.base p{margin:0;line-height:1.6;overflow-wrap:anywhere}
+
+footer{background:#fff;color:var(--text2);padding:70px 0 0;border-top:4px solid var(--teal)}
+.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+@media (max-width:991px){.fgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.fgrid{grid-template-columns:1fr}}
+footer h4{color:var(--navy);font-size:16px;font-weight:700;margin-bottom:10px}
+footer p{margin:0;line-height:1.7;overflow-wrap:anywhere}
+footer a:hover{color:var(--teal)}
+footer .logo img{height:70px;margin-bottom:16px}
+.copy{margin-top:50px;border-top:1px solid #E6E8EE;color:var(--gray);padding:22px 0;font-size:14px;text-align:center}
+
+.wa{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+
+.up{transition:transform 1.2s ease}
+.up.wait{transform:translateY(40px)}
+@media (prefers-reduced-motion:reduce){.up,.track{transition:none}.up.wait{transform:none}.pin{animation:none;opacity:0}}
+</style>
+</head>
+<body>
+
+
+<header class="hdr" id="hdr">
+  <div class="container">
+    <a class="logo" href="#home"><img src="n/logo-navy.png" alt="Premium Locação — Guindastes e Transportes"></a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    <ul class="menu" id="menu">
+      <li><a class="on" href="#home">Home</a></li>
+      <li><a class="dd" href="#servicos">Serviços</a>
+        <ul class="sub">
+          <li><a href="#servico-em-campo">Remoção Industrial</a></li>
+          <li><a href="#servico-em-campo">Içamento de Cargas</a></li>
+          <li><a href="#servico-em-campo">Transporte de Cargas Indivisíveis</a></li>
+        </ul></li>
+      <li><a class="dd" href="#servicos">Locação</a>
+        <ul class="sub">
+          <li><a href="#servicos">Guindastes</a></li>
+          <li><a href="#servicos">Caminhão Munck</a></li>
+          <li><a href="#servicos">Cavalo Mecânico</a></li>
+          <li><a href="#servicos">Caminhão Carroceria</a></li>
+          <li><a href="#servicos">Caminhão Pipa</a></li>
+        </ul></li>
+      <li><a href="#clientes">Clientes</a></li>
+      <li><a href="#servico-em-campo">Obras</a></li>
+      <li><a href="#qualidade">Qualidade</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero" aria-label="Destaque">
+    <canvas class="hero-lights" id="luzes" aria-hidden="true"></canvas>
+    <div class="container">
+      <div class="line"></div>
+      <h1>Excelência em<br>Remoção Industrial</h1>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div class="container row">
+      <h2>Há mais de 15 anos atuando em diversos segmentos de mercado</h2>
+      <a class="boxed-btn" href="#contato">Contato</a>
+    </div>
+  </div>
+
+  <section class="service-section" id="servicos">
+    <div class="container">
+      <span class="title up">Energia, subestações, siderúrgicas, metalúrgicas, portos, construtoras, indústrias e obras de infraestrutura</span>
+      <h2 class="subtitle up">Nas áreas</h2>
+      <div class="services">
+        <div class="svc svc-main up"><span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Remoção industrial</h4><p>Nosso carro-chefe: transformadores de todos os portes</p></div></div>
+        <div class="svc up"><span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Içamento de cargas</h4><p>Guindastes com operador e plano de içamento</p></div></div>
+        <div class="svc up"><span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Caminhão munck</h4><p>Carga, descarga e posicionamento</p></div></div>
+        <div class="svc up"><span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Transporte de cargas indivisíveis</h4><p>Carretas e pranchas para cargas especiais</p></div></div>
+        <div class="svc up"><span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Pioneira no Maranhão</h4><p>A primeira do segmento no estado</p></div></div>
+        <div class="svc up"><span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Nossa sede</h4><p>Matriz em São Luís MA</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="video-full">
+    <video src="m/video-guindaste-2.mp4" poster="m/video-guindaste-2.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo da frota da Premium Locação"></video>
+  </div>
+
+  <section class="about" id="sobre">
+    <div class="container">
+      <div class="up">
+        <span class="title">Nós nunca</span>
+        <h2 class="subtitle">Paramos</h2>
+        <p class="quote">Estamos sempre em busca de novas soluções, pensando em levar a você operações práticas, seguras e cada vez mais rápidas na execução de cada serviço.</p>
+        <h5>Premium Locação</h5>
+        <span class="role">Guindastes e Transportes</span>
+      </div>
+      <div class="blks up">
+        <div class="blk"><span class="blk-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Há mais de 15 anos</h4><p>que a Premium Locação abriu caminho como a primeira empresa de guindastes, transportes e remoção industrial do Maranhão. Ao longo dos anos participamos de obras reconhecidas, como a construção da Base de Lançamento de Foguetes de Alcântara, alcançando clientes e parceiros em todo o Nordeste.</p></div></div>
+        <div class="blk"><span class="blk-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Transformadores de todos os portes</h4><p>Nosso diferencial é a remoção e movimentação de transformadores de qualquer tamanho, dos menores aos de grande porte, com planejamento, segurança e equipe de alta performance.</p></div></div>
+        <div class="blk"><span class="blk-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Bases em São Luís e Minas Gerais</h4><p>Uma comunicação rápida com nossos coordenadores em cada base e um engajamento full time de nossos gestores operacionais, antecipando riscos e correspondendo às exigências normativas em todos os estados do Brasil.</p></div></div>
+        <div class="blk"><span class="blk-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Segurança no trabalho</h4><p>Com equipe certificada em NR-10, NR-11, NR-12 e NR-35, toda nossa equipe operacional passa por constantes treinamentos, preservando a vida dos clientes e de nossos colaboradores.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fala" aria-label="Palavra da fundadora">
+    <div class="container">
+      <div class="fala-head up">
+        <span class="title">Palavra da fundadora</span>
+        <h2 class="subtitle">O que nos move</h2>
+      </div>
+      <figure class="fala-box up">
+        <span class="aspas" aria-hidden="true">“</span>
+        <blockquote>Antes de mover uma carga, movemos pessoas. Levar humanidade a cada atendimento, inovar em cada operação e entregar mais valor do que o cliente esperava: é isso que nos move.</blockquote>
+        <figcaption><span class="ini" aria-hidden="true">IM</span><span><b>Ivete Modesto</b>CEO e fundadora da Premium Locação, a primeira empresa de guindastes, transportes e remoção industrial do Maranhão</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="carousel" aria-label="Fotos de obras e frota">
+    <div class="track" id="track">
+      <figure><img src="n/trafo-weg.jpg" alt="Transformador posicionado em subestação" loading="lazy"></figure>
+      <figure><img src="m/guindaste-xcmg.jpg" alt="Guindaste da frota" loading="lazy"></figure>
+      <figure><img src="n/frota-guindaste-amarelo.jpg" alt="Guindaste amarelo da Premium Locação" loading="lazy"></figure>
+      <figure><img src="n/trafo-macacos.jpg" alt="Transformador sobre macacos hidráulicos" loading="lazy"></figure>
+      <figure><img src="m/munck-2426.jpg" alt="Caminhão munck" loading="lazy"></figure>
+      <figure><img src="n/frota-guindaste-vermelho.jpg" alt="Guindaste com lança estendida" loading="lazy"></figure>
+      <figure><img src="n/trafo-subestacao.jpg" alt="Remoção de transformador em subestação" loading="lazy"></figure>
+      <figure><img src="m/cavalo-volvo.jpg" alt="Cavalo mecânico" loading="lazy"></figure>
+      <figure><img src="m/carroceria.jpg" alt="Caminhão carroceria" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section class="essence" id="qualidade">
+    <div class="container">
+      <div class="up">
+        <span class="title">Nossa essência é</span>
+        <h2 class="subtitle">Transformar desafios em resultados acima do padrão e satisfação total do cliente</h2>
+      </div>
+      <div class="mv up">
+        <h3>Nossa missão</h3>
+        <p>Continuar levando soluções em guindastes, transportes e remoção industrial com atendimento de alta qualidade, segurança e resultado acima do padrão.</p>
+        <h3>Nossa visão</h3>
+        <p>Oferecer soluções consistentes, de alta qualidade, inovadoras e baseadas em valor para nossos negócios e satisfação total aos nossos clientes.</p>
+      </div>
+    </div>
+    <div class="container valores">
+      <div class="val-head"><span class="title">O que nos guia</span><h2 class="subtitle">Nossos valores</h2></div>
+      <div class="vals">
+        <div class="val up"><h4>Transparência</h4><p>Relações claras com clientes, parceiros e colaboradores, do orçamento à entrega.</p></div>
+        <div class="val up"><h4>Humildade</h4><p>Ouvir, aprender e evoluir a cada obra, respeitando cada pessoa envolvida.</p></div>
+        <div class="val up"><h4>Segurança</h4><p>Preservar a vida da equipe, dos clientes e da comunidade em todas as operações.</p></div>
+        <div class="val up"><h4>Qualidade</h4><p>Soluções consistentes e resultado acima do padrão em cada serviço.</p></div>
+        <div class="val up"><h4>Inovação</h4><p>Busca constante por novas tecnologias e métodos mais práticos e eficientes.</p></div>
+        <div class="val up"><h4>Satisfação do cliente</h4><p>Atendimento próximo e compromisso total com o resultado de quem nos contrata.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients-sec" id="clientes">
+    <div class="container">
+      <span class="title up">Empresas que confiam na Premium</span>
+      <h2 class="subtitle up">Clientes</h2>
+      <div class="clients up">
+        <div class="client">Equatorial Energia<small>Maranhão</small></div>
+        <div class="client">Equatorial Energia<small>Piauí</small></div>
+        <div class="client">Equatorial Energia<small>Alagoas</small></div>
+        <div class="client">Trael</div>
+        <div class="client">Comtrafo</div>
+        <div class="client">Marka<small>Engenharia</small></div>
+        <div class="client">Transpés</div>
+        <a class="client" href="#contato" style="filter:none;opacity:1;background:var(--teal);color:#fff">Sua empresa<small style="color:#fff">Fale conosco</small></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="obras-sec" id="servico-em-campo">
+    <div class="container">
+      <span class="title up">Remoção industrial · Içamento de cargas · Transporte de cargas indivisíveis</span>
+      <h2 class="subtitle up">Obras realizadas</h2>
+    </div>
+      <div class="mq"><div class="mq-track mq-a">
+          <figure class="mq-item"><img src="n/obra-carga-indivisivel.jpg" alt="Transformador em carreta extensível"><figcaption><em>Transporte de cargas indivisíveis</em><b>Transformador em carreta extensível</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-viaduto.jpg" alt="Viaduto rodoviário · vigas metálicas"><figcaption><em>Içamento de cargas</em><b>Viaduto rodoviário · vigas metálicas</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-tanque.jpg" alt="Tanque de armazenamento"><figcaption><em>Içamento de cargas</em><b>Tanque de armazenamento</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-silos-agi.jpg" alt="Montagem de silos e correia transportadora"><figcaption><em>Içamento de cargas</em><b>Montagem de silos e correia transportadora</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-secador-agi.jpg" alt="Montagem de secador de grãos"><figcaption><em>Içamento de cargas</em><b>Montagem de secador de grãos</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-estrutura-tanques.jpg" alt="Estrutura metálica em parque de tanques"><figcaption><em>Içamento de cargas</em><b>Estrutura metálica em parque de tanques</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-dois-guindastes.jpg" alt="Operação com dois guindastes"><figcaption><em>Içamento de cargas</em><b>Operação com dois guindastes</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-guindastes-duplo.jpg" alt="Içamento sincronizado em obra"><figcaption><em>Içamento de cargas</em><b>Içamento sincronizado em obra</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-transporte-guindaste.jpg" alt="Mobilização de guindastes"><figcaption><em>Transporte de cargas indivisíveis</em><b>Mobilização de guindastes</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-mobilizacao.jpg" alt="Guindaste a caminho da obra"><figcaption><em>Frota própria</em><b>Guindaste a caminho da obra</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/frota-dois-sany.jpg" alt="Guindastes SANY de grande porte"><figcaption><em>Frota própria</em><b>Guindastes SANY de grande porte</b></figcaption></figure>
+      </div></div>
+      <div class="mq"><div class="mq-track mq-b">
+          <figure class="mq-item"><img src="n/obra-subestacao-equipe.jpg" alt="Troca de transformador em subestação"><figcaption><em>Remoção industrial</em><b>Troca de transformador em subestação</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-torres.jpg" alt="Montagem de torres metálicas"><figcaption><em>Içamento de cargas</em><b>Montagem de torres metálicas</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/remocao-subestacao.jpg" alt="Deslizamento de transformador sobre trilhos"><figcaption><em>Remoção industrial</em><b>Deslizamento de transformador sobre trilhos</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-subestacao-movel.jpg" alt="Subestação móvel sobre carreta"><figcaption><em>Transporte de cargas indivisíveis</em><b>Subestação móvel sobre carreta</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-icamento-estrutura.jpg" alt="Estrutura içada em obra"><figcaption><em>Içamento de cargas</em><b>Estrutura içada em obra</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-trafo-base-subestacao.jpg" alt="Transformador posicionado na base"><figcaption><em>Remoção industrial</em><b>Transformador posicionado na base</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/munck-equatorial.jpg" alt="Acessórios do transformador com munck"><figcaption><em>Içamento de cargas</em><b>Acessórios do transformador com munck</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/trafo-carreta.jpg" alt="Transformador em carreta prancha"><figcaption><em>Transporte de cargas indivisíveis</em><b>Transformador em carreta prancha</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-ponte-vigas.jpg" alt="Montagem de vigas metálicas de ponte"><figcaption><em>Içamento de cargas</em><b>Montagem de vigas metálicas de ponte</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-xcmg-poco.jpg" alt="Guindaste XCMG em operação industrial"><figcaption><em>Içamento de cargas</em><b>Guindaste XCMG em operação industrial</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-guindaste-bombeio.jpg" alt="Instalação de equipamento em campo"><figcaption><em>Içamento de cargas</em><b>Instalação de equipamento em campo</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/frota-sany-232.jpg" alt="Guindaste SANY em preparação"><figcaption><em>Frota própria</em><b>Guindaste SANY em preparação</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-embarcacao-historica.jpg" alt="Transporte de embarcação"><figcaption><em>Nossa história</em><b>Transporte de embarcação</b></figcaption></figure>
+      </div></div>
+  </section>
+
+  <section class="destaque" id="obras">
+    <div class="container">
+      <div class="d-img up">
+        <img src="n/alcantara-lancamento.jpg" alt="Lançamento de foguete na torre do Centro de Lançamento de Alcântara" loading="lazy"><span class="d-badge">Alcântara · Maranhão</span><span class="d-cred">Imagem: livro “Centro de Lançamento de Alcântara”</span>
+      </div>
+      <div class="d-tx up">
+        <span class="title">Obra em destaque</span>
+        <h2 class="subtitle">Base de Lançamento de Foguetes de Alcântara</h2>
+        <p>A Premium Locação participou da construção da base de lançamento de foguetes de Alcântara, no Maranhão, uma das obras mais reconhecidas do país.</p>
+        <p>Um projeto que exigiu planejamento, segurança e precisão em cada movimentação, e que mostra o nível das obras que a Premium está preparada para atender.</p>
+        <ul class="d-list">
+          <li><b>Local</b>Alcântara · Maranhão</li>
+          <li><b>Tipo de obra</b>Infraestrutura aeroespacial</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="teal">
+    <div class="container">
+      <div class="up">
+        <h2>Premium Locação: a solução completa em guindastes e remoção industrial em todo o Brasil</h2>
+        <p>Profissionais experientes e de alta performance oferecem soluções personalizadas para suas necessidades de içamento, transporte e remoção industrial, com foco em resultados acima do padrão.</p>
+        <p>Frota própria de guindastes, caminhões munck, cavalos mecânicos, carrocerias e caminhão pipa garante a eficiência dos serviços.</p>
+        <p>Serviços especializados de remoção e movimentação de transformadores de todos os portes atendem concessionárias de energia e indústrias.</p>
+        <p>Bases em São Luís/MA e Minas Gerais, com profissionais e equipamentos próximos a você, garantem agilidade e qualidade no atendimento.</p>
+        <p>Mais de 15 anos de experiência e o pioneirismo no Maranhão garantem a expertise da Premium Locação em entregar satisfação total ao cliente.</p>
+      </div>
+      <img class="up" src="n/trafo-base.jpg" alt="Transformador instalado pela Premium Locação" loading="lazy">
+    </div>
+  </section>
+
+  <section class="bases-sec" id="contato">
+    <div class="container">
+      <span class="title up">Onde estamos</span>
+      <h2 class="subtitle up">Localizados no Maranhão, atendemos todo o Brasil</h2>
+      <div class="bases-wrap">
+        <div class="map up">
+          <svg viewBox="-6 -6 162 215" role="img" aria-label="Mapa do Maranhão com a sede em São Luís">
+            <path d="M53,0 L50,4 L51,5 L50,8 L51,13 L47,14 L50,17 L49,23 L45,27 L46,32 L45,34 L41,37 L42,38 L41,45 L39,50 L36,52 L36,55 L34,57 L34,62 L28,68 L28,72 L25,74 L23,79 L21,81 L18,81 L0,97 L2,97 L2,95 L4,93 L9,95 L14,95 L15,94 L19,98 L27,101 L27,105 L29,108 L30,122 L28,126 L29,127 L28,128 L29,131 L28,134 L24,138 L26,139 L28,138 L30,140 L28,143 L31,144 L40,155 L43,153 L46,153 L48,151 L50,151 L53,154 L53,160 L49,161 L46,164 L46,166 L44,168 L45,172 L42,177 L44,177 L47,182 L54,188 L52,192 L54,192 L56,194 L57,199 L59,201 L61,200 L64,201 L65,200 L67,202 L69,197 L69,183 L67,182 L64,171 L68,168 L74,146 L78,142 L86,140 L88,137 L93,136 L97,131 L99,131 L101,127 L106,122 L113,121 L119,124 L122,122 L127,122 L129,120 L130,111 L125,107 L124,97 L127,92 L130,90 L129,88 L130,86 L126,79 L126,75 L128,71 L125,69 L124,65 L129,59 L130,53 L135,47 L141,46 L146,41 L149,35 L148,30 L145,31 L143,30 L141,31 L139,30 L138,31 L131,31 L128,28 L125,28 L116,24 L110,25 L108,22 L101,29 L98,27 L92,29 L85,13 L83,14 L81,13 L84,10 L81,7 L79,10 L78,9 L79,6 L77,8 L75,8 L74,6 L70,10 L67,6 L69,5 L67,6 L68,8 L66,10 L65,5 L62,3 L62,1 L62,3 L61,4 L60,2 L59,4 L58,2 L57,3 L56,2 L56,0 L54,3Z" fill="#183650"/>
+            <circle class="pin" cx="82" cy="17" r="5" fill="#5BBCCF"/>
+            <circle cx="82" cy="17" r="5" fill="#5BBCCF" stroke="#fff" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="bases up">
+          <div class="base"><h3>Matriz</h3><p>Av. Santos Dumont, nº 80 · Salas 201 a 204<br>Tirirical · São Luís – MA</p></div>
+          <div class="base"><h3>Base Minas Gerais</h3><p>Minas Gerais</p></div>
+          <div class="base"><h3>Atendimento</h3><p>Todo o Nordeste e todos os estados do Brasil</p></div>
+          <div class="base"><h3>Comercial</h3><p><a href="https://wa.me/5598991711704" target="_blank" rel="noopener">(98) 9 9171-1704</a><br><a href="mailto:diretoria@premiumlocacao.com.br">diretoria@<wbr>premiumlocacao.com.br</a></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="fgrid">
+      <div class="f-brand"><a class="logo" href="#home"><img src="n/logo-navy.png" alt="Premium Locação — Guindastes e Transportes"></a><p>Remoção industrial, içamento de cargas e transporte de cargas indivisíveis.</p></div>
+      <div><h4>Endereço</h4><p>Av. Santos Dumont, nº 80<br>Salas 201, 202, 203 e 204<br>Tirirical · São Luís – MA</p></div>
+      <div><h4>Contato comercial</h4><p><a href="mailto:diretoria@premiumlocacao.com.br">diretoria@<wbr>premiumlocacao.com.br</a><br><a href="https://wa.me/5598991711704" target="_blank" rel="noopener">(98) 9 9171-1704</a></p></div>
+      <div><h4>Base de apoio</h4><p>Minas Gerais</p><h4 style="margin-top:18px">Redes sociais</h4><p><a href="https://instagram.com/premiumlocacao" target="_blank" rel="noopener">@premiumlocacao</a></p></div>
+    </div>
+    <div class="copy">© 2026 Premium Locação. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5598991711704" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.1Z"/></svg>
+</a>
+
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var h=document.getElementById('hdr'),b=document.getElementById('burger'),m=document.getElementById('menu');
+  addEventListener('scroll',function(){h.classList.toggle('fix',scrollY>200)},{passive:true});
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+  if(!reduce&&'IntersectionObserver' in window){
+    var els=[].slice.call(document.querySelectorAll('.up'));
+    els.forEach(function(el){if(el.getBoundingClientRect().top>innerHeight)el.classList.add('wait')});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('wait');io.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }
+
+  // luzes dos equipamentos entrando e saindo do pátio
+  (function(){
+    var c=document.getElementById('luzes'); if(!c||reduce) return;
+    var x=c.getContext('2d'), W,H,dpr=Math.min(2,devicePixelRatio||1);
+    function size(){var r=c.getBoundingClientRect();W=r.width;H=r.height;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+    size(); addEventListener('resize',size);
+    // rotas (proporção da tela): entrada pelo portão e circulação no pátio
+    var rotas=[
+      [[-.05,.92],[.25,.86],[.45,.80],[.62,.70],[.70,.52],[.72,.30],[.80,.12],[1.05,.05]],
+      [[1.05,.88],[.80,.84],[.58,.78],[.40,.62],[.36,.40],[.30,.18],[.10,.08],[-.05,.10]],
+      [[.50,1.05],[.52,.85],[.55,.66],[.62,.55],[.85,.50],[1.05,.46]],
+      [[-.05,.50],[.18,.52],[.34,.60],[.48,.74],[.60,1.05]]
+    ];
+    function pt(r,t){var n=r.length-1,i=Math.min(n-1,Math.floor(t*n)),f=t*n-i,a=r[i],b=r[i+1];return [(a[0]+(b[0]-a[0])*f)*W,(a[1]+(b[1]-a[1])*f)*H]}
+    var veics=[]; for(var k=0;k<7;k++) veics.push({r:k%rotas.length,t:Math.random(),v:.018+Math.random()*.02,dir:k%2?1:-1});
+    var beacons=[[.30,.40],[.66,.58],[.78,.28],[.45,.86],[.20,.70]].map(function(b,i){return {x:b[0],y:b[1],ph:i*1.3}});
+    function glow(px,py,r,col,a){var g=x.createRadialGradient(px,py,0,px,py,r);g.addColorStop(0,'rgba('+col+','+a+')');g.addColorStop(1,'rgba('+col+',0)');x.fillStyle=g;x.beginPath();x.arc(px,py,r,0,7);x.fill()}
+    var last=performance.now();
+    function frame(now){
+      var dt=Math.min(.05,(now-last)/1000); last=now;
+      x.clearRect(0,0,W,H);
+      veics.forEach(function(v){
+        v.t+=v.v*dt*v.dir; if(v.t>1)v.t=0; if(v.t<0)v.t=1;
+        var rota=rotas[v.r];
+        for(var j=12;j>=0;j--){var tt=v.t-v.dir*j*.006; if(tt<0||tt>1)continue; var q=pt(rota,tt); glow(q[0],q[1],6+j*.4,'255,236,190',(1-j/13)*.18)}
+        var p=pt(rota,v.t), q2=pt(rota,Math.min(1,Math.max(0,v.t+v.dir*.004)));
+        var ang=Math.atan2(q2[1]-p[1],q2[0]-p[0]), ox=Math.cos(ang+1.57)*4, oy=Math.sin(ang+1.57)*4;
+        glow(p[0]+ox,p[1]+oy,22,'255,248,225',.55); glow(p[0]-ox,p[1]-oy,22,'255,248,225',.55);
+        glow(p[0]+ox,p[1]+oy,4,'255,255,255',1); glow(p[0]-ox,p[1]-oy,4,'255,255,255',1);
+      });
+      beacons.forEach(function(b){var a=Math.max(0,Math.sin(now/260+b.ph)); glow(b.x*W,b.y*H,26,'246,198,0',a*.6); glow(b.x*W,b.y*H,4,'255,230,90',a)});
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
+  var t=document.getElementById('track'),i=0;
+  function per(){return innerWidth<=560?1:innerWidth<=991?2:4}
+  if(!reduce)setInterval(function(){var max=t.children.length-per();i=i>=max?0:i+1;t.style.transform='translateX(-'+(i*100/per())+'%)'},3000);
+  addEventListener('resize',function(){i=0;t.style.transform='none'});
+})();
+</script>
+
+</body>
+</html>
