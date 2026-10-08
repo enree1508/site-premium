@@ -1,12 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Premium Locação de Guindastes e Transportes: remoção industrial, içamento de cargas e transporte de cargas indivisíveis. Sede em São Luís/MA, atendimento em todo o Brasil.">
-<link rel="icon" href="logo-navy.png">
-<title>Premium Locação — Guindastes, Transportes e Remoção Industrial</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Premium Locação · Guindastes, Transportes e Remoção Industrial</title>
+<meta name="description" content="Premium Locação: a primeira empresa de guindastes, transportes e remoção industrial do Maranhão. Remoção de transformadores, içamento de cargas e transporte de cargas indivisíveis em todo o Brasil.">
+<meta property="og:title" content="Premium Locação · Guindastes e Transportes">
+<meta property="og:description" content="Remoção industrial, içamento de cargas e transporte de cargas indivisíveis. Sede em São Luís/MA, atendimento em todo o Brasil.">
+<meta property="og:image" content="n/hero-subestacao-drone.jpg">
+<link rel="icon" href="n/logo-navy.png">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@400;500&display=swap">
 <style>
 :root{
   --navy:#183650; --cta:#234966; --foot:#1F415F; --foot-t:#B7CEE1; --gray:#797E82; --text:#333333; --text2:#4E5861;
@@ -29,17 +36,14 @@ h1,h2,h3,h4,h5{margin:0;font-family:var(--font);text-transform:uppercase}
 /* header */
 .hdr{position:sticky;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;background:#fff;box-shadow:0 2px 14px rgba(24,54,80,.10);transition:box-shadow .3s}
 .hdr.fix{box-shadow:0 4px 20px rgba(24,54,80,.18)}
-.hdr .container{display:flex;align-items:center;justify-content:space-between;height:90px;transition:height .3s}
-.hdr.fix .container{height:70px}
+.hdr .container{display:flex;align-items:center;justify-content:space-between;height:90px}
 .logo{display:block;line-height:0}
-.logo img{height:58px;width:auto;transition:height .3s}
-.hdr.fix .logo img{height:46px}
+.logo img{height:58px;width:auto}
 .logo b{font-weight:900;font-size:27px;letter-spacing:.02em}
 .logo span{font-size:10.5px;font-weight:600;letter-spacing:.3em;opacity:.9}
 .menu{display:flex;align-items:center;list-style:none;margin:0;padding:0}
 .menu>li{position:relative}
 .menu>li>a{display:block;color:var(--navy);font-size:14px;font-weight:600;text-transform:uppercase;padding:30px 15px}
-.hdr.fix .menu>li>a{padding:22px 15px}
 .menu>li>a.on,.menu>li>a:hover{color:var(--teal)}
 .menu .dd::after{content:" ▾";font-size:11px}
 .sub{position:absolute;top:100%;left:0;min-width:230px;background:#fff;list-style:none;margin:0;padding:10px 0;box-shadow:0 10px 25px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s}
@@ -52,13 +56,13 @@ h1,h2,h3,h4,h5{margin:0;font-family:var(--font);text-transform:uppercase}
   .burger{display:block}
   .menu{position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 12px 20px rgba(24,54,80,.12);flex-direction:column;align-items:stretch;padding:8px 15px 18px}
   .menu:not(.open){display:none}
-  .menu>li>a,.hdr.fix .menu>li>a{padding:12px 0;border-bottom:1px solid #E6E8EE}
+  .menu>li>a,.hdr .menu>li>a{padding:12px 0;border-bottom:1px solid #E6E8EE}
   .sub{position:static;opacity:1;visibility:visible;transform:none;background:transparent;box-shadow:none;padding:4px 0 8px 14px}
   .sub a{color:var(--text2);padding:5px 0}
 }
 
 /* hero */
-.hero{position:relative;height:658px;max-height:92vh;min-height:480px;background:#10263a url("hero-subestacao-drone.jpg") center/cover no-repeat}
+.hero{position:relative;height:658px;max-height:92vh;min-height:480px;background:#10263a url("n/hero-subestacao-drone.jpg") center/cover no-repeat}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,54,80,.55) 0%,rgba(24,54,80,.1) 40%,rgba(24,54,80,.55) 100%)}
 .hero .container{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:90px}
 .hero-lights{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;mix-blend-mode:screen}
@@ -85,11 +89,9 @@ h1,h2,h3,h4,h5{margin:0;font-family:var(--font);text-transform:uppercase}
 .svc h4{color:var(--navy);font-size:20px;font-weight:700;line-height:1.2;margin-bottom:6px}
 .svc p{margin:0;line-height:1.75}
 
-.video-full{background:#000}
-.video-full video{width:100%;height:712px;max-height:80vh;object-fit:cover}
 
 /* sobre */
-.about{position:relative;padding:110px 0;color:#fff;background:#0f2436 url("guindaste-trelica.jpg") center/cover no-repeat}
+.about{position:relative;padding:110px 0;color:#fff;background:#0f2436 url("m/guindaste-trelica.jpg") center/cover no-repeat}
 .about::before{content:"";position:absolute;inset:0;background:rgba(24,54,80,.88)}
 .about .container{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:60px}
 @media (max-width:991px){.about .container{grid-template-columns:1fr}}
@@ -126,7 +128,7 @@ h1,h2,h3,h4,h5{margin:0;font-family:var(--font);text-transform:uppercase}
 
 /* essência */
 .essence{background:#fff;padding:110px 0;border-top:1px solid #EEF0F3;border-bottom:1px solid #EEF0F3}
-.essence .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.essence .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 @media (max-width:991px){.essence .container{grid-template-columns:1fr}}
 .mv h3{color:var(--navy);font-size:20px;font-weight:700;margin-bottom:8px}
 .mv p{color:var(--navy);margin:0 0 26px;line-height:1.75}
@@ -154,20 +156,22 @@ h1,h2,h3,h4,h5{margin:0;font-family:var(--font);text-transform:uppercase}
 .mq-track{display:flex;gap:16px;width:max-content}
 .mq-a{animation:mqA 90s linear infinite alternate}
 .mq-b{animation:mqB 100s linear infinite alternate}
+.mq-c{animation:mqA 110s linear infinite alternate}
 .mq:hover .mq-track{animation-play-state:paused}
 @keyframes mqA{from{transform:translateX(0)}to{transform:translateX(calc(-100% + 100vw - 32px))}}
 @keyframes mqB{from{transform:translateX(calc(-100% + 100vw - 32px))}to{transform:translateX(0)}}
-.mq-item{position:relative;margin:0;height:320px;flex:none;overflow:hidden;border-radius:3px;background:var(--navy);box-shadow:0 12px 30px -20px rgba(24,54,80,.6)}
+.mq-item{position:relative;margin:0;height:280px;flex:none;overflow:hidden;border-radius:3px;background:var(--navy);box-shadow:0 12px 30px -20px rgba(24,54,80,.6)}
 .mq-item img{height:100%;width:auto;max-width:none;transform:scale(1.06);transition:transform .7s ease,filter .7s ease}
 .mq-item:hover img{transform:scale(1.14)}
 .mq-item::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-18deg);animation:brilho 6s ease-in-out infinite}
 .mq-b .mq-item::after{animation-delay:1.6s}
+.mq-c .mq-item::after{animation-delay:3.2s}
 @keyframes brilho{0%,70%{left:-60%}88%{left:130%}100%{left:130%}}
 .mq-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;background:linear-gradient(0deg,rgba(24,54,80,.78),rgba(24,54,80,0));color:#fff;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s}
 .mq-item:hover figcaption,.mq-item:focus-within figcaption{opacity:1;transform:none}
 .mq-item em{display:block;font-style:normal;color:#9FD8E6;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
 .mq-item b{display:block;font-size:13px;font-weight:600;letter-spacing:.01em;line-height:1.25;text-transform:none}
-@media (max-width:600px){.mq-item{height:220px}.mq-a{animation-duration:70s}.mq-b{animation-duration:80s}}
+@media (max-width:600px){.mq-item{height:220px}.mq-a{animation-duration:70s}.mq-b{animation-duration:80s}.mq-c{animation-duration:90s}}
 @media (prefers-reduced-motion:reduce){.mq{overflow-x:auto}.mq-track{animation:none}.mq-item img{transform:none}.mq-item::after{display:none}}
 /* destaque */
 .destaque{padding:0 0 110px}
@@ -215,46 +219,431 @@ footer a:hover{color:var(--teal)}
 footer .logo img{height:70px;margin-bottom:16px}
 .copy{margin-top:50px;border-top:1px solid #E6E8EE;color:var(--gray);padding:22px 0;font-size:14px;text-align:center}
 
+/* apresentação (home) */
+.ap{padding:110px 0 90px;background:#fff}
+.ap-intro{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:start}
+@media (max-width:991px){.ap-intro{grid-template-columns:1fr;gap:24px}}
+.ap-texto p{margin:0 0 16px;color:var(--text2);font-size:17px;line-height:1.75}
+.ap-fatos{list-style:none;margin:60px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #E6E8EE}
+.ap-fatos li{padding:28px 20px 0 0;border-right:1px solid #E6E8EE;margin-right:20px}
+.ap-fatos li:last-child{border-right:0;margin-right:0}
+.ap-fatos b{display:block;color:var(--navy);font-size:30px;font-weight:700;line-height:1.1}
+.ap-fatos span{display:block;color:var(--gray);font-size:14px;margin-top:6px;text-transform:uppercase;letter-spacing:.04em}
+@media (max-width:767px){.ap-fatos{grid-template-columns:1fr 1fr;gap:0}.ap-fatos li{border-right:0;margin:0;padding:22px 12px 0 0}.ap-fatos b{font-size:24px}}
+.ent{background:var(--card);padding:100px 0}
+.ent-head{max-width:720px}
+.ent-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:46px}
+@media (max-width:991px){.ent-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.ent-grid{grid-template-columns:1fr}}
+.ent-card{background:#fff;border-radius:3px;padding:34px 28px;border-top:4px solid var(--teal);transition:box-shadow .3s,transform .3s}
+.ent-card:hover{box-shadow:0 18px 40px -18px rgba(24,54,80,.3);transform:translateY(-4px)}
+.ent-ico{width:52px;height:52px;border-radius:50%;background:rgba(91,188,207,.14);color:var(--navy);display:grid;place-items:center;margin-bottom:20px}
+.ent-card h3{color:var(--navy);font-size:18px;font-weight:700;line-height:1.25;margin-bottom:10px}
+.ent-card p{margin:0;color:var(--text2);line-height:1.65}
+.conf{padding:110px 0;background:#fff}
+.conf-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media (max-width:991px){.conf-wrap{grid-template-columns:1fr;gap:36px}}
+.conf-foto{margin:0;position:relative;border-radius:3px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(24,54,80,.55)}
+.conf-foto img{width:100%;height:auto;display:block}
+.conf-foto figcaption{background:var(--navy);color:#fff;font-size:14px;font-weight:600;padding:14px 20px}
+.conf-lista{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:22px}
+.conf-lista li{display:flex;gap:16px;align-items:flex-start}
+.conf-ico{flex:none;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center}
+.conf-ico svg{width:22px;height:22px}
+.conf-lista b{display:block;color:var(--navy);font-size:17px;margin-bottom:3px}
+.conf-lista div{color:var(--text2);line-height:1.6}
+.ap-cta{background:var(--navy);padding:70px 0;color:#fff}
+.ap-cta-row{display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between}
+.ap-cta h2{font-size:30px;font-weight:700;line-height:1.2}
+.ap-cta p{margin:8px 0 0;color:#D5DAE6;font-size:17px}
+.ap-cta-btns{display:flex;flex-wrap:wrap;gap:14px}
+.ghost-btn{display:inline-block;border:2px solid #fff;color:#fff;font-size:15px;font-weight:600;text-transform:uppercase;padding:12px 30px;border-radius:3px;transition:background .25s,color .25s}
+.ghost-btn:hover{background:#fff;color:var(--navy)}
+@media (max-width:767px){.ap-cta h2{font-size:24px}}
+
+/* textos alinhados (justificados) */
+.ap-texto p,.conf-lista div,.blk p,.about .quote,.teal p,.mv p,.d-tx p,.ap-cta p,.fala-box blockquote{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.ent-card h3{min-height:2.5em}
+.ent-card p,.val p,.svc p{text-align:left}
+@media (max-width:560px){.ap-texto p,.conf-lista div,.blk p,.teal p,.mv p,.d-tx p{text-align:left}}
+.conf-lista b{text-align:left}
+@media (max-width:560px){.ent-card h3{min-height:0}}
+
+.q-foto{margin:34px 0 0;border-radius:3px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(24,54,80,.5)}
+.q-foto img{width:100%;height:auto;display:block}
+.q-foto figcaption{background:var(--navy);color:#fff;font-size:14px;font-weight:600;padding:12px 18px}
+/* home estilo institucional */
+.saiba{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--navy);font-weight:700;font-size:15px;border-bottom:2px solid var(--teal);padding-bottom:3px;transition:gap .25s,color .25s}
+.saiba:hover{gap:12px;color:var(--teal)}
+.v-intro{padding:110px 0 100px;background:#fff}
+.v-intro-wrap{max-width:900px}
+.v-intro h2{color:var(--navy);font-size:44px;font-weight:700;line-height:1.12}
+.v-intro-wrap p{color:var(--text2);font-size:19px;line-height:1.7;margin:24px 0 0;text-align:justify;hyphens:auto}
+@media (max-width:767px){.v-intro h2{font-size:30px}.v-intro-wrap p{font-size:17px;text-align:left}}
+.v-pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:64px}
+@media (max-width:991px){.v-pilares{grid-template-columns:1fr}}
+.v-img{overflow:hidden;border-radius:3px;background:var(--navy)}
+.v-img img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .8s ease}
+.v-pilar:hover .v-img img,.v-card:hover .v-img img{transform:scale(1.05)}
+.v-pilar h3{color:var(--navy);font-size:22px;font-weight:700;margin:22px 0 10px}
+.v-pilar p{margin:0;color:var(--text2);line-height:1.7}
+.v-mais{margin-top:56px;text-align:center}
+.v-comp{background:var(--card);padding:110px 0}
+.v-comp-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+@media (max-width:991px){.v-comp-wrap{grid-template-columns:1fr}}
+.v-comp-tx p{color:var(--text2);line-height:1.75;margin:18px 0 0;text-align:justify;hyphens:auto}
+.v-comp-fotos{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;align-items:end}
+.v-comp-fotos figure{margin:0;border-radius:3px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(24,54,80,.5)}
+.v-comp-fotos img{width:100%;display:block;object-fit:cover}
+.v-comp-fotos .f1 img{aspect-ratio:16/10.5}
+.v-comp-fotos .f2{margin-bottom:-40px}
+.v-comp-fotos .f2 img{aspect-ratio:3/4}
+@media (max-width:560px){.v-comp-fotos{grid-template-columns:1fr}.v-comp-fotos .f2{margin:0}}
+.v-resp{background:var(--navy);color:#fff;padding:100px 0}
+.v-resp-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:64px}
+@media (max-width:991px){.v-resp-wrap{grid-template-columns:1fr;gap:24px}}
+.v-resp .title{color:#9FD8E6}.v-resp .subtitle{color:#fff}
+.v-resp p{color:#D5DAE6;line-height:1.75;margin:0 0 16px;text-align:justify;hyphens:auto}
+.v-resp .saiba{color:#fff}
+.v-evo{padding:110px 0;background:#fff}
+.v-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:44px}
+@media (max-width:991px){.v-cards{grid-template-columns:1fr}}
+.v-card{background:var(--card);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+.v-card .v-img{border-radius:0}
+.v-card-tx{padding:28px 28px 32px;display:flex;flex-direction:column;flex:1}
+.v-card-tx h3{color:var(--navy);font-size:22px;font-weight:700;margin-bottom:10px}
+.v-card-tx p{margin:0;color:var(--text2);line-height:1.7;flex:1}
+.v-card-tx .saiba{align-self:flex-start}
+@media (max-width:560px){.v-comp-tx p,.v-resp p{text-align:left}}
+
+/* página propósito */
+.p-head{padding:100px 0 110px;background:#fff}
+.p-head-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+@media (max-width:991px){.p-head-wrap{grid-template-columns:1fr;gap:40px}}
+.p-h1{color:var(--navy);font-size:46px;font-weight:700;line-height:1.1;margin:6px 0 26px}
+.p-head p{color:var(--text2);font-size:18px;line-height:1.75;margin:0 0 16px;text-align:justify;hyphens:auto}
+.p-frase{margin:26px 0 18px;padding:6px 0 6px 24px;border-left:6px solid var(--teal);color:var(--navy);font-size:32px;font-weight:700;line-height:1.2;text-transform:none}
+.p-head .p-fecho{font-style:italic;color:var(--gray)}
+.p-foto{margin:0;border-radius:3px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(24,54,80,.55)}
+.p-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+@media (max-width:767px){.p-h1{font-size:32px}.p-frase{font-size:24px}.p-head p{text-align:left;font-size:17px}}
+.p-vals{background:var(--card);padding:100px 0}
+.p-vals-head{max-width:720px}
+.p-vals-head p{color:var(--text2);font-size:17px;line-height:1.7;margin:14px 0 0}
+.p-vals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
+@media (max-width:991px){.p-vals-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.p-vals-grid{grid-template-columns:1fr}}
+.p-val{background:#fff;border-radius:3px;padding:34px 30px;border-top:4px solid var(--teal)}
+.p-val-ico{width:52px;height:52px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;margin-bottom:20px}
+.p-val h3{color:var(--navy);font-size:19px;font-weight:700;line-height:1.25;margin-bottom:10px;min-height:2.5em}
+.p-val p{margin:0;color:var(--text2);line-height:1.65}
+@media (max-width:600px){.p-val h3{min-height:0}}
+.p-faq{padding:100px 0;background:#fff}
+.p-faq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+@media (max-width:991px){.p-faq-wrap{grid-template-columns:1fr;gap:24px}}
+.p-faq-item{border-bottom:1px solid #E6E8EE}
+.p-faq-item:first-child{border-top:1px solid #E6E8EE}
+.p-faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;color:var(--navy);font-size:18px;font-weight:700}
+.p-faq-item summary::-webkit-details-marker{display:none}
+.p-faq-item summary span{flex:none;width:28px;height:28px;border-radius:50%;border:2px solid var(--teal);position:relative;transition:transform .3s}
+.p-faq-item summary span::before,.p-faq-item summary span::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--teal);transform:translate(-50%,-50%)}
+.p-faq-item summary span::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+.p-faq-item[open] summary span::after{transform:translate(-50%,-50%) rotate(0)}
+.p-faq-item p{margin:0 0 24px;color:var(--text2);line-height:1.75;max-width:640px}
+
+/* página transparência */
+.t-head{padding:90px 0 40px;background:#fff}
+.t-fotos{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;margin-top:34px}
+.t-fotos figure{margin:0;border-radius:3px;overflow:hidden}
+.t-fotos img{width:100%;height:420px;object-fit:cover;display:block}
+@media (max-width:767px){.t-fotos{grid-template-columns:1fr}.t-fotos img{height:260px}}
+.t-comp{padding:70px 0 100px;background:#fff}
+.t-comp-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+@media (max-width:991px){.t-comp-wrap{grid-template-columns:1fr;gap:20px}}
+.t-comp p{color:var(--text2);font-size:18px;line-height:1.75;margin:0 0 18px;text-align:justify;hyphens:auto}
+.t-comp .t-fecho{color:var(--navy)}
+@media (max-width:560px){.t-comp p{text-align:left;font-size:17px}}
+.t-links{background:var(--card);padding:100px 0}
+.t-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
+@media (max-width:991px){.t-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.t-grid{grid-template-columns:1fr}}
+.t-card{display:flex;flex-direction:column;background:#fff;border-radius:3px;padding:32px 28px;border-top:4px solid var(--teal);transition:box-shadow .3s,transform .3s}
+a.t-card:hover{box-shadow:0 18px 40px -18px rgba(24,54,80,.3);transform:translateY(-4px)}
+.t-ico{width:52px;height:52px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;margin-bottom:20px}
+.t-card h3{color:var(--navy);font-size:19px;font-weight:700;margin-bottom:10px}
+.t-card p{margin:0;color:var(--text2);line-height:1.65;flex:1}
+.t-go{display:inline-flex;align-items:center;gap:8px;margin-top:18px;color:var(--navy);font-weight:700;font-size:15px;border-bottom:2px solid var(--teal);padding-bottom:3px;align-self:flex-start}
+
+/* páginas de serviço */
+.sv-hero{padding:90px 0 100px;background:#fff}
+.sv-hero .title a{color:var(--teal)}
+.sv-hero-wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media (max-width:991px){.sv-hero-wrap{grid-template-columns:1fr;gap:36px}}
+.sv-hero p{color:var(--text2);font-size:17px;line-height:1.75;margin:0 0 16px;text-align:justify;hyphens:auto}
+.sv-hero .sv-lead{color:var(--navy);font-size:20px;font-weight:600;line-height:1.55;text-align:left}
+.sv-btns{margin-top:28px}
+.sv-foto{margin:0;border-radius:3px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(24,54,80,.55)}
+.sv-foto img{width:100%;aspect-ratio:4/4.4;object-fit:cover;display:block}
+@media (max-width:560px){.sv-hero p{text-align:left}}
+.sv-etapas{background:var(--card);padding:100px 0}
+.sv-grid{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:none}
+@media (max-width:991px){.sv-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.sv-grid{grid-template-columns:1fr}}
+.sv-grid li{background:#fff;border-radius:3px;padding:30px 26px;border-top:4px solid var(--teal)}
+.sv-n{display:block;color:var(--teal);font-size:34px;font-weight:700;line-height:1;margin-bottom:16px}
+.sv-grid h3{color:var(--navy);font-size:18px;font-weight:700;line-height:1.25;margin-bottom:10px;min-height:2.5em}
+.sv-grid p{margin:0;color:var(--text2);line-height:1.65}
+@media (max-width:560px){.sv-grid h3{min-height:0}}
+.sv-onde{padding:100px 0;background:#fff}
+body[data-view="remocao-industrial"] .sv-onde{background:var(--card)}
+.sv-onde-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center}
+@media (max-width:991px){.sv-onde-wrap{grid-template-columns:1fr}}
+.sv-tags{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
+@media (max-width:560px){.sv-tags{grid-template-columns:1fr}}
+.sv-tags li{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:600}
+.sv-tags svg{flex:none;color:var(--teal)}
+.sv-dest{margin:28px 0 0;padding:18px 22px;background:var(--card);border-left:4px solid var(--teal);color:var(--navy);font-weight:600;line-height:1.6}
+.sv-fotos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sv-fotos figure{margin:0;border-radius:3px;overflow:hidden;background:var(--navy)}
+.sv-fotos img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sv-fotos figcaption{color:#fff;font-size:13px;font-weight:600;padding:10px 14px}
+.sv-outros{background:var(--navy);padding:60px 0;color:#fff}
+.sv-outros-wrap{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+.sv-outros h2{font-size:26px;font-weight:700}
+.sv-outros-links{display:flex;flex-wrap:wrap;gap:14px}
+.sv-outros-links a{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,.7);color:#fff;font-weight:600;padding:12px 20px;border-radius:3px;transition:background .25s,color .25s}
+.sv-outros-links a:hover{background:#fff;color:var(--navy)}
+
+/* remoção industrial: conteúdo extra */
+.ri-2col{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+@media (max-width:991px){.ri-2col{grid-template-columns:1fr;gap:24px}}
+.ri-txt p{color:var(--text2);font-size:17px;line-height:1.8;margin:0 0 18px;text-align:justify;hyphens:auto}
+.ri-sub{color:var(--text2);font-size:17px;line-height:1.7;margin:18px 0 0}
+.ri-oque{padding:100px 0;background:#fff;border-top:1px solid #EEF0F3}
+.ri-quando{padding:100px 0;background:var(--card)}
+.ri-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+@media (max-width:991px){.ri-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.ri-grid{grid-template-columns:1fr}}
+.ri-card{background:#fff;border-radius:3px;padding:32px 28px;border-top:4px solid var(--teal)}
+.ri-card h3{color:var(--navy);font-size:19px;font-weight:700;margin-bottom:10px}
+.ri-card p{margin:0;color:var(--text2);line-height:1.65}
+.ri-tec{padding:100px 0;background:var(--card)}
+.ri-tec-list{list-style:none;margin:0;padding:0;counter-reset:t;display:grid;gap:0}
+.ri-tec-list li{counter-increment:t;display:grid;grid-template-columns:52px 1fr;column-gap:18px;padding:22px 0;border-bottom:1px solid #E6E8EE}
+.ri-tec-list li:first-child{border-top:1px solid #E6E8EE}
+.ri-tec-list li::before{content:counter(t,decimal-leading-zero);grid-row:span 2;color:var(--teal);font-size:28px;font-weight:700;line-height:1}
+.ri-tec-list b{color:var(--navy);font-size:18px;margin-bottom:6px}
+.ri-tec-list span{color:var(--text2);line-height:1.7}
+.sv-6 .sv-grid{grid-template-columns:repeat(3,1fr)}
+@media (max-width:991px){.sv-6 .sv-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.sv-6 .sv-grid{grid-template-columns:1fr}}
+.ri-seg{padding:100px 0;background:var(--navy);color:#fff}
+.ri-seg .title{color:#9FD8E6}.ri-seg .subtitle{color:#fff}.ri-seg .ri-sub{color:#D5DAE6}
+.ri-seg-list{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.ri-seg-list li{display:flex;gap:14px;align-items:flex-start;color:#E6EAF2;line-height:1.65}
+.ri-seg-list svg{flex:none;margin-top:3px;color:#5BBCCF}
+.ri-inov{padding:100px 0;background:var(--card)}
+@media (max-width:560px){.ri-txt p{text-align:left}}
+
+.ri-oq2{padding:100px 0;background:#fff;border-top:1px solid #EEF0F3}
+.ri-oq-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:26px 30px}
+@media (max-width:600px){.ri-oq-list{grid-template-columns:1fr}}
+.ri-oq-list li{display:flex;gap:14px;align-items:flex-start}
+.ri-ok{flex:none;width:34px;height:34px;border-radius:50%;background:rgba(91,188,207,.15);color:var(--navy);display:grid;place-items:center}
+.ri-oq-list b{display:block;color:var(--navy);font-size:17px;margin-bottom:4px}
+.ri-oq-list span{color:var(--text2);line-height:1.6}
+.ri-rec{padding:100px 0;background:#fff;border-top:1px solid #EEF0F3}
+.ri-rec-grid{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #DDE1E7;border-left:1px solid #DDE1E7}
+@media (max-width:991px){.ri-rec-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.ri-rec-grid{grid-template-columns:1fr}}
+.ri-rec-grid li{background:#fff;padding:28px 26px;border-right:1px solid #DDE1E7;border-bottom:1px solid #DDE1E7}
+.ri-rec-grid b{display:block;color:var(--navy);font-size:18px;margin-bottom:8px}
+.ri-rec-grid span{color:var(--text2);line-height:1.6}
+.ri-van{padding:100px 0;background:#fff}
+.ri-van .ri-card{background:var(--card)}
+.ri-faq{background:#fff;border-top:1px solid #EEF0F3}
+
+.ri-agil{padding:100px 0;background:#fff;border-top:1px solid #EEF0F3}
+.ri-agil-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+@media (max-width:991px){.ri-agil-head{grid-template-columns:1fr;gap:18px}}
+.ri-agil-head p{margin:0;color:var(--text2);font-size:17px;line-height:1.75;text-align:justify;hyphens:auto}
+.ri-ag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 30px;margin-top:50px}
+@media (max-width:991px){.ri-ag-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.ri-ag-grid{grid-template-columns:1fr}.ri-agil-head p{text-align:left}}
+.ri-ag{display:flex;gap:16px;align-items:flex-start}
+.ri-ag-ico{flex:none;width:52px;height:52px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center}
+.ri-ag h3{color:var(--navy);font-size:18px;font-weight:700;margin-bottom:6px}
+.ri-ag p{margin:0;color:var(--text2);line-height:1.65}
+.ri-frase{margin:56px 0 0;padding:26px 30px;background:var(--navy);color:#fff;font-size:22px;font-weight:700;line-height:1.35;border-radius:3px;border-left:6px solid var(--teal)}
+.ri-ciclo{padding:100px 0;background:var(--card)}
+.ri-fases{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
+@media (max-width:991px){.ri-fases{grid-template-columns:1fr}}
+.ri-fase{position:relative;background:#fff;border-radius:3px;padding:34px 30px 30px;border-top:4px solid var(--teal)}
+.ri-fase-n{position:absolute;top:22px;right:26px;color:rgba(91,188,207,.25);font-size:64px;font-weight:700;line-height:1}
+.ri-fase h3{color:var(--navy);font-size:24px;font-weight:700}
+.ri-fase-sub{margin:6px 0 18px;color:var(--teal);font-weight:600}
+.ri-fase ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ri-fase li{display:flex;gap:10px;align-items:flex-start;color:var(--text2);line-height:1.55}
+.ri-fase li svg{flex:none;margin-top:3px;color:var(--teal)}
+
+body[data-view="remocao-industrial"] .sv-etapas{background:#fff;border-top:1px solid #EEF0F3}
+body[data-view="remocao-industrial"] .sv-grid li{background:var(--card)}
+/* içamento extra */
+.ic-op{padding:100px 0;background:#fff;border-top:1px solid #EEF0F3}
+.ic-op-wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:64px;align-items:center}
+@media (max-width:991px){.ic-op-wrap{grid-template-columns:1fr;gap:30px}}
+.ic-num{background:var(--navy);color:#fff;border-radius:3px;padding:50px 40px;border-left:8px solid var(--teal)}
+.ic-num b{display:block;font-size:110px;font-weight:700;line-height:.9;color:#fff}
+.ic-num span{display:block;margin-top:16px;font-size:20px;font-weight:600;color:#D5DAE6;line-height:1.35}
+.ic-op .subtitle{margin-bottom:22px}
+.ic-check{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+@media (max-width:560px){.ic-check{grid-template-columns:1fr}.ic-num b{font-size:80px}}
+.ic-check li{display:flex;gap:10px;align-items:flex-start;color:var(--navy);font-weight:600;line-height:1.45}
+.ic-check svg{flex:none;margin-top:2px;color:var(--teal)}
+body[data-view="icamento"] .sv-etapas{background:#fff;border-top:1px solid #EEF0F3}
+body[data-view="icamento"] .sv-grid li{background:var(--card)}
+body[data-view="icamento"] .sv-onde{background:var(--card)}
+
+body[data-view="transporte"] .sv-foto img{aspect-ratio:auto;height:auto;object-fit:contain}
+.sv-fotos{align-items:start}
+.sv-fotos img{aspect-ratio:auto;height:auto;object-fit:contain}
+/* transparência: ESG e humanidade */
+.esg{padding:100px 0;background:var(--card)}
+.esg-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+@media (max-width:991px){.esg-head{grid-template-columns:1fr;gap:18px}}
+.esg-head p{margin:0;color:var(--text2);font-size:17px;line-height:1.75;text-align:justify;hyphens:auto}
+.esg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}
+@media (max-width:991px){.esg-grid{grid-template-columns:1fr}}
+.esg-col{background:#fff;border-radius:3px;padding:34px 30px;border-top:4px solid var(--teal)}
+.esg-top{display:flex;align-items:center;justify-content:space-between}
+.esg-letra{font-size:64px;font-weight:700;line-height:1;color:var(--navy)}
+.esg-ico{width:56px;height:56px;border-radius:50%;background:rgba(91,188,207,.15);color:var(--navy);display:grid;place-items:center}
+.esg-tag{display:block;margin-top:16px;color:var(--teal);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.esg-col h3{color:var(--navy);font-size:22px;font-weight:700;margin:4px 0 12px}
+.esg-col>p{margin:0 0 18px;color:var(--text2);line-height:1.65}
+.esg-col ul{list-style:none;margin:0;padding:18px 0 0;border-top:1px solid #E6E8EE;display:grid;gap:12px}
+.esg-col li{display:flex;gap:10px;align-items:flex-start;color:var(--text2);line-height:1.5}
+.esg-col li svg{flex:none;margin-top:3px;color:var(--teal)}
+.hum{padding:100px 0;background:var(--navy);color:#fff}
+.hum .title{color:#9FD8E6}.hum .subtitle{color:#fff}
+.hum-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+@media (max-width:991px){.hum-wrap{grid-template-columns:1fr;gap:30px}}
+.hum-txt{color:#D5DAE6;font-size:17px;line-height:1.75;margin:22px 0 0;text-align:justify;hyphens:auto}
+.hum-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:560px){.hum-grid{grid-template-columns:1fr}.hum-txt,.esg-head p{text-align:left}}
+.hum-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:26px 24px;border-top:3px solid var(--teal)}
+.hum-card h3{color:#fff;font-size:18px;font-weight:700;margin-bottom:8px}
+.hum-card p{margin:0;color:#D5DAE6;line-height:1.6}
+body[data-view="transparencia"] .t-links{background:#fff}
+body[data-view="transparencia"] .t-card{background:var(--card)}
+
+/* plano de içamento animado */
+.pl{padding:100px 0;background:#fff;border-top:1px solid #EEF0F3}
+.pl-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+@media (max-width:991px){.pl-head{grid-template-columns:1fr;gap:18px}}
+.pl-head p{margin:0;color:var(--text2);font-size:17px;line-height:1.75;text-align:justify;hyphens:auto}
+.pl-board{margin-top:44px;border-radius:6px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(11,30,48,.55),0 0 0 1px #E1E5EA;background:#fff}
+.pl-board svg{display:block;width:100%;height:auto}
+.pl-steps{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);gap:8px;counter-reset:s}
+.pl-steps li{counter-increment:s;position:relative;padding:12px 10px 10px;border-top:3px solid #E1E5EA;color:var(--gray);font-size:13px;font-weight:600;line-height:1.3;transition:color .3s,border-color .3s}
+.pl-steps li::before{content:counter(s,decimal-leading-zero);display:block;font-size:12px;font-weight:700;margin-bottom:4px}
+.pl-steps li.done{border-top-color:rgba(91,188,207,.5);color:var(--text2)}
+.pl-steps li.on{border-top-color:var(--teal);color:var(--navy)}
+@media (max-width:991px){.pl-steps{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:560px){.pl-steps{grid-template-columns:1fr 1fr}.pl-head p{text-align:left}}
+
+/* página frota */
+.fr-hero img{aspect-ratio:auto!important;height:auto;max-height:640px;object-fit:cover}
+.fr-dest{padding:100px 0;background:var(--card)}
+.fr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px}
+@media (max-width:991px){.fr-grid{grid-template-columns:1fr}}
+.fr-card{background:#fff;border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+.fr-img{background:var(--navy);overflow:hidden}
+.fr-img img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;transition:transform .8s}
+.fr-card:hover .fr-img img{transform:scale(1.04)}
+.fr-tx{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
+.fr-tx h3{color:var(--navy);font-size:21px;font-weight:700;margin-bottom:10px}
+.fr-tx p{margin:0 0 18px;color:var(--text2);line-height:1.65;flex:1}
+.fr-spec{list-style:none;margin:0;padding:0;border-top:1px solid #E6E8EE}
+.fr-spec li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #E6E8EE}
+.fr-spec span{color:var(--gray);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.fr-spec b{color:var(--navy);font-size:15px;text-align:right}
+.fr-all{padding:100px 0;background:#fff}
+.fr-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:22px 30px}
+@media (max-width:600px){.fr-list{grid-template-columns:1fr}}
+.fr-list li{display:flex;gap:14px;align-items:flex-start}
+.fr-ok{flex:none;width:34px;height:34px;border-radius:50%;background:rgba(91,188,207,.15);color:var(--navy);display:grid;place-items:center}
+.fr-list b{display:block;color:var(--navy);font-size:17px;margin-bottom:3px}
+.fr-list span{color:var(--text2);line-height:1.5}
+body[data-view="frota"] .ri-van{background:var(--card)}
+body[data-view="frota"] .ri-van .ri-card{background:#fff}
+
+/* equipamentos */
+.eq{padding:40px 0 100px;background:var(--card)}
+.eq-row{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:70px 0;border-bottom:1px solid #E1E5EA}
+.eq-row:last-child{border-bottom:0}
+.eq-rev .eq-img{order:2}
+@media (max-width:991px){.eq-row{grid-template-columns:1fr;gap:30px;padding:50px 0}.eq-rev .eq-img{order:0}}
+.eq-img{position:relative;margin:0;border-radius:3px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(24,54,80,.55);background:var(--navy)}
+.eq-img img{width:100%;aspect-ratio:4/3.4;object-fit:cover;display:block}
+.eq-n{position:absolute;left:0;top:0;background:var(--navy);color:#fff;font-size:22px;font-weight:700;padding:12px 18px;border-bottom-right-radius:3px}
+.eq-tx p{color:var(--text2);font-size:17px;line-height:1.75;margin:18px 0 0;text-align:justify;hyphens:auto}
+.eq-list{list-style:none;margin:22px 0 4px;padding:0;display:grid;gap:10px}
+.eq-list li{display:flex;gap:10px;align-items:flex-start;color:var(--navy);font-weight:600}
+.eq-list svg{flex:none;margin-top:3px;color:var(--teal)}
+@media (max-width:560px){.eq-tx p{text-align:left}}
+body[data-view="frota"] .ri-van{background:#fff}
+body[data-view="frota"] .ri-van .ri-card{background:var(--card)}
+
+#eq-guindastes .eq-img img,#eq-munck .eq-img img,#eq-pranchas .eq-img img{aspect-ratio:auto;height:auto}
+/* páginas: cada segmento aparece só quando clicado */
+[data-page]{display:none}
+body[data-view="home"] [data-page="home"],body[data-view="servicos"] [data-page="servicos"],body[data-view="sobre"] [data-page="sobre"],body[data-view="proposito"] [data-page="proposito"],body[data-view="transparencia"] [data-page="transparencia"],body[data-view="remocao-industrial"] [data-page="remocao-industrial"],body[data-view="icamento"] [data-page="icamento"],body[data-view="transporte"] [data-page="transporte"],body[data-view="frota"] [data-page="frota"],body[data-view="obras"] [data-page="obras"],body[data-view="clientes"] [data-page="clientes"],body[data-view="qualidade"] [data-page="qualidade"],body[data-view="contato"] [data-page="contato"]{display:block}
+body[data-view="home"] .hero{height:calc(88vh - 90px);min-height:480px;max-height:none}
+body[data-view="obras"] .obras-sec{padding-top:100px}
+.page-in{animation:pageIn .5s ease}
+@keyframes pageIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.page-in{animation:none}}
+
 .wa{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.25)}
 
 .up{transition:transform 1.2s ease}
 .up.wait{transform:translateY(40px)}
 @media (prefers-reduced-motion:reduce){.up,.track{transition:none}.up.wait{transform:none}.pin{animation:none;opacity:0}}
 </style>
-</head>
-<body>
-
 
 <header class="hdr" id="hdr">
   <div class="container">
-    <a class="logo" href="#home"><img src="logo-navy.png" alt="Premium Locação — Guindastes e Transportes"></a>
+    <a class="logo" href="#home"><img src="n/logo-navy.png" alt="Premium Locação — Guindastes e Transportes"></a>
     <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
     <ul class="menu" id="menu">
       <li><a class="on" href="#home">Home</a></li>
       <li><a class="dd" href="#servicos">Serviços</a>
         <ul class="sub">
-          <li><a href="#servico-em-campo">Remoção Industrial</a></li>
-          <li><a href="#servico-em-campo">Içamento de Cargas</a></li>
-          <li><a href="#servico-em-campo">Transporte de Cargas Indivisíveis</a></li>
+          <li><a href="#remocao-industrial">Remoção Industrial</a></li>
+          <li><a href="#icamento">Içamento de Cargas</a></li>
+          <li><a href="#transporte">Transporte de Cargas Indivisíveis</a></li>
         </ul></li>
-      <li><a class="dd" href="#servicos">Locação</a>
+      <li><a class="dd" href="#frota">Locação</a>
         <ul class="sub">
-          <li><a href="#servicos">Guindastes</a></li>
-          <li><a href="#servicos">Caminhão Munck</a></li>
-          <li><a href="#servicos">Cavalo Mecânico</a></li>
-          <li><a href="#servicos">Caminhão Carroceria</a></li>
-          <li><a href="#servicos">Caminhão Pipa</a></li>
+          <li><a href="#frota">Equipamentos</a></li>
         </ul></li>
+      <li><a class="dd" href="#sobre">Sobre</a>
+        <ul class="sub">
+          <li><a href="#sobre">Quem somos</a></li>
+          <li><a href="#transparencia">Transparência</a></li>
+        </ul></li>
+      <li><a href="#proposito">Propósito</a></li>
       <li><a href="#clientes">Clientes</a></li>
-      <li><a href="#servico-em-campo">Obras</a></li>
+      <li><a href="#obras">Obras</a></li>
       <li><a href="#qualidade">Qualidade</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
   </div>
 </header>
 
-<main id="home">
-  <section class="hero" aria-label="Destaque">
+<main id="s-home" lang="pt-BR">
+  <section data-page="home" class="hero" aria-label="Destaque">
     <canvas class="hero-lights" id="luzes" aria-hidden="true"></canvas>
     <div class="container">
       <div class="line"></div>
@@ -262,14 +651,676 @@ footer .logo img{height:70px;margin-bottom:16px}
     </div>
   </section>
 
-  <div class="cta">
+  <section data-page="home" class="v-intro" aria-label="Apresentação">
+    <div class="container v-intro-wrap up">
+      <h2>Movimentando cargas que levam energia e desenvolvimento ao Brasil</h2>
+      <p>Somos a primeira empresa de guindastes, transportes e remoção industrial do Maranhão. Atuamos com segurança e responsabilidade em cada etapa da operação, do planejamento e do içamento ao transporte de cargas indivisíveis e à remoção de transformadores em subestações, levando nossa estrutura a todo o país.</p>
+    </div>
+    <div class="container v-pilares">
+      <article class="v-pilar up"><div class="v-img"><img src="n/trafo-weg.jpg" alt="Transformador de grande porte posicionado em subestação" loading="lazy"></div><h3>Remoção industrial</h3><p>Nosso carro-chefe. Removemos e posicionamos transformadores de todos os portes, para que a energia continue chegando a quem precisa.</p><a class="saiba" href="#remocao-industrial">Saiba mais sobre Remoção industrial<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="v-pilar up"><div class="v-img"><img src="n/g-britagem-icamento.jpg" alt="Guindaste em operação em usina de britagem" loading="lazy"></div><h3>Içamento de cargas</h3><p>Guindastes e caminhões munck com operador e plano de içamento para indústrias, portos, usinas e obras de infraestrutura.</p><a class="saiba" href="#icamento">Saiba mais sobre Içamento<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="v-pilar up"><div class="v-img"><img src="n/obra-subestacao-movel.jpg" alt="Subestação móvel transportada sobre carreta extensa" loading="lazy"></div><h3>Transporte de cargas indivisíveis</h3><p>Carretas e pranchas preparadas para levar cargas especiais com segurança, da origem até a base de instalação.</p><a class="saiba" href="#transporte">Saiba mais sobre Transporte<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+    </div>
+    <div class="container v-mais up"><a class="boxed-btn" href="#servicos">Saiba mais sobre o que fazemos</a></div>
+  </section>
+
+  <section data-page="home" class="v-comp" aria-label="Compromisso com a vida">
+    <div class="container v-comp-wrap">
+      <div class="v-comp-tx up">
+        <span class="title">Nosso compromisso</span>
+        <h2 class="subtitle">Agilidade para atender, segurança para entregar</h2>
+        <p>Antes de mover uma carga, cuidamos das pessoas. A segurança da nossa equipe, dos clientes e das comunidades próximas às obras vem antes de qualquer prazo.</p>
+        <p>Nossa equipe é certificada nas normas NR-10, NR-11, NR-12 e NR-35 e passa por treinamentos constantes. Cada frente de trabalho tem área isolada, sinalização e análise de risco antes de qualquer movimentação.</p>
+        <a class="saiba" href="#qualidade">Saiba mais sobre nossa qualidade<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="v-comp-fotos up">
+        <figure class="f1"><img src="n/g-munck-subestacao.jpg" alt="Munck em subestação com área isolada por cones" loading="lazy"></figure>
+        <figure class="f2"><img src="n/g-equipe-macacos.jpg" alt="Equipe ajustando macacos hidráulicos sob transformador" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="home" class="v-resp" aria-label="Responsabilidade na prática">
+    <div class="container v-resp-wrap up">
+      <div>
+        <span class="title">Responsabilidade na prática</span>
+        <h2 class="subtitle">Atuamos com responsabilidade ambiental, social e transparência na gestão</h2>
+      </div>
+      <div>
+        <p>Planejamos cada operação para reduzir riscos ao meio ambiente e às comunidades por onde passamos, valorizamos quem trabalha conosco e mantemos relações claras com clientes, parceiros e colaboradores, do orçamento à entrega.</p>
+        <p>Como empresa integrada à Equatorial Energia no Maranhão, no Piauí e em Alagoas, seguimos as exigências do setor elétrico em todas as subestações onde atuamos.</p>
+        <a class="saiba" href="#contato">Fale com a nossa equipe<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="home" class="v-evo" aria-label="Como a Premium está evoluindo">
+    <div class="container">
+      <h2 class="subtitle up">Como a Premium está evoluindo</h2>
+      <div class="v-cards">
+        <article class="v-card up"><div class="v-img"><img src="n/g-comando-hidraulico.jpg" alt="Operador no comando hidráulico durante remoção de transformador" loading="lazy"></div><div class="v-card-tx"><h3>Pessoas</h3><p>Investimos em treinamento e também no cuidado com a saúde mental da equipe. Em setembro, recebemos profissionais de saúde em nossa sede para falar sobre prevenção e sobre pedir ajuda.</p><a class="saiba" href="#sobre">Conheça a Premium<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+        <article class="v-card up"><div class="v-img"><img src="n/g-britagem-amanhecer.jpg" alt="Guindaste em operação ao amanhecer, com a vegetação ao redor" loading="lazy"></div><div class="v-card-tx"><h3>Meio ambiente</h3><p>Rotas planejadas, operações sinalizadas e cuidado com o entorno de cada obra, para reduzir impactos e respeitar os lugares onde trabalhamos.</p><a class="saiba" href="#qualidade">Veja nossos valores<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+        <article class="v-card up"><div class="v-img"><img src="n/munck-equatorial.jpg" alt="Munck içando acessório de transformador em subestação" loading="lazy"></div><div class="v-card-tx"><h3>Inovação</h3><p>Buscamos constantemente novas tecnologias e métodos mais práticos, seguros e rápidos para executar cada serviço.</p><a class="saiba" href="#obras">Veja nossas obras<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="home" class="ap-cta" aria-label="Fale com a Premium">
+    <div class="container ap-cta-row up">
+      <div><h2>Tem uma carga para mover?</h2><p>Conte o que precisa e a nossa equipe monta a solução para a sua operação.</p></div>
+      <div class="ap-cta-btns"><a class="boxed-btn" href="https://wa.me/5598991711704" target="_blank" rel="noopener">Falar no WhatsApp</a><a class="ghost-btn" href="#servicos">Conhecer os serviços</a></div>
+    </div>
+  </section>
+
+  <section data-page="proposito" class="p-head" aria-label="Propósito">
+    <div class="container p-head-wrap">
+      <div class="up">
+        <span class="title">Propósito</span>
+        <h1 class="p-h1">O propósito da Premium</h1>
+        <p>Acreditamos que movimentar cargas pesadas com segurança é essencial para que a energia chegue às casas, as indústrias produzam e as obras saiam do papel. Mas só servimos de verdade aos nossos clientes quando assumimos o problema inteiro: do estudo técnico à carga posicionada, cuidando das pessoas e do lugar onde trabalhamos.</p>
+        <p>É por essa convicção que definimos nosso propósito:</p>
+        <blockquote class="p-frase">Movemos o que a indústria não move sozinha.</blockquote>
+        <p class="p-fecho">Não vendemos hora de guindaste. Vendemos a certeza de que a carga vai sair do lugar.</p>
+      </div>
+      <figure class="p-foto up"><img src="n/g-britagem-entardecer.jpg" alt="Guindaste da Premium içando peça longa ao entardecer" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section data-page="proposito" class="p-faq" aria-label="Perguntas frequentes">
+    <div class="container p-faq-wrap">
+      <h2 class="subtitle up">Perguntas frequentes</h2>
+      <div class="up"><details class="p-faq-item"><summary>Qual é o propósito da Premium?<span aria-hidden="true"></span></summary><p>Nosso propósito é <b>mover o que a indústria não move sozinha</b>. Para isso, contamos com profissionais renomados no mercado: uma equipe de alta performance com mais de 30 anos de expertise em operações de içamento e movimentação de cargas indivisíveis. É essa experiência que garante planejamento, segurança e responsabilidade em cada operação, do estudo técnico até a carga posicionada.</p></details><details class="p-faq-item"><summary>Por que a remoção industrial é essencial?<span aria-hidden="true"></span></summary><p>Transformadores, estruturas e equipamentos pesados são o coração de subestações, indústrias, portos e obras de infraestrutura. Quando precisam ser trocados, instalados ou transportados, a operação tem que ser precisa e segura, porque dela depende a energia e a produção de muita gente.</p></details><details class="p-faq-item"><summary>O que diferencia a Premium?<span aria-hidden="true"></span></summary><p>Pioneira no Maranhão, a Premium foi a primeira empresa de guindastes, transportes e remoção industrial do estado. São mais de 15 anos de história, frota própria e atuação integrada à Equatorial Energia. Mas o que realmente nos diferencia é a forma de trabalhar: cada serviço começa pelo estudo técnico, e o equipamento é consequência do planejamento, nunca o ponto de partida. <b>Não entregamos apenas um serviço. Entregamos a expectativa do cliente cumprida</b>, com a carga no lugar certo, no prazo combinado e com total segurança.</p></details></div>
+    </div>
+  </section>
+
+  <section data-page="transparencia" class="t-head" aria-label="Transparência">
+    <div class="container">
+      <span class="title up">Sobre a Premium</span>
+      <h1 class="p-h1 up">Transparência</h1>
+      <div class="t-fotos up">
+        <figure><img src="n/obra-equipe.jpg" alt="Equipe da Premium reunida em campo" loading="lazy"></figure>
+        <figure><img src="n/g-munck-frota.jpg" alt="Caminhão munck da frota Premium em subestação" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="transparencia" class="t-comp" aria-label="Nosso compromisso">
+    <div class="container t-comp-wrap up">
+      <h2 class="subtitle">Nosso compromisso</h2>
+      <div>
+        <p>Temos o compromisso de colocar a ética e a integridade em cada decisão que tomamos. Trabalhamos todos os dias para que esses princípios façam parte da nossa cultura e guiem cada pessoa que representa a Premium: no escritório, no pátio e em campo.</p>
+        <p>Isso significa propostas claras, preços explicados, prazos cumpridos e responsabilidade assumida por escrito. O cliente sabe exatamente o que está contratando, quem está na operação e como cada etapa será feita.</p>
+        <p class="t-fecho">Afinal, só caminhando lado a lado com os nossos princípios alcançamos o nosso propósito: <b>mover o que a indústria não move sozinha.</b></p>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="transparencia" class="esg" aria-label="ESG na prática">
+    <div class="container">
+      <div class="esg-head up">
+        <div>
+          <span class="title">ESG na prática</span>
+          <h2 class="subtitle">Responsabilidade ambiental, social e de governança</h2>
+        </div>
+        <p>Crescer com responsabilidade é parte do nosso propósito. Trabalhamos para reduzir impactos ambientais, valorizar as pessoas e manter uma gestão ética e transparente em todas as nossas operações, deixando um legado positivo para os clientes e para as regiões onde atuamos.</p>
+      </div>
+      <div class="esg-grid"><article class="esg-col up"><div class="esg-top"><span class="esg-letra">E</span><span class="esg-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6.5-7-10.5A7 7 0 0 1 12 3a7 7 0 0 1 7 7.5c0 4-3 7.5-7 10.5z"/><path d="M12 13V8"/><path d="M9.5 10.5L12 13l2.5-2.5"/></svg></span></div><span class="esg-tag">Ambiental</span><h3>Sustentabilidade</h3><p>Cuidamos do meio ambiente em cada operação, do planejamento da rota à entrega da área limpa.</p><ul><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Planejamento de rotas para reduzir deslocamentos e consumo de combustível</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Manutenção preventiva da frota para evitar vazamentos e reduzir emissões</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Atenção redobrada ao óleo isolante dos transformadores</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Área de trabalho entregue limpa, sem resíduos deixados para trás</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Respeito à vegetação e ao entorno de cada obra</span></li></ul></article><article class="esg-col up"><div class="esg-top"><span class="esg-letra">S</span><span class="esg-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.5c2.8 0 5 2.2 5 5"/></svg></span></div><span class="esg-tag">Social</span><h3>Pessoas e comunidades</h3><p>A segurança e o bem-estar de quem trabalha conosco e de quem vive perto das nossas obras vêm em primeiro lugar.</p><ul><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Segurança da equipe acima de qualquer prazo</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Treinamento e capacitação constantes</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Cuidado com a saúde física e mental dos colaboradores</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Geração de emprego e renda no Maranhão e nas regiões onde atuamos</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Sinalização e isolamento para proteger as comunidades vizinhas</span></li></ul></article><article class="esg-col up"><div class="esg-top"><span class="esg-letra">G</span><span class="esg-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V10M9.5 21V10M14.5 21V10M19 21V10"/><path d="M2 10l10-6 10 6z"/></svg></span></div><span class="esg-tag">Governança</span><h3>Ética e transparência</h3><p>Gestão séria, decisões responsáveis e relações claras com clientes, parceiros, colaboradores e o poder público.</p><ul><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Propostas e contratos claros, com escopo, prazo e responsabilidades definidos</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Cumprimento das normas regulamentadoras e das exigências do setor elétrico</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Gestão financeira organizada e acompanhada de perto</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Canal de ética aberto para relatos com sigilo</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Proteção dos dados de clientes e parceiros, conforme a LGPD</span></li></ul></article></div>
+    </div>
+  </section>
+
+  <section data-page="transparencia" class="hum" aria-label="Humanidade">
+    <div class="container hum-wrap">
+      <div class="up">
+        <span class="title">Humanidade</span>
+        <h2 class="subtitle">Movemos cargas. Mas são as pessoas que nos movem.</h2>
+        <p class="hum-txt">Por trás de cada guindaste, de cada carreta e de cada transformador posicionado existe uma equipe de pessoas. Acreditamos que uma empresa humana é aquela que cuida de quem trabalha nela, respeita quem convive com ela e se importa com o impacto que deixa por onde passa.</p>
+      </div>
+      <div class="hum-grid"><article class="hum-card up"><h3>Pessoas antes das cargas</h3><p>Nenhuma operação começa sem que a equipe esteja segura, preparada e bem orientada. Quem volta para casa todos os dias é a nossa maior entrega.</p></article><article class="hum-card up"><h3>Respeito em cada relação</h3><p>Tratamos clientes, parceiros, colaboradores e comunidades com respeito, escuta e humildade, do primeiro contato até o fim da obra.</p></article><article class="hum-card up"><h3>Cuidado com quem cuida</h3><p>Valorizamos a saúde física e emocional da equipe e abrimos espaço para que cada pessoa possa pedir ajuda quando precisar.</p></article><article class="hum-card up"><h3>Crescer juntos</h3><p>Investimos no desenvolvimento dos nossos profissionais, porque uma empresa só evolui quando as pessoas que fazem parte dela evoluem também.</p></article></div>
+    </div>
+  </section>
+
+  <section data-page="transparencia" class="t-links" aria-label="Saiba mais sobre nossa atuação">
+    <div class="container">
+      <h2 class="subtitle up">Saiba mais sobre nossa atuação</h2>
+      <div class="t-grid"><a class="t-card up" href="#contato"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span><h3>Fale conosco</h3><p>Tire dúvidas, solicite uma proposta ou fale com a nossa diretoria.</p><span class="t-go">Acessar<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="t-card up" href="mailto:diretoria@premiumlocacao.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20documentos"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h6"/></svg></span><h3>Documentos e certificações</h3><p>Solicite cópias das certificações da equipe, documentos da empresa e planos de içamento do seu serviço.</p><span class="t-go">Acessar<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="t-card up" href="mailto:diretoria@premiumlocacao.com.br?subject=Canal%20de%20%C3%A9tica"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg></span><h3>Canal de ética</h3><p>Viu alguma conduta que vai contra os nossos princípios? Relate diretamente à diretoria, com sigilo.</p><span class="t-go">Acessar<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><div class="t-card t-card-info up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><h3>Privacidade</h3><p>Os dados que você nos envia são usados apenas para atender o seu pedido, conforme a Lei Geral de Proteção de Dados (LGPD).</p></div></div>
+    </div>
+  </section>
+
+  <div data-page="sobre" class="cta">
     <div class="container row">
       <h2>Há mais de 15 anos atuando em diversos segmentos de mercado</h2>
       <a class="boxed-btn" href="#contato">Contato</a>
     </div>
   </div>
 
-  <section class="service-section" id="servicos">
+  <section data-page="remocao-industrial" class="sv-hero" aria-label="Remoção industrial">
+    <div class="container sv-hero-wrap">
+      <div class="up">
+        <span class="title"><a href="#servicos">Serviços</a> · Remoção industrial</span>
+        <h1 class="p-h1">Remoção industrial</h1>
+        <p class="sv-lead">Nosso carro-chefe. Removemos, movimentamos e posicionamos transformadores de todos os portes, dos menores aos de grande porte, em subestações e ambientes industriais.</p>
+        <p>É uma operação em que não existe margem para erro. Por isso, cada remoção é planejada em detalhe: estudamos o equipamento, o terreno e o acesso, e só então definimos a técnica e o equipamento certos.</p><p>Trabalhamos com macacos hidráulicos, trilhos e dormentes para deslocar o transformador milímetro a milímetro até a base, com a área isolada e a equipe certificada para atuar em subestações.</p>
+        <div class="sv-btns"><a class="boxed-btn" href="https://wa.me/5598991711704" target="_blank" rel="noopener">Solicitar orçamento</a></div>
+      </div>
+      <figure class="sv-foto up"><img src="n/trafo-macacos.jpg" alt="Transformador de grande porte sobre macacos hidráulicos em subestação" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section data-page="remocao-industrial" class="ri-oque" aria-label="O que é remoção industrial">
+    <div class="container ri-2col">
+      <div class="up">
+        <span class="title">Entenda o serviço</span>
+        <h2 class="subtitle">O que é remoção industrial</h2>
+      </div>
+      <div class="up ri-txt">
+        <p>Remoção industrial é o conjunto de técnicas usadas para retirar, movimentar, transportar e reposicionar equipamentos pesados e de alto valor, como transformadores de potência, máquinas industriais, motores, geradores e estruturas, com total controle e sem danificar a carga, o local ou as instalações ao redor.</p>
+        <p>Diferente de um simples içamento, a remoção industrial acontece muitas vezes em espaços restritos, sem acesso para guindastes, dentro de subestações ou de plantas em funcionamento. Por isso, ela combina diferentes técnicas, como macaqueamento, deslizamento sobre trilhos, içamento e transporte especial, escolhidas a partir de um estudo detalhado de cada situação.</p>
+        <p>No setor elétrico, é um serviço essencial: quando um transformador precisa ser trocado, ampliado ou levado para manutenção, a remoção precisa ser rápida e precisa, porque dela depende o fornecimento de energia para cidades inteiras.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="remocao-industrial" class="ri-quando" aria-label="Quando é necessária">
+    <div class="container">
+      <span class="title up">Aplicações</span>
+      <h2 class="subtitle up">Quando a remoção industrial é necessária</h2>
+      <div class="ri-grid"><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h11l-3-3"/><path d="M20 17H9l3 3"/></svg></span><h3>Troca de transformador</h3><p>Quando o equipamento chega ao fim da vida útil, apresenta defeito ou precisa ser substituído por um de maior capacidade.</p></article><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10l8-6 8 6v10"/><path d="M12 20v-6"/></svg></span><h3>Ampliação e modernização</h3><p>Subestações e plantas que crescem precisam receber novos equipamentos e reorganizar os existentes.</p></article><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span><h3>Manutenção</h3><p>Alguns reparos só podem ser feitos com o equipamento retirado da base e levado para a oficina ou fábrica.</p></article><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg></span><h3>Instalação de equipamento novo</h3><p>Do caminhão até a base: descarga, movimentação e posicionamento exato no ponto de instalação.</p></article><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="12" height="10"/><path d="M15 11h4l2 3v3h-6"/><circle cx="7" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></span><h3>Mudança de planta industrial</h3><p>Relocação de máquinas e equipamentos pesados de um ponto a outro da fábrica ou para outra unidade.</p></article><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><h3>Emergências</h3><p>Quando um equipamento falha, cada hora conta. Mobilizamos equipe e equipamentos para restabelecer a operação o quanto antes.</p></article></div>
+    </div>
+  </section>
+
+  <section data-page="remocao-industrial" class="ri-oq2" aria-label="O que removemos">
+    <div class="container ri-2col">
+      <div class="up">
+        <span class="title">Equipamentos</span>
+        <h2 class="subtitle">O que removemos</h2>
+        <p class="ri-sub">Nossa especialidade são os transformadores, mas a mesma técnica e o mesmo cuidado se aplicam a qualquer equipamento pesado que precise sair do lugar com segurança.</p>
+      </div>
+      <ul class="ri-oq-list"><li class="up"><span class="ri-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><b>Transformadores de potência</b><span>De pequeno a grande porte, em subestações de energia e plantas industriais.</span></div></li><li class="up"><span class="ri-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><b>Subestações móveis</b><span>Conjuntos completos montados sobre carreta, levados e posicionados onde a energia é necessária.</span></div></li><li class="up"><span class="ri-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><b>Radiadores, tanques de expansão e acessórios</b><span>Movimentados e transportados com o mesmo cuidado do equipamento principal.</span></div></li><li class="up"><span class="ri-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><b>Geradores</b><span>Grupos geradores descarregados e posicionados com munck ou guindaste.</span></div></li><li class="up"><span class="ri-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><b>Máquinas e equipamentos industriais</b><span>Equipamentos de grande peso de linhas de produção e plantas industriais.</span></div></li><li class="up"><span class="ri-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><b>Tanques e estruturas metálicas</b><span>Reservatórios, estruturas e peças longas em parques industriais e obras.</span></div></li></ul>
+    </div>
+  </section>
+
+  <section data-page="remocao-industrial" class="ri-tec" aria-label="Técnicas">
+    <div class="container ri-2col">
+      <div class="up">
+        <span class="title">Técnicas</span>
+        <h2 class="subtitle">Como movemos cargas que não podem errar</h2>
+        <p class="ri-sub">Cada remoção combina as técnicas certas para o equipamento, o espaço e o prazo. O resultado é uma operação controlada do começo ao fim.</p>
+      </div>
+      <ol class="ri-tec-list"><li class="up"><b>Macaqueamento</b><span>O transformador é erguido de forma gradual e controlada com macacos hidráulicos, sempre apoiado em calços de dormentes montados em camadas, garantindo estabilidade a cada centímetro.</span></li><li class="up"><b>Deslizamento sobre trilhos</b><span>Com o equipamento elevado, montamos uma pista de trilhos sobre dormentes e deslizamos a carga com tração controlada, técnica ideal quando não há espaço ou acesso para um guindaste.</span></li><li class="up"><b>Içamento com guindaste ou munck</b><span>Quando o acesso permite, o equipamento é içado com plano de içamento, cintas e acessórios dimensionados para o peso e o centro de gravidade da carga.</span></li><li class="up"><b>Transporte até o destino</b><span>A carga segue em carreta prancha ou extensível, calçada, amarrada e sinalizada, até a oficina, a fábrica ou a nova base.</span></li><li class="up"><b>Posicionamento e nivelamento</b><span>No destino, o processo se inverte: o equipamento é levado até a base e assentado no ponto exato, nivelado e pronto para a montagem final.</span></li></ol>
+    </div>
+  </section>
+
+  <section data-page="remocao-industrial" class="sv-etapas sv-6" aria-label="Como trabalhamos">
+    <div class="container">
+      <span class="title up">Passo a passo</span>
+      <h2 class="subtitle up">Como trabalhamos</h2>
+      <ol class="sv-grid"><li class="up"><span class="sv-n">01</span><h3>Visita técnica</h3><p>Avaliamos o equipamento, a base, o acesso, o solo e as condições da subestação ou da planta.</p></li><li class="up"><span class="sv-n">02</span><h3>Estudo e plano de remoção</h3><p>Definimos as técnicas, a sequência de trabalho, os equipamentos e a análise de risco da operação.</p></li><li class="up"><span class="sv-n">03</span><h3>Preparação</h3><p>Isolamos e sinalizamos a área, montamos trilhos, dormentes e macacos e checamos cada equipamento da operação.</p></li><li class="up"><span class="sv-n">04</span><h3>Macaqueamento e deslizamento</h3><p>Erguemos a carga com macacos hidráulicos e a deslocamos sobre trilhos e dormentes com controle total.</p></li><li class="up"><span class="sv-n">05</span><h3>Içamento e transporte</h3><p>Quando previsto, içamos e embarcamos a carga em carreta especial até o destino.</p></li><li class="up"><span class="sv-n">06</span><h3>Posicionamento e entrega</h3><p>Assentamos e nivelamos o equipamento na base e entregamos a área limpa e organizada.</p></li></ol>
+    </div>
+  </section>
+
+  <section data-page="remocao-industrial" class="ri-agil" aria-label="Agilidade">
+    <div class="container">
+      <div class="ri-agil-head up">
+        <div>
+          <span class="title">Agilidade</span>
+          <h2 class="subtitle">Equipamento parado custa caro. Por isso, a gente não para.</h2>
+        </div>
+        <p>Cada hora com um transformador fora de operação significa energia que não chega, produção que não acontece e prejuízo para o cliente. Nossa estrutura foi pensada para responder rápido, sem abrir mão de nenhum cuidado com a segurança.</p>
+      </div>
+      <div class="ri-ag-grid"><article class="ri-ag up"><span class="ri-ag-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span><div><h3>Resposta rápida</h3><p>Atendimento direto pelo WhatsApp e compromisso de retornar com a proposta técnica o mais rápido possível, de preferência no mesmo dia do contato.</p></div></article><article class="ri-ag up"><span class="ri-ag-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><div><h3>Mobilização imediata</h3><p>Frota e materiais próprios prontos para sair, sem depender da agenda de terceiros para começar o serviço.</p></div></article><article class="ri-ag up"><span class="ri-ag-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6.5-7-10.5A7 7 0 0 1 12 3a7 7 0 0 1 7 7.5c0 4-3 7.5-7 10.5z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><h3>Bases estratégicas</h3><p>Sede em São Luís e base em Minas Gerais encurtam a distância até a sua obra, no Nordeste e no resto do país.</p></div></article><article class="ri-ag up"><span class="ri-ag-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6v3H9z"/><path d="M7 5H5v16h14V5h-2"/><path d="M8.5 13.5l2.5 2.5 4.5-5"/></svg></span><div><h3>Planejamento que economiza tempo</h3><p>Quanto mais detalhado o plano, menos imprevistos no dia. Cada etapa é preparada antes para a operação fluir sem paradas.</p></div></article><article class="ri-ag up"><span class="ri-ag-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.5c2.8 0 5 2.2 5 5"/></svg></span><div><h3>Equipe que resolve</h3><p>Profissionais experientes, com autonomia para tomar decisões técnicas em campo e manter o cronograma.</p></div></article><article class="ri-ag up"><span class="ri-ag-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Prontidão 24 horas para emergências</h3><p>Atendemos emergências 24 horas por dia, 7 dias por semana. Quando um transformador falha, mobilizamos equipe e equipamentos com prioridade para restabelecer a energia o quanto antes.</p></div></article></div>
+    </div>
+  </section>
+
+  <section data-page="remocao-industrial" class="ri-seg" aria-label="Segurança">
+    <div class="container ri-2col">
+      <div class="up">
+        <span class="title">Segurança</span>
+        <h2 class="subtitle">Segurança em ambiente de subestação</h2>
+        <p class="ri-sub">Trabalhar perto de equipamentos energizados exige preparo técnico, disciplina e respeito rigoroso aos procedimentos. Na Premium, segurança não é uma etapa da operação: é a forma de executar cada uma delas.</p>
+      </div>
+      <ul class="ri-seg-list up"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Equipe certificada em NR-10 (segurança em eletricidade), NR-11 (movimentação de cargas), NR-12 (máquinas e equipamentos) e NR-35 (trabalho em altura).</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Planejamento conjunto com a concessionária e o cliente, respeitando as regras de acesso e de distância em áreas energizadas.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Área isolada, sinalizada e com acesso controlado durante toda a operação.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Atenção ao centro de gravidade, à capacidade do solo e à estabilidade da carga em cada etapa.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Cuidado com o óleo isolante e com os componentes do equipamento, para evitar vazamentos e danos.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Comunicação constante entre a liderança da operação e a equipe de campo.</span></li></ul>
+    </div>
+  </section>
+
+
+  <section data-page="remocao-industrial" class="ri-van" aria-label="Vantagens">
+    <div class="container">
+      <span class="title up">Para o cliente</span>
+      <h2 class="subtitle up">O que você ganha contratando a Premium</h2>
+      <div class="ri-grid"><article class="ri-card up"><h3>Menos tempo parado</h3><p>Planejamento detalhado para que a subestação ou a planta volte a operar o quanto antes.</p></article><article class="ri-card up"><h3>Um só responsável</h3><p>Remoção, içamento e transporte com a mesma equipe, sem o cliente coordenar vários fornecedores.</p></article><article class="ri-card up"><h3>Previsibilidade</h3><p>Plano, etapas e responsabilidades definidos antes de a operação começar.</p></article><article class="ri-card up"><h3>Risco controlado</h3><p>Técnicas adequadas a cada situação e equipe certificada em todas as frentes.</p></article><article class="ri-card up"><h3>Integridade do equipamento</h3><p>Cuidado com cada componente para que o equipamento chegue ao destino como saiu da base.</p></article><article class="ri-card up"><h3>Atendimento em todo o Brasil</h3><p>Sede em São Luís, base em Minas Gerais e estrutura para atender qualquer estado.</p></article></div>
+    </div>
+  </section>
+
+  <section data-page="remocao-industrial" class="sv-onde" aria-label="Onde atuamos">
+    <div class="container sv-onde-wrap">
+      <div class="up">
+        <span class="title">Onde atuamos</span>
+        <h2 class="subtitle">Para quem fazemos</h2>
+        <ul class="sv-tags"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Subestações de energia</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Concessionárias de energia</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Indústrias</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Usinas</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Siderúrgicas e metalúrgicas</li></ul>
+        <p class="sv-dest">Empresa integrada à Equatorial Energia, com atuação em subestações no Maranhão, no Piauí e em Alagoas.</p>
+      </div>
+      <div class="sv-fotos"><figure class="up"><img src="n/g-trafo-chegada-base.jpg" alt="Transformador chegando à base" loading="lazy"><figcaption>Transformador chegando à base</figcaption></figure><figure class="up"><img src="n/obra-trafo-base-subestacao.jpg" alt="Transformador posicionado na base" loading="lazy"><figcaption>Transformador posicionado na base</figcaption></figure></div>
+    </div>
+  </section>
+
+  <section data-page="remocao-industrial" class="p-faq ri-faq" aria-label="Dúvidas sobre remoção industrial">
+    <div class="container p-faq-wrap">
+      <h2 class="subtitle up">Dúvidas sobre remoção industrial</h2>
+      <div class="up"><details class="p-faq-item"><summary>Toda remoção precisa de guindaste?<span aria-hidden="true"></span></summary><p>Não. Em muitos casos, principalmente dentro de subestações com pouco espaço, o equipamento é movimentado com macacos hidráulicos e deslizamento sobre trilhos, sem guindaste. A técnica é definida na visita técnica.</p></details><details class="p-faq-item"><summary>Quanto tempo leva uma remoção industrial?<span aria-hidden="true"></span></summary><p>Depende do porte do equipamento, do acesso e da distância até o destino. Na visita técnica apresentamos o cronograma, sempre planejado para reduzir ao máximo o tempo de equipamento parado.</p></details><details class="p-faq-item"><summary>Vocês fazem também o transporte do equipamento?<span aria-hidden="true"></span></summary><p>Sim. Fazemos a remoção, o içamento, o transporte em carreta especial e o posicionamento no destino, com uma só equipe.</p></details><details class="p-faq-item"><summary>A Premium atende fora do Maranhão?<span aria-hidden="true"></span></summary><p>Sim. Temos sede em São Luís e base em Minas Gerais, e atendemos todo o Nordeste e todos os estados do Brasil.</p></details></div>
+    </div>
+  </section>
+
+  <section data-page="remocao-industrial" class="ri-inov" aria-label="Inovação">
+    <div class="container ri-2col">
+      <div class="up">
+        <span class="title">Inovação</span>
+        <h2 class="subtitle">Inovação na busca contínua</h2>
+      </div>
+      <div class="up ri-txt">
+        <p>Nenhuma remoção é igual à outra, e é isso que nos move a evoluir sempre. A cada operação, registramos o que funcionou, revisamos o que pode ser feito melhor e levamos esse aprendizado para o próximo serviço.</p>
+        <p>Estamos em busca contínua de novas tecnologias, equipamentos e métodos que tornem a remoção industrial mais segura, mais rápida e mais precisa. Investimos na capacitação constante da equipe, no planejamento cada vez mais detalhado e em soluções que reduzam o tempo de equipamento parado para o cliente.</p>
+        <p>Para nós, inovar é unir a experiência de mais de 30 anos dos nossos profissionais à disposição de fazer diferente, e melhor, a cada novo desafio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="remocao-industrial" class="sv-outros" aria-label="Outros serviços">
+    <div class="container sv-outros-wrap up">
+      <h2>Conheça também</h2>
+      <div class="sv-outros-links"><a href="#icamento">Içamento de cargas<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#transporte">Transporte de cargas indivisíveis<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+  </section>
+
+  <section data-page="icamento" class="sv-hero" aria-label="Içamento de cargas">
+    <div class="container sv-hero-wrap">
+      <div class="up">
+        <span class="title"><a href="#servicos">Serviços</a> · Içamento de cargas</span>
+        <h1 class="p-h1">Içamento de cargas</h1>
+        <p class="sv-lead">Guindastes e caminhões munck com operador e plano de içamento para levantar, montar e posicionar cargas pesadas com precisão.</p>
+        <p>Do pequeno içamento a operações com dois guindastes trabalhando juntos, cada serviço começa pelo estudo da carga, do raio de trabalho e do terreno. O equipamento é escolhido a partir do planejamento, nunca o contrário.</p><p>Nossos operadores têm mais de 30 anos de experiência em içamento e movimentação de cargas indivisíveis. São profissionais altamente capacitados, treinados constantemente, que atendem indústrias, portos, usinas e obras de infraestrutura com agilidade e segurança.</p>
+        <div class="sv-btns"><a class="boxed-btn" href="https://wa.me/5598991711704" target="_blank" rel="noopener">Solicitar orçamento</a></div>
+      </div>
+      <figure class="sv-foto up"><img src="n/obra-silos-agi.jpg" alt="Guindaste içando estrutura metálica de grande porte ao lado de silos" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section data-page="icamento" class="pl" aria-label="Plano de içamento animado">
+    <div class="container">
+      <div class="pl-head up">
+        <div>
+          <span class="title">Plano de içamento</span>
+          <h2 class="subtitle">Do zero à carga posicionada</h2>
+        </div>
+        <p>Antes de qualquer carga sair do chão, a operação inteira já foi desenhada. Veja, passo a passo, como planejamos um içamento: do levantamento do local ao posicionamento final, com cada medida, ângulo e ponto de atenção definido com antecedência.</p>
+      </div>
+      <div class="pl-board up">
+        <svg id="plano" viewBox="0 0 1600 660" role="img" aria-label="Animação técnica, em estilo de projeto digital, mostrando o planejamento de um içamento em vista lateral e frontal: chegada da carga, posicionamento e patolamento do guindaste, lança de 27,2 metros a 62,5 graus, raio de 12 metros, amarração, içamento e posicionamento na base">
+          <defs>
+            <pattern id="pl-g1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#1E3BD8" stroke-opacity=".05" stroke-width="1"/></pattern>
+            <pattern id="pl-g2" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M100 0H0V100" fill="none" stroke="#1E3BD8" stroke-opacity=".10" stroke-width="1"/></pattern>
+            <linearGradient id="pl-scan" x1="0" x2="1"><stop offset="0" stop-color="#1E3BD8" stop-opacity="0"/><stop offset=".5" stop-color="#1E3BD8" stop-opacity=".14"/><stop offset="1" stop-color="#1E3BD8" stop-opacity="0"/></linearGradient>
+            <marker id="pl-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 1.5L10 5L0 8.5z" fill="#E3241B"/></marker>
+            <marker id="pl-arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 1.5L10 5L0 8.5z" fill="#E3241B"/></marker>
+            <pattern id="pl-hat" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#1E3BD8" stroke-opacity=".55" stroke-width="1.2"/></pattern>
+            <pattern id="pl-earth" width="9" height="13" patternUnits="userSpaceOnUse"><path d="M0 13L9 4M-2 6L4 0" stroke="#111" stroke-opacity=".55" stroke-width=".9"/></pattern>
+            <pattern id="pl-soil" width="14" height="10" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1" fill="#555"/><circle cx="10" cy="7" r=".8" fill="#777"/><path d="M6 8l2-2" stroke="#666" stroke-width=".8"/></pattern>
+          </defs>
+          <rect width="1600" height="660" fill="#fff"/>
+          <g id="pl-grid" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif"></g>
+          
+          <g id="pl-sheet" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif" font-size="9" fill="#111" opacity="0"><rect x="3" y="3" width="1594" height="594" fill="none" stroke="#111" stroke-width=".8"/><line x1="10" y1="3" x2="10" y2="10" stroke="#111" stroke-width=".8"/><line x1="10" y1="590" x2="10" y2="597" stroke="#111" stroke-width=".8"/><text x="109" y="9.5" text-anchor="middle">1</text><text x="109" y="596" text-anchor="middle">1</text><line x1="208" y1="3" x2="208" y2="10" stroke="#111" stroke-width=".8"/><line x1="208" y1="590" x2="208" y2="597" stroke="#111" stroke-width=".8"/><text x="306" y="9.5" text-anchor="middle">2</text><text x="306" y="596" text-anchor="middle">2</text><line x1="405" y1="3" x2="405" y2="10" stroke="#111" stroke-width=".8"/><line x1="405" y1="590" x2="405" y2="597" stroke="#111" stroke-width=".8"/><text x="504" y="9.5" text-anchor="middle">3</text><text x="504" y="596" text-anchor="middle">3</text><line x1="602" y1="3" x2="602" y2="10" stroke="#111" stroke-width=".8"/><line x1="602" y1="590" x2="602" y2="597" stroke="#111" stroke-width=".8"/><text x="701" y="9.5" text-anchor="middle">4</text><text x="701" y="596" text-anchor="middle">4</text><line x1="800" y1="3" x2="800" y2="10" stroke="#111" stroke-width=".8"/><line x1="800" y1="590" x2="800" y2="597" stroke="#111" stroke-width=".8"/><text x="899" y="9.5" text-anchor="middle">5</text><text x="899" y="596" text-anchor="middle">5</text><line x1="998" y1="3" x2="998" y2="10" stroke="#111" stroke-width=".8"/><line x1="998" y1="590" x2="998" y2="597" stroke="#111" stroke-width=".8"/><text x="1096" y="9.5" text-anchor="middle">6</text><text x="1096" y="596" text-anchor="middle">6</text><line x1="1195" y1="3" x2="1195" y2="10" stroke="#111" stroke-width=".8"/><line x1="1195" y1="590" x2="1195" y2="597" stroke="#111" stroke-width=".8"/><text x="1294" y="9.5" text-anchor="middle">7</text><text x="1294" y="596" text-anchor="middle">7</text><line x1="1392" y1="3" x2="1392" y2="10" stroke="#111" stroke-width=".8"/><line x1="1392" y1="590" x2="1392" y2="597" stroke="#111" stroke-width=".8"/><text x="1491" y="9.5" text-anchor="middle">8</text><text x="1491" y="596" text-anchor="middle">8</text><line x1="3" y1="10" x2="10" y2="10" stroke="#111" stroke-width=".8"/><line x1="1590" y1="10" x2="1597" y2="10" stroke="#111" stroke-width=".8"/><text x="6.5" y="110" text-anchor="middle">A</text><text x="1593.5" y="110" text-anchor="middle">A</text><line x1="3" y1="203" x2="10" y2="203" stroke="#111" stroke-width=".8"/><line x1="1590" y1="203" x2="1597" y2="203" stroke="#111" stroke-width=".8"/><text x="6.5" y="303" text-anchor="middle">B</text><text x="1593.5" y="303" text-anchor="middle">B</text><line x1="3" y1="397" x2="10" y2="397" stroke="#111" stroke-width=".8"/><line x1="1590" y1="397" x2="1597" y2="397" stroke="#111" stroke-width=".8"/><text x="6.5" y="496" text-anchor="middle">C</text><text x="1593.5" y="496" text-anchor="middle">C</text></g>
+          <rect class="dr" data-a="0" data-b=".9" x="10" y="10" width="1580" height="580" fill="none" stroke="#111" stroke-width="2"/>
+          <line class="dr" data-a=".6" data-b="1.4" x1="1050" y1="10" x2="1050" y2="590" stroke="#111" stroke-width="2"/>
+
+          <!-- solo -->
+          <g id="pl-soilf" opacity="0"><rect x="20" y="471.5" width="1020" height="13" fill="url(#pl-earth)"/><rect x="1060" y="471.5" width="520" height="13" fill="url(#pl-earth)"/></g>
+          <line class="dr" data-a="1.2" data-b="2.4" x1="20" y1="470" x2="1040" y2="470" stroke="#111" stroke-width="3"/>
+          <line class="dr" data-a="1.6" data-b="2.6" x1="1060" y1="470" x2="1580" y2="470" stroke="#111" stroke-width="3"/>
+
+          <!-- notas (vermelho, como no projeto) -->
+          <g id="pl-notes" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif" fill="#E3241B" font-size="17" letter-spacing="1.1">
+            <g id="pl-n1"><path d="M30 56l15-27 15 27z" fill="none" stroke="#E3241B" stroke-width="2"/><text x="45" y="52" text-anchor="middle" font-size="16" font-weight="700">!</text><text x="30" y="80">13 – EM CASO DE CONTATO COM</text><text x="30" y="101">CANTOS VIVOS, O USO DE QUEBRA</text><text x="30" y="122">CANTO É OBRIGATÓRIO.</text></g>
+            <g id="pl-n2"><path d="M30 168l15-27 15 27z" fill="none" stroke="#E3241B" stroke-width="2"/><text x="45" y="164" text-anchor="middle" font-size="16" font-weight="700">!</text><text x="30" y="192">* AO FAZER O GIRO DA CARGA NA</text><text x="30" y="213">POSIÇÃO, MANTER ATENÇÃO NA</text><text x="30" y="234">INTERFERÊNCIA ELÉTRICA</text></g>
+            <g id="pl-n3"><path d="M30 280l15-27 15 27z" fill="none" stroke="#E3241B" stroke-width="2"/><text x="45" y="276" text-anchor="middle" font-size="16" font-weight="700">!</text><text x="30" y="304">INTERFERÊNCIA ELÉTRICA</text><text x="30" y="325">(VER NOTA 11)</text></g>
+          </g>
+
+          <!-- ====== VISTA LATERAL ====== -->
+          <!-- base -->
+          <g id="pl-base" stroke="#1E3BD8" fill="none" stroke-width="2">
+            <rect class="dr" data-a="15.6" data-b="16.6" x="607" y="432" width="120" height="38"/>
+            <rect id="pl-basehat" x="608" y="433" width="118" height="36" fill="url(#pl-hat)" stroke="none" opacity="0"/>
+          </g>
+          <!-- carreta -->
+          <g id="pl-truck" stroke="#1E3BD8" fill="none" stroke-width="2" stroke-linejoin="round">
+            <path class="dr" data-a="2.8" data-b="4.0" d="M58 448V384Q58 372 70 370L120 366Q134 366 140 376L160 398Q168 404 168 412V448Z"/>
+            <path class="dr" data-a="2.9" data-b="4.0" d="M74 380H122L138 400H74Z M78 404V430 M92 404H150"/>
+            <path class="dr" data-a="3.0" data-b="4.1" d="M150 424H176V444H150Z M62 436H74"/>
+            <path class="dr" data-a="3.1" data-b="4.2" d="M168 434H210L222 424H266L286 444H745V456H286L270 446H168"/>
+            <path class="dr" data-a="3.2" data-b="4.2" d="M200 430V418H244V430 M300 448H730"/>
+            <g class="dr-g" data-a="3.4" data-b="4.5">
+              <circle cx="92" cy="458" r="13"/><circle cx="92" cy="458" r="5"/>
+              <circle cx="196" cy="458" r="13"/><circle cx="196" cy="458" r="5"/>
+              <circle cx="226" cy="458" r="13"/><circle cx="226" cy="458" r="5"/>
+              <circle cx="640" cy="461" r="10"/><circle cx="666" cy="461" r="10"/><circle cx="692" cy="461" r="10"/>
+            </g>
+          </g>
+          <!-- guindaste -->
+          <g id="pl-crane" stroke="#1E3BD8" fill="none" stroke-width="2" stroke-linejoin="round">
+            <path class="dr" data-a="5.0" data-b="6.0" d="M752 446V424H1012V446Z M752 434H1012"/>
+            <path class="dr" data-a="5.1" data-b="6.1" d="M964 424V384Q964 376 972 376H1000Q1006 376 1010 382L1016 398V424Z"/>
+            <path class="dr" data-a="5.2" data-b="6.2" d="M972 386H998L1006 402H972Z M984 404V420"/>
+            <path class="dr" data-a="5.3" data-b="6.3" d="M772 424V398H902V424 M772 398L790 388H902V398"/>
+            <path class="dr" data-a="5.4" data-b="6.4" d="M760 418V392H794V418 M764 396H790V414H764Z"/>
+            <path class="dr" data-a="5.5" data-b="6.5" d="M864 398V366Q864 360 870 360H894L904 378V398"/>
+            <rect id="pl-cabhat" x="868" y="366" width="28" height="22" fill="url(#pl-hat)" stroke="none" opacity="0"/>
+            <g class="dr-g" data-a="5.6" data-b="6.8">
+              <circle cx="792" cy="458" r="13"/><circle cx="792" cy="458" r="5"/>
+              <circle cx="826" cy="458" r="13"/><circle cx="826" cy="458" r="5"/>
+              <circle cx="930" cy="458" r="13"/><circle cx="930" cy="458" r="5"/>
+              <circle cx="964" cy="458" r="13"/><circle cx="964" cy="458" r="5"/>
+            </g>
+            <circle id="pl-pivot" cx="830" cy="402" r="4" fill="#E3241B" stroke="none" opacity="0"/>
+          </g>
+          <!-- marcas de centro das rodas -->
+          <g id="pl-cm" stroke="#E3241B" stroke-width="1.2" opacity="0">
+            <path d="M792 440V476M774 458H810M826 440V476M808 458H844M930 440V476M912 458H948M964 440V476M946 458H982"/>
+            <path d="M808 400V500" stroke-dasharray="10 4 2 4"/>
+          </g>
+          <g id="pl-outlat" stroke="#1E3BD8" fill="none" stroke-width="2"><path id="pl-outL" d=""/><path id="pl-outR" d=""/></g>
+
+          <!-- lança lateral -->
+          <g id="pl-boom" stroke="#1E3BD8" fill="none" stroke-width="2" stroke-linejoin="round">
+            <polygon id="pl-boomshape" points="" fill="#fff"/>
+            <path id="pl-boomin" d="" stroke-width="1.2"/>
+            <g id="pl-boomsec" stroke-width="1.6"></g>
+            <path id="pl-cyl" d="" stroke-width="2"/>
+            <circle id="pl-tipc" r="6" cx="0" cy="0"/>
+          </g>
+
+          <!-- cotas laterais -->
+          <g id="pl-dims" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif" font-size="18" fill="#111">
+            <path id="pl-arc" d="" fill="none" stroke="#E3241B" stroke-width="1.5" marker-end="url(#pl-ar)"/>
+            <text id="pl-ang" fill="#111">62,5°</text>
+            <line id="pl-lenline" stroke="#E3241B" stroke-width="1.5" marker-start="url(#pl-ar)" marker-end="url(#pl-ar)"/>
+            <text id="pl-len" fill="#111">27200</text>
+            <g class="fd" data-a="10.9" data-b="11.5">
+              <line x1="667" y1="476" x2="667" y2="532" stroke="#E3241B" stroke-width="1"/>
+              <line x1="830" y1="476" x2="830" y2="532" stroke="#E3241B" stroke-width="1"/>
+              <line x1="670" y1="524" x2="827" y2="524" stroke="#E3241B" stroke-width="1.5" marker-start="url(#pl-ar)" marker-end="url(#pl-ar)"/>
+              <text x="748" y="550" text-anchor="middle">R12000</text>
+            </g>
+          </g>
+
+          <!-- cabo, gancho, cintas e carga (lateral) -->
+          <g id="pl-rig"><line id="pl-rope1" stroke="#2DBE3C" stroke-width="2"/><line id="pl-rope2" stroke="#2DBE3C" stroke-width="2"/><path id="pl-hook" d="" fill="#fff" stroke="#111" stroke-width="2"/><path id="pl-slings" d="" fill="none" stroke="#B4642A" stroke-width="2.6"/><g id="pl-sl-dots" fill="#2DBE3C"></g></g>
+          <g id="pl-load" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif"><rect x="612" y="352" width="110" height="88" fill="none" stroke="#111" stroke-width="2"/><path d="M612 352L722 440M722 352L612 440" stroke="#111" stroke-width=".8" stroke-opacity=".55"/><circle cx="667" cy="396" r="4" fill="none" stroke="#E3241B" stroke-width="1.2"/><path d="M659 396h16M667 388v16" stroke="#E3241B" stroke-width="1"/><text x="667" y="434" text-anchor="middle" font-size="11" fill="#111" letter-spacing="1">CARGA · CG</text><g id="pl-b6" opacity="0"><line x1="596" y1="366" x2="612" y2="378" stroke="#111" stroke-width=".9"/><circle cx="586" cy="360" r="11" fill="#fff" stroke="#111" stroke-width="1.2"/><text x="586" y="364.5" text-anchor="middle" font-size="12" font-weight="700">6</text></g></g>
+
+          <!-- ====== VISTA FRONTAL ====== -->
+          <g id="pl-fdeck" stroke="#1E3BD8" fill="none" stroke-width="2">
+            <path class="dr" data-a="3.6" data-b="4.6" d="M1200 440H1352V454H1200Z M1210 454V462H1342V454"/>
+            <g class="dr-g" data-a="3.9" data-b="4.7"><rect x="1212" y="456" width="22" height="14" rx="3"/><rect x="1238" y="456" width="22" height="14" rx="3"/><rect x="1300" y="456" width="22" height="14" rx="3"/><rect x="1324" y="456" width="22" height="14" rx="3"/></g>
+          </g>
+          <g id="pl-fbase" stroke="#1E3BD8" fill="none" stroke-width="2">
+            <path class="dr" data-a="15.8" data-b="16.8" d="M1232 436H1342V444H1232Z M1240 444L1252 470M1334 444L1322 470M1246 458H1328"/>
+          </g>
+          <g id="pl-fcrane" stroke="#1E3BD8" fill="none" stroke-width="2" stroke-linejoin="round">
+            <path class="dr" data-a="6.0" data-b="6.9" d="M1408 446V406H1492V446Z"/>
+            <path class="dr" data-a="6.1" data-b="7.0" d="M1414 406V374Q1414 368 1420 368H1480Q1486 368 1486 374V406 M1420 376H1480V396H1420Z"/>
+            <path class="dr" data-a="6.2" data-b="7.0" d="M1424 396V388 M1476 396V388 M1430 420H1470V434H1430Z"/>
+            <g class="dr-g" data-a="6.3" data-b="7.1"><rect x="1394" y="440" width="16" height="30" rx="3"/><rect x="1376" y="440" width="16" height="30" rx="3"/><rect x="1490" y="440" width="16" height="30" rx="3"/><rect x="1508" y="440" width="16" height="30" rx="3"/></g>
+            <circle id="pl-fpivot" cx="1450" cy="398" r="4" fill="#E3241B" stroke="none" opacity="0"/>
+          </g>
+          <g id="pl-outfr" stroke="#1E3BD8" fill="none" stroke-width="2"><path id="pl-foutL" d=""/><path id="pl-foutR" d=""/></g>
+          <g id="pl-fboom" stroke="#1E3BD8" fill="none" stroke-width="2" stroke-linejoin="round">
+            <polygon id="pl-fboomshape" points="" fill="#fff"/>
+            <g id="pl-fboomsec" stroke-width="1.6"></g>
+          </g>
+          <g id="pl-fdims" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif" font-size="18" fill="#111">
+            <path id="pl-farc" d="" fill="none" stroke="#E3241B" stroke-width="1.5" marker-end="url(#pl-ar)"/>
+            <text id="pl-fang">62,5°</text>
+            <line id="pl-flenline" stroke="#E3241B" stroke-width="1.5" marker-start="url(#pl-ar)" marker-end="url(#pl-ar)"/>
+            <text id="pl-flen">27200</text>
+            <g class="fd" data-a="11.0" data-b="11.6">
+              <line x1="1290" y1="508" x2="1447" y2="508" stroke="#E3241B" stroke-width="1.5" marker-start="url(#pl-ar)" marker-end="url(#pl-ar)"/>
+              <line x1="1287" y1="476" x2="1287" y2="516" stroke="#E3241B" stroke-width="1"/><line x1="1450" y1="476" x2="1450" y2="516" stroke="#E3241B" stroke-width="1"/>
+              <text x="1368" y="500" text-anchor="middle">R12000</text>
+            </g>
+          </g>
+          <g id="pl-frig"><line id="pl-frope1" stroke="#2DBE3C" stroke-width="2"/><line id="pl-frope2" stroke="#2DBE3C" stroke-width="2"/><path id="pl-fhook" d="" fill="#fff" stroke="#111" stroke-width="2"/><path id="pl-fslings" d="" fill="none" stroke="#B4642A" stroke-width="2.6"/></g>
+          <g id="pl-fload" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif"><rect x="1232" y="352" width="110" height="88" fill="none" stroke="#111" stroke-width="2"/><path d="M1232 352L1342 440M1342 352L1232 440" stroke="#111" stroke-width=".8" stroke-opacity=".55"/><circle cx="1287" cy="396" r="4" fill="none" stroke="#E3241B" stroke-width="1.2"/><path d="M1279 396h16M1287 388v16" stroke="#E3241B" stroke-width="1"/><text x="1287" y="434" text-anchor="middle" font-size="11" fill="#111" letter-spacing="1">CARGA · CG</text></g>
+
+          <!-- títulos das vistas -->
+          <g font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif" font-size="16" fill="#111" letter-spacing="2" font-weight="700">
+            <g class="fd" data-a="2.2" data-b="2.8"><text x="420" y="578" text-anchor="middle">VISTA LATERAL</text><line x1="350" y1="584" x2="490" y2="584" stroke="#111" stroke-width="1.5"/><text x="420" y="594" text-anchor="middle" font-size="9" font-weight="400" letter-spacing="1">ESC. 1:200</text></g>
+            <g class="fd" data-a="2.4" data-b="3.0"><text x="1150" y="570" text-anchor="middle">VISTA FRONTAL</text><line x1="1085" y1="576" x2="1215" y2="576" stroke="#111" stroke-width="1.5"/><text x="1150" y="586" text-anchor="middle" font-size="9" font-weight="400" letter-spacing="1">ESC. 1:200</text></g>
+          </g>
+
+          <g id="pl-balloons" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif" fill="#111"><g id="pl-b1" opacity="0"><line x1="325.6" y1="382.1" x2="300" y2="440" stroke="#111" stroke-width=".9"/><circle cx="300" cy="440" r="2" fill="#111"/><circle cx="330" cy="372" r="11" fill="#fff" stroke="#111" stroke-width="1.2"/><text x="330" y="376.5" text-anchor="middle" font-size="12" font-weight="700">1</text></g><g id="pl-b2" opacity="0"><line x1="985.0" y1="341.0" x2="985" y2="378" stroke="#111" stroke-width=".9"/><circle cx="985" cy="378" r="2" fill="#111"/><circle cx="985" cy="330" r="11" fill="#fff" stroke="#111" stroke-width="1.2"/><text x="985" y="334.5" text-anchor="middle" font-size="12" font-weight="700">2</text></g><g id="pl-b3" opacity="0"><line x1="1009.2" y1="529.8" x2="1032" y2="474" stroke="#111" stroke-width=".9"/><circle cx="1032" cy="474" r="2" fill="#111"/><circle cx="1005" cy="540" r="11" fill="#fff" stroke="#111" stroke-width="1.2"/><text x="1005" y="544.5" text-anchor="middle" font-size="12" font-weight="700">3</text></g><g id="pl-b4" opacity="0"><line x1="792.2" y1="177.8" x2="748" y2="222" stroke="#111" stroke-width=".9"/><circle cx="748" cy="222" r="2" fill="#111"/><circle cx="800" cy="170" r="11" fill="#fff" stroke="#111" stroke-width="1.2"/><text x="800" y="174.5" text-anchor="middle" font-size="12" font-weight="700">4</text></g><g id="pl-b5" opacity="0"><line x1="584.6" y1="305.4" x2="636" y2="334" stroke="#111" stroke-width=".9"/><circle cx="636" cy="334" r="2" fill="#111"/><circle cx="575" cy="300" r="11" fill="#fff" stroke="#111" stroke-width="1.2"/><text x="575" y="304.5" text-anchor="middle" font-size="12" font-weight="700">5</text></g><g id="pl-b7" opacity="0"><line x1="584.4" y1="509.9" x2="607" y2="458" stroke="#111" stroke-width=".9"/><circle cx="607" cy="458" r="2" fill="#111"/><circle cx="580" cy="520" r="11" fill="#fff" stroke="#111" stroke-width="1.2"/><text x="580" y="524.5" text-anchor="middle" font-size="12" font-weight="700">7</text></g></g>
+          <g id="pl-table" transform="translate(316 0)" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif" font-size="11" fill="#111" opacity="0"><rect x="1068" y="22" width="196" height="156" fill="#fff" stroke="#111" stroke-width="1.2"/><rect x="1068" y="22" width="196" height="20" fill="#111"/><text x="1076" y="36" fill="#fff" font-weight="700" letter-spacing="1.2">DADOS DO IÇAMENTO</text><line x1="1068" y1="64.6" x2="1264" y2="64.6" stroke="#111" stroke-width=".5"/><text x="1074" y="51.5" font-size="8.5" fill="#555" letter-spacing=".8">LANÇA</text><text id="pl-dv1" x="1074" y="61.5" font-size="11.5" font-weight="700" fill="#1E3BD8">—</text><text id="pl-dv1v" display="none">27,2 m</text><line x1="1068" y1="87.2" x2="1264" y2="87.2" stroke="#111" stroke-width=".5"/><text x="1074" y="74.1" font-size="8.5" fill="#555" letter-spacing=".8">ÂNGULO DA LANÇA</text><text id="pl-dv2" x="1074" y="84.1" font-size="11.5" font-weight="700" fill="#1E3BD8">—</text><text id="pl-dv2v" display="none">62,5°</text><line x1="1068" y1="109.8" x2="1264" y2="109.8" stroke="#111" stroke-width=".5"/><text x="1074" y="96.7" font-size="8.5" fill="#555" letter-spacing=".8">RAIO DE OPERAÇÃO</text><text id="pl-dv3" x="1074" y="106.7" font-size="11.5" font-weight="700" fill="#1E3BD8">—</text><text id="pl-dv3v" display="none">12,0 m</text><line x1="1068" y1="132.4" x2="1264" y2="132.4" stroke="#111" stroke-width=".5"/><text x="1074" y="119.3" font-size="8.5" fill="#555" letter-spacing=".8">PATOLAS</text><text id="pl-dv4" x="1074" y="129.3" font-size="11.5" font-weight="700" fill="#1E3BD8">—</text><text id="pl-dv4v" display="none">EXTENSÃO TOTAL</text><line x1="1068" y1="155.0" x2="1264" y2="155.0" stroke="#111" stroke-width=".5"/><text x="1074" y="141.9" font-size="8.5" fill="#555" letter-spacing=".8">ACESSÓRIOS</text><text id="pl-dv5" x="1074" y="151.9" font-size="11.5" font-weight="700" fill="#1E3BD8">—</text><text id="pl-dv5v" display="none">2 CINTAS + QUEBRA-CANTO</text><line x1="1068" y1="177.6" x2="1264" y2="177.6" stroke="#111" stroke-width=".5"/><text x="1074" y="164.5" font-size="8.5" fill="#555" letter-spacing=".8">ÁREA DE TRABALHO</text><text id="pl-dv6" x="1074" y="174.5" font-size="11.5" font-weight="700" fill="#1E3BD8">—</text><text id="pl-dv6v" display="none">ISOLADA E SINALIZADA</text></g>
+          <g id="pl-legend" transform="translate(366 -2)" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif" font-size="10" fill="#111" opacity="0"><rect x="1068" y="188" width="146" height="148" fill="#fff" stroke="#111" stroke-width="1.2"/><rect x="1068" y="188" width="146" height="20" fill="#111"/><text x="1076" y="202" fill="#fff" font-weight="700" letter-spacing="1.2">LEGENDA</text><g id="pl-lg1" opacity=".25"><circle cx="1082" cy="217.0" r="7" fill="#fff" stroke="#111"/><text x="1082" y="220.5" text-anchor="middle" font-size="9" font-weight="700">1</text><text x="1096" y="220.8">CARRETA PRANCHA</text></g><g id="pl-lg2" opacity=".25"><circle cx="1082" cy="235.2" r="7" fill="#fff" stroke="#111"/><text x="1082" y="238.7" text-anchor="middle" font-size="9" font-weight="700">2</text><text x="1096" y="239.0">GUINDASTE TELESCÓPICO</text></g><g id="pl-lg3" opacity=".25"><circle cx="1082" cy="253.4" r="7" fill="#fff" stroke="#111"/><text x="1082" y="256.9" text-anchor="middle" font-size="9" font-weight="700">3</text><text x="1096" y="257.2">PATOLA SOBRE CALÇO</text></g><g id="pl-lg4" opacity=".25"><circle cx="1082" cy="271.6" r="7" fill="#fff" stroke="#111"/><text x="1082" y="275.1" text-anchor="middle" font-size="9" font-weight="700">4</text><text x="1096" y="275.4">LANÇA 27,2 m</text></g><g id="pl-lg5" opacity=".25"><circle cx="1082" cy="289.8" r="7" fill="#fff" stroke="#111"/><text x="1082" y="293.3" text-anchor="middle" font-size="9" font-weight="700">5</text><text x="1096" y="293.6">CINTAS DE IÇAMENTO</text></g><g id="pl-lg6" opacity=".25"><circle cx="1082" cy="308.0" r="7" fill="#fff" stroke="#111"/><text x="1082" y="311.5" text-anchor="middle" font-size="9" font-weight="700">6</text><text x="1096" y="311.8">CARGA (CG)</text></g><g id="pl-lg7" opacity=".25"><circle cx="1082" cy="326.2" r="7" fill="#fff" stroke="#111"/><text x="1082" y="329.7" text-anchor="middle" font-size="9" font-weight="700">7</text><text x="1096" y="330.0">BASE DE APOIO</text></g></g>
+          <g id="pl-scale" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif" font-size="10" fill="#111" opacity="0"><rect x="40.0" y="560" width="65.1" height="6" fill="#111" stroke="#111" stroke-width=".8"/><text x="40.0" y="580" text-anchor="middle">0</text><rect x="105.1" y="560" width="65.1" height="6" fill="#fff" stroke="#111" stroke-width=".8"/><text x="105.1" y="580" text-anchor="middle">5</text><rect x="170.1" y="560" width="65.1" height="6" fill="#111" stroke="#111" stroke-width=".8"/><text x="170.1" y="580" text-anchor="middle">10</text><rect x="235.2" y="560" width="65.1" height="6" fill="#fff" stroke="#111" stroke-width=".8"/><text x="235.2" y="580" text-anchor="middle">15</text><text x="300.3" y="580" text-anchor="middle">20 m</text><text x="40" y="553" font-size="9" letter-spacing="1">ESCALA GRÁFICA</text></g>
+          <!-- carimbo -->
+          <g id="pl-stamp" font-family="Roboto Condensed,Arial Narrow,Arial,sans-serif" fill="#111">
+            <rect x="1250" y="516" width="330" height="74" fill="#fff" stroke="#111" stroke-width="1.6"/>
+            <line x1="1250" y1="536" x2="1580" y2="536" stroke="#111"/><line x1="1250" y1="556" x2="1580" y2="556" stroke="#111"/><line x1="1250" y1="573" x2="1580" y2="573" stroke="#111" stroke-width=".7"/>
+            <line x1="1360" y1="556" x2="1360" y2="590" stroke="#111" stroke-width=".7"/><line x1="1450" y1="556" x2="1450" y2="590" stroke="#111" stroke-width=".7"/><line x1="1520" y1="556" x2="1520" y2="590" stroke="#111" stroke-width=".7"/>
+            <text x="1258" y="531" font-size="11" font-weight="700" letter-spacing=".6">PREMIUM LOCAÇÃO · GUINDASTES E TRANSPORTES</text>
+            <text id="pl-etapa" x="1258" y="551" font-size="10.5" font-weight="700" fill="#1E3BD8" letter-spacing=".8">ETAPA 01/08 · LEVANTAMENTO DO LOCAL</text>
+            <text x="1256" y="565" font-size="7.5" fill="#666" letter-spacing=".6">DESENHO</text><text x="1256" y="585" font-size="11" font-weight="700">PL-IÇ-001</text>
+            <text x="1366" y="565" font-size="7.5" fill="#666" letter-spacing=".6">ESCALA</text><text x="1366" y="585" font-size="11" font-weight="700">1:200</text>
+            <text x="1456" y="565" font-size="7.5" fill="#666" letter-spacing=".6">UNIDADE</text><text x="1456" y="585" font-size="11" font-weight="700">mm</text>
+            <text x="1526" y="565" font-size="7.5" fill="#666" letter-spacing=".6">FOLHA · REV.</text><text x="1526" y="585" font-size="11" font-weight="700">01/01 · 00</text>
+          </g>
+
+          <!-- cursor CAD -->
+          <g id="pl-cur" pointer-events="none">
+            <line id="pl-curh" x1="0" y1="0" x2="1600" y2="0" stroke="#1E3BD8" stroke-opacity=".16" stroke-width="1"/>
+            <line id="pl-curv" x1="0" y1="0" x2="0" y2="600" stroke="#1E3BD8" stroke-opacity=".16" stroke-width="1"/>
+            <rect id="pl-curb" x="-6" y="-6" width="12" height="12" fill="none" stroke="#111" stroke-width="1.4"/>
+            <g id="pl-tip" font-family="Roboto Mono,Consolas,Menlo,monospace" font-size="12">
+              <rect id="pl-tipbg" x="0" y="0" width="150" height="20" fill="#fff" stroke="#1E3BD8" stroke-opacity=".5"/>
+              <text id="pl-tiptx" x="0" y="0" fill="#1E3BD8">X 0 · Y 0</text>
+            </g>
+          </g>
+
+          <rect id="pl-veil" width="1600" height="600" fill="#fff" opacity="0"/>
+
+          <!-- barra de comando -->
+          <rect x="0" y="600" width="1600" height="60" fill="#1F2329"/>
+          <rect x="0" y="600" width="1600" height="3" fill="#2E343C"/>
+          <rect id="pl-prog" x="0" y="600" width="0" height="3" fill="#5BBCCF"/>
+          <g font-family="Roboto Mono,Consolas,Menlo,monospace" font-size="16">
+            <text x="20" y="626" fill="#8A93A0">Comando:</text>
+            <text id="pl-cmd" x="104" y="626" fill="#E8ECF1"></text>
+            <text id="pl-cmd2" x="20" y="648" fill="#5BBCCF" font-size="13"></text>
+            <text id="pl-coord" x="1580" y="626" fill="#8A93A0" text-anchor="end">X 0,0  Y 0,0</text>
+            <text x="1580" y="648" fill="#5E6773" text-anchor="end" font-size="12">CAMADA: IÇAMENTO · ORTO · SNAP</text>
+          </g>
+        </svg>
+      </div>
+      <ol class="pl-steps up" id="pl-steps">
+        <li>Levantamento do local</li><li>Chegada da carga</li><li>Posicionamento do guindaste</li><li>Patolamento</li><li>Configuração da lança</li><li>Amarração e segurança</li><li>Içamento</li><li>Posicionamento na base</li>
+      </ol>
+    </div>
+  </section>
+
+  <section data-page="icamento" class="ic-op" aria-label="Nossos operadores">
+    <div class="container ic-op-wrap">
+      <div class="ic-num up"><b>+30</b><span>anos de experiência dos nossos operadores</span></div>
+      <div class="up ri-txt">
+        <span class="title">Nossos operadores</span>
+        <h2 class="subtitle">Experiência que faz a diferença no ar</h2>
+        <p>No içamento, a máquina é só metade da operação. A outra metade é quem está no comando. Por isso, a Premium conta com operadores que somam mais de 30 anos de experiência em içamento e movimentação de cargas indivisíveis, profissionais reconhecidos no mercado pela precisão e pela calma em operações de alta responsabilidade.</p>
+        <p>São profissionais altamente capacitados e treinados constantemente, com certificações em dia e domínio das técnicas de içamento, sinalização e amarração de cargas. Essa experiência permite antecipar riscos, ler as condições do terreno e do vento e tomar decisões seguras em cada segundo da operação.</p>
+        <ul class="ic-check"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Mais de 30 anos de experiência em içamento</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Treinamentos e reciclagens constantes</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Certificações NR-11, NR-12 e NR-35 em dia</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Domínio de cargas leves às de grande porte</span></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="icamento" class="ri-quando" aria-label="Expertise">
+    <div class="container">
+      <span class="title up">Expertise</span>
+      <h2 class="subtitle up">Tipos de içamento que realizamos</h2>
+      <p class="ri-sub up" style="max-width:780px">Da carga simples à operação mais complexa, nossa equipe tem experiência nos mais diferentes cenários de içamento.</p>
+      <div class="ri-grid"><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v10"/><path d="M8 9l4 4 4-4"/><rect x="7" y="15" width="10" height="6"/></svg></span><h3>Içamento convencional</h3><p>Carga, descarga e posicionamento de equipamentos, estruturas e materiais pesados.</p></article><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V5l5 3"/><path d="M19 21V5l-5 3"/><rect x="8" y="13" width="8" height="4"/></svg></span><h3>Içamento em conjunto</h3><p>Operações com dois guindastes trabalhando de forma sincronizada para cargas longas ou de grande porte.</p></article><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20V8l6-4 6 4v12"/><path d="M6 12h12M6 16h12"/></svg></span><h3>Montagem de estruturas</h3><p>Vigas, passarelas, torres, silos e estruturas metálicas montadas peça por peça com precisão.</p></article><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><h3>Içamento em subestações</h3><p>Transformadores e acessórios içados em ambientes energizados, com equipe preparada para o setor elétrico.</p></article><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M12 3v10"/><path d="M8 7h8"/></svg></span><h3>Operações portuárias</h3><p>Apoio a embarcações e movimentação de cargas em cais e áreas portuárias.</p></article><article class="ri-card up"><span class="t-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="10" width="6" height="11"/><rect x="11" y="6" width="4" height="15"/><rect x="17" y="13" width="4" height="8"/></svg></span><h3>Indústrias e usinas</h3><p>Manutenção de correias, britadores, tanques e equipamentos em plantas em operação.</p></article></div>
+    </div>
+  </section>
+
+  <section data-page="icamento" class="sv-etapas" aria-label="Como trabalhamos">
+    <div class="container">
+      <span class="title up">Passo a passo</span>
+      <h2 class="subtitle up">Como trabalhamos</h2>
+      <ol class="sv-grid"><li class="up"><span class="sv-n">01</span><h3>Avaliação da carga e do local</h3><p>Levantamos peso, dimensões, pontos de içamento e condições do terreno.</p></li><li class="up"><span class="sv-n">02</span><h3>Plano de içamento</h3><p>Definimos o guindaste ou munck, o raio, os acessórios e a sequência da operação.</p></li><li class="up"><span class="sv-n">03</span><h3>Patolamento e isolamento</h3><p>Apoiamos o equipamento com segurança e isolamos a área de trabalho.</p></li><li class="up"><span class="sv-n">04</span><h3>Içamento e posicionamento</h3><p>Executamos a operação com comunicação constante entre operador e equipe de solo.</p></li></ol>
+    </div>
+  </section>
+
+  <section data-page="icamento" class="ri-seg" aria-label="Segurança no içamento">
+    <div class="container ri-2col">
+      <div class="up">
+        <span class="title">Segurança</span>
+        <h2 class="subtitle">Segurança em cada içamento</h2>
+        <p class="ri-sub">Uma carga suspensa não admite improviso. Cada içamento da Premium segue procedimentos rigorosos, do cálculo da carga à liberação da área, para proteger pessoas, equipamentos e as instalações do cliente.</p>
+      </div>
+      <ul class="ri-seg-list up"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Plano de içamento elaborado antes de cada operação, com peso da carga, raio de trabalho e capacidade do equipamento.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Escolha do guindaste ou munck com margem de segurança, nunca operando no limite da capacidade.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Patolamento sobre calços e avaliação do solo para garantir a estabilidade do equipamento.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Inspeção de cintas, cabos, manilhas e acessórios antes de cada uso.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Área isolada e sinalizada: nenhuma carga passa sobre pessoas.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Comunicação constante entre operador e equipe de solo durante todo o içamento.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Avaliação do vento e das condições do tempo antes e durante a operação.</span></li></ul>
+    </div>
+  </section>
+
+  <section data-page="icamento" class="ri-van" aria-label="Comprometimento">
+    <div class="container">
+      <span class="title up">Comprometimento</span>
+      <h2 class="subtitle up">Nosso compromisso com cada cliente</h2>
+      <div class="ri-grid"><article class="ri-card up"><h3>Pontualidade</h3><p>Chegamos no horário combinado, com equipamento revisado e equipe pronta para começar.</p></article><article class="ri-card up"><h3>Responsabilidade</h3><p>Assumimos a operação do começo ao fim e respondemos por cada etapa do serviço.</p></article><article class="ri-card up"><h3>Transparência</h3><p>Plano, prazo e preço claros antes do início, sem surpresas para o cliente.</p></article><article class="ri-card up"><h3>Cuidado com o patrimônio</h3><p>Respeito às instalações do cliente, ao equipamento içado e ao entorno da obra.</p></article><article class="ri-card up"><h3>Disponibilidade</h3><p>Atendimento 24 horas para emergências e mobilização rápida quando o cliente precisa.</p></article><article class="ri-card up"><h3>Satisfação total</h3><p>Só consideramos o serviço concluído quando a carga está no lugar certo e o cliente satisfeito.</p></article></div>
+    </div>
+  </section>
+
+  <section data-page="icamento" class="sv-onde" aria-label="Onde atuamos">
+    <div class="container sv-onde-wrap">
+      <div class="up">
+        <span class="title">Onde atuamos</span>
+        <h2 class="subtitle">Para quem fazemos</h2>
+        <ul class="sv-tags"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Indústrias</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Portos</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Usinas de britagem</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Construtoras</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Obras de infraestrutura</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Parques de tanques e silos</li></ul>
+        <p class="sv-dest">Operações com um ou dois guindastes, inclusive içamentos sincronizados para cargas de grande porte.</p>
+      </div>
+      <div class="sv-fotos"><figure class="up"><img src="n/obra-dois-guindastes.jpg" alt="Operação com dois guindastes" loading="lazy"><figcaption>Operação com dois guindastes</figcaption></figure><figure class="up"><img src="n/obra-viaduto.jpg" alt="Içamento de passarela metálica" loading="lazy"><figcaption>Içamento de passarela metálica</figcaption></figure></div>
+    </div>
+  </section>
+
+  <section data-page="icamento" class="p-faq ri-faq" aria-label="Dúvidas sobre içamento">
+    <div class="container p-faq-wrap">
+      <h2 class="subtitle up">Dúvidas sobre içamento de cargas</h2>
+      <div class="up"><details class="p-faq-item"><summary>Qual a diferença entre guindaste e munck?<span aria-hidden="true"></span></summary><p>O caminhão munck tem um guindaste articulado montado sobre o próprio caminhão e é ideal para cargas menores, com agilidade para carregar, descarregar e posicionar. O guindaste é indicado para cargas mais pesadas, maiores alturas e raios de trabalho mais longos. Na visita técnica indicamos o equipamento certo para cada caso.</p></details><details class="p-faq-item"><summary>O operador vai junto com o equipamento?<span aria-hidden="true"></span></summary><p>Sim. Todos os nossos equipamentos são locados com operador experiente e certificado, que conhece o equipamento e é responsável pela operação.</p></details><details class="p-faq-item"><summary>O que é o plano de içamento?<span aria-hidden="true"></span></summary><p>É o estudo feito antes da operação que define o peso da carga, o raio de trabalho, o equipamento, os acessórios e a sequência do içamento, garantindo que tudo seja executado com segurança.</p></details><details class="p-faq-item"><summary>Vocês fazem içamentos com dois guindastes?<span aria-hidden="true"></span></summary><p>Sim. Realizamos içamentos em conjunto, com dois guindastes trabalhando de forma sincronizada, para cargas longas ou de grande porte.</p></details></div>
+    </div>
+  </section>
+
+  <section data-page="icamento" class="sv-outros" aria-label="Outros serviços">
+    <div class="container sv-outros-wrap up">
+      <h2>Conheça também</h2>
+      <div class="sv-outros-links"><a href="#remocao-industrial">Remoção industrial<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#transporte">Transporte de cargas indivisíveis<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+  </section>
+
+  <section data-page="transporte" class="sv-hero" aria-label="Transporte de cargas indivisíveis">
+    <div class="container sv-hero-wrap">
+      <div class="up">
+        <span class="title"><a href="#servicos">Serviços</a> · Transporte de cargas indivisíveis</span>
+        <h1 class="p-h1">Transporte de cargas indivisíveis</h1>
+        <p class="sv-lead">Carretas extensíveis, pranchas e cavalos mecânicos de frota própria para levar cargas especiais com segurança, da origem até a base de instalação.</p>
+        <p>Cargas indivisíveis não podem ser desmontadas para viajar: transformadores, subestações móveis, radiadores, estruturas e equipamentos industriais precisam de veículo, rota e amarração pensados para cada peça.</p><p>Planejamos o percurso, preparamos a carga e acompanhamos o transporte até a descarga, integrando quando necessário o içamento e a remoção no destino.</p>
+        <div class="sv-btns"><a class="boxed-btn" href="https://wa.me/5598991711704" target="_blank" rel="noopener">Solicitar orçamento</a></div>
+      </div>
+      <figure class="sv-foto up"><img src="n/obra-carga-indivisivel.jpg" alt="Transformador transportado em carreta extensível" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section data-page="transporte" class="sv-etapas" aria-label="Como trabalhamos">
+    <div class="container">
+      <span class="title up">Passo a passo</span>
+      <h2 class="subtitle up">Como trabalhamos</h2>
+      <ol class="sv-grid"><li class="up"><span class="sv-n">01</span><h3>Estudo da carga e da rota</h3><p>Avaliamos dimensões, peso e o melhor percurso até o destino.</p></li><li class="up"><span class="sv-n">02</span><h3>Escolha do veículo</h3><p>Definimos carreta extensível, prancha ou carroceria e o cavalo mecânico adequado.</p></li><li class="up"><span class="sv-n">03</span><h3>Preparação e amarração</h3><p>Calçamos, amarramos e sinalizamos a carga para a viagem.</p></li><li class="up"><span class="sv-n">04</span><h3>Transporte e entrega</h3><p>Levamos a carga com acompanhamento até a descarga no ponto de instalação.</p></li></ol>
+    </div>
+  </section>
+
+  <section data-page="transporte" class="sv-onde" aria-label="Onde atuamos">
+    <div class="container sv-onde-wrap">
+      <div class="up">
+        <span class="title">Onde atuamos</span>
+        <h2 class="subtitle">Para quem fazemos</h2>
+        <ul class="sv-tags"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Transformadores</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Subestações móveis</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Radiadores e acessórios</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Equipamentos industriais</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Estruturas metálicas</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Mobilização de guindastes</li></ul>
+        <p class="sv-dest">Solução completa: transportamos, içamos e posicionamos a carga com uma só equipe.</p>
+      </div>
+      <div class="sv-fotos"><figure class="up"><img src="n/g-radiadores-carreta.jpg" alt="Radiadores amarrados na prancha" loading="lazy"><figcaption>Radiadores amarrados na prancha</figcaption></figure><figure class="up"><img src="n/g-trafo-conservador.jpg" alt="Transformador e conservador na prancha" loading="lazy"><figcaption>Transformador e conservador na prancha</figcaption></figure></div>
+    </div>
+  </section>
+
+  <section data-page="transporte" class="sv-outros" aria-label="Outros serviços">
+    <div class="container sv-outros-wrap up">
+      <h2>Conheça também</h2>
+      <div class="sv-outros-links"><a href="#remocao-industrial">Remoção industrial<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#icamento">Içamento de cargas<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+  </section>
+
+  <section data-page="frota" class="sv-hero" aria-label="Locação de guindastes">
+    <div class="container sv-hero-wrap">
+      <div class="up">
+        <span class="title"><a href="#frota">Locação</a> · Equipamentos</span>
+        <h1 class="p-h1">Locação de equipamentos</h1>
+        <p class="sv-lead">Guindastes, caminhões munck, cavalinhos e pranchas de frota própria, sempre com operador experiente e planejamento técnico.</p>
+        <p>Contamos com guindastes modernos, com capacidade entre 30 e 80 toneladas, preparados para operações industriais, portuárias, logísticas e estruturais de diferentes níveis de complexidade. A frota é própria, revisada antes de cada mobilização e operada por profissionais com mais de 30 anos de experiência em içamento.</p>
+        <p>Do içamento pontual à locação mensal, o cliente recebe muito mais que uma máquina: recebe a solução completa, com plano de içamento, equipe certificada e a responsabilidade da Premium em cada etapa.</p>
+        <div class="sv-btns"><a class="boxed-btn" href="https://wa.me/5598991711704" target="_blank" rel="noopener">Solicitar orçamento</a></div>
+      </div>
+      <figure class="sv-foto fr-hero up"><img src="n/g-guindaste-porto.jpg" alt="Guindaste da Premium em operação no cais do porto" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section data-page="frota" class="eq" aria-label="Equipamentos">
+    <div class="container">
+      <article class="eq-row" id="eq-guindastes">
+        <figure class="eq-img up"><img src="n/obra-estrutura-tanques.jpg" alt="Dois guindastes telescópicos de grande porte com lanças estendidas em obra" loading="lazy"><span class="eq-n">01</span></figure>
+        <div class="eq-tx up"><span class="title">Equipamentos</span><h2 class="subtitle">Guindastes</h2><p>Guindastes telescópicos modernos, com capacidade entre 30 e 80 toneladas, para içar, montar e posicionar cargas pesadas em indústrias, portos, usinas, subestações e obras de infraestrutura. Nossa frota nova conta com guindaste XCMG de 80 toneladas, ano 2021.</p><ul class="eq-list"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Capacidade de 30 a 80 toneladas</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Locação com operador experiente e certificado</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Plano de içamento antes de cada operação</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Içamentos simples ou em conjunto com dois guindastes</span></li></ul><a class="saiba" href="https://wa.me/5598991711704" target="_blank" rel="noopener">Solicitar orçamento de guindastes<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="eq-row eq-rev" id="eq-munck">
+        <figure class="eq-img up"><img src="n/g-gerador-subestacao.jpg" alt="Caminhão munck descarregando gerador em subestação, com área isolada" loading="lazy"><span class="eq-n">02</span></figure>
+        <div class="eq-tx up"><span class="title">Equipamentos</span><h2 class="subtitle">Caminhão munck</h2><p>Caminhão com guindaste articulado montado sobre o próprio chassi, que une transporte e içamento em um só equipamento. Ideal para carga, descarga e posicionamento de equipamentos, acessórios e materiais, inclusive dentro de subestações. Nossa frota nova conta com munck de 45 toneladas.</p><ul class="eq-list"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Transporta e iça com o mesmo veículo</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Agilidade em espaços restritos</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Apoio às operações de remoção industrial</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Operador experiente e certificado</span></li></ul><a class="saiba" href="https://wa.me/5598991711704" target="_blank" rel="noopener">Solicitar orçamento de caminhão munck<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="eq-row" id="eq-cavalinhos">
+        <figure class="eq-img up"><img src="m/cavalo-volvo.jpg" alt="Cavalo mecânico da frota Premium no pátio" loading="lazy"><span class="eq-n">03</span></figure>
+        <div class="eq-tx up"><span class="title">Equipamentos</span><h2 class="subtitle">Cavalinhos</h2><p>Cavalos mecânicos de frota própria, preparados para tracionar pranchas e carretas com cargas pesadas e indivisíveis. São a força por trás do transporte de transformadores, máquinas e estruturas, da origem até o ponto de instalação.</p><ul class="eq-list"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Tração para cargas pesadas e especiais</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Frota própria com manutenção preventiva</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Motoristas experientes em cargas especiais</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Atendimento em todo o Brasil</span></li></ul><a class="saiba" href="https://wa.me/5598991711704" target="_blank" rel="noopener">Solicitar orçamento de cavalinhos<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="eq-row eq-rev" id="eq-pranchas">
+        <figure class="eq-img up"><img src="n/trafo-carreta.jpg" alt="Prancha completa com transformador, tracionada por cavalo mecânico" loading="lazy"><span class="eq-n">04</span></figure>
+        <div class="eq-tx up"><span class="title">Equipamentos</span><h2 class="subtitle">Pranchas</h2><p>Pranchas e carretas extensíveis para o transporte de cargas indivisíveis de 1 a 60 toneladas, como transformadores, subestações móveis, radiadores e equipamentos industriais. A carga é calçada, amarrada e sinalizada para viajar com total segurança.</p><ul class="eq-list"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Cargas indivisíveis de 1 a 60 toneladas</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Pranchas e carretas extensíveis</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Amarração e sinalização da carga</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Integração com içamento e remoção no destino</span></li></ul><a class="saiba" href="https://wa.me/5598991711704" target="_blank" rel="noopener">Solicitar orçamento de pranchas<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <section data-page="frota" class="ri-van" aria-label="Modalidades de locação">
+    <div class="container">
+      <span class="title up">Modalidades</span>
+      <h2 class="subtitle up">Como você pode contratar</h2>
+      <div class="ri-grid"><article class="ri-card up"><h3>Locação spot</h3><p>Para operações pontuais: o equipamento vai até a obra, executa o serviço e é desmobilizado ao final.</p></article><article class="ri-card up"><h3>Locação mensal</h3><p>Para obras e plantas com demanda contínua: equipamento e operador à disposição durante todo o contrato.</p></article><article class="ri-card up"><h3>Equipe completa</h3><p>Além do equipamento, a equipe técnica da Premium planeja e executa a operação inteira.</p></article></div>
+    </div>
+  </section>
+
+  <section data-page="frota" class="ri-seg" aria-label="Por que alugar com a Premium">
+    <div class="container ri-2col">
+      <div class="up">
+        <span class="title">Diferenciais</span>
+        <h2 class="subtitle">Por que alugar com a Premium</h2>
+        <p class="ri-sub">Não alugamos só a máquina. Entregamos a operação com segurança, planejamento e quem sabe exatamente o que está fazendo.</p>
+      </div>
+      <ul class="ri-seg-list up"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Todos os equipamentos com operador experiente e certificado</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Plano de içamento elaborado antes de cada operação</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Manutenção preventiva e frota revisada antes de cada mobilização</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Atendimento 24 horas para emergências</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Bases em São Luís e Minas Gerais, com atendimento em todo o Brasil</span></li></ul>
+    </div>
+  </section>
+
+  <section data-page="frota" class="sv-outros" aria-label="Serviços">
+    <div class="container sv-outros-wrap up">
+      <h2>Conheça nossos serviços</h2>
+      <div class="sv-outros-links"><a href="#remocao-industrial">Remoção industrial<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#icamento">Içamento de cargas<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#transporte">Transporte de cargas<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+  </section>
+
+  <section data-page="servicos" class="service-section" id="s-servicos">
     <div class="container">
       <span class="title up">Energia, subestações, siderúrgicas, metalúrgicas, portos, construtoras, indústrias e obras de infraestrutura</span>
       <h2 class="subtitle up">Nas áreas</h2>
@@ -284,11 +1335,7 @@ footer .logo img{height:70px;margin-bottom:16px}
     </div>
   </section>
 
-  <div class="video-full">
-    <video src="video-guindaste-2.mp4" poster="video-guindaste-2.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo da frota da Premium Locação"></video>
-  </div>
-
-  <section class="about" id="sobre">
+  <section data-page="sobre" class="about" id="s-sobre">
     <div class="container">
       <div class="up">
         <span class="title">Nós nunca</span>
@@ -306,7 +1353,7 @@ footer .logo img{height:70px;margin-bottom:16px}
     </div>
   </section>
 
-  <section class="fala" aria-label="Palavra da fundadora">
+  <section data-page="sobre" class="fala" aria-label="Palavra da fundadora">
     <div class="container">
       <div class="fala-head up">
         <span class="title">Palavra da fundadora</span>
@@ -320,21 +1367,21 @@ footer .logo img{height:70px;margin-bottom:16px}
     </div>
   </section>
 
-  <section class="carousel" aria-label="Fotos de obras e frota">
+  <section data-page="sobre" class="carousel" aria-label="Fotos de obras e frota">
     <div class="track" id="track">
-      <figure><img src="trafo-weg.jpg" alt="Transformador posicionado em subestação" loading="lazy"></figure>
-      <figure><img src="guindaste-xcmg.jpg" alt="Guindaste da frota" loading="lazy"></figure>
-      <figure><img src="frota-guindaste-amarelo.jpg" alt="Guindaste amarelo da Premium Locação" loading="lazy"></figure>
-      <figure><img src="trafo-macacos.jpg" alt="Transformador sobre macacos hidráulicos" loading="lazy"></figure>
-      <figure><img src="munck-2426.jpg" alt="Caminhão munck" loading="lazy"></figure>
-      <figure><img src="frota-guindaste-vermelho.jpg" alt="Guindaste com lança estendida" loading="lazy"></figure>
-      <figure><img src="trafo-subestacao.jpg" alt="Remoção de transformador em subestação" loading="lazy"></figure>
-      <figure><img src="cavalo-volvo.jpg" alt="Cavalo mecânico" loading="lazy"></figure>
-      <figure><img src="carroceria.jpg" alt="Caminhão carroceria" loading="lazy"></figure>
+      <figure><img src="n/g-trafo-dormentes.jpg" alt="Transformador sobre dormentes durante remoção industrial" loading="lazy"></figure>
+      <figure><img src="m/guindaste-xcmg.jpg" alt="Guindaste da frota" loading="lazy"></figure>
+      <figure><img src="n/frota-guindaste-amarelo.jpg" alt="Guindaste amarelo da Premium Locação" loading="lazy"></figure>
+      <figure><img src="n/remocao-subestacao.jpg" alt="Deslizamento de transformador sobre trilhos em subestação" loading="lazy"></figure>
+      <figure><img src="m/munck-2426.jpg" alt="Caminhão munck" loading="lazy"></figure>
+      <figure><img src="n/frota-guindaste-vermelho.jpg" alt="Guindaste com lança estendida" loading="lazy"></figure>
+      <figure><img src="n/trafo-subestacao.jpg" alt="Remoção de transformador em subestação" loading="lazy"></figure>
+      <figure><img src="n/frota-dois-sany.jpg" alt="Guindastes SANY de grande porte" loading="lazy"></figure>
+      <figure><img src="m/carroceria.jpg" alt="Caminhão carroceria" loading="lazy"></figure>
     </div>
   </section>
 
-  <section class="essence" id="qualidade">
+  <section data-page="qualidade" class="essence" id="s-qualidade">
     <div class="container">
       <div class="up">
         <span class="title">Nossa essência é</span>
@@ -347,20 +1394,20 @@ footer .logo img{height:70px;margin-bottom:16px}
         <p>Oferecer soluções consistentes, de alta qualidade, inovadoras e baseadas em valor para nossos negócios e satisfação total aos nossos clientes.</p>
       </div>
     </div>
-    <div class="container valores">
-      <div class="val-head"><span class="title">O que nos guia</span><h2 class="subtitle">Nossos valores</h2></div>
-      <div class="vals">
-        <div class="val up"><h4>Transparência</h4><p>Relações claras com clientes, parceiros e colaboradores, do orçamento à entrega.</p></div>
-        <div class="val up"><h4>Humildade</h4><p>Ouvir, aprender e evoluir a cada obra, respeitando cada pessoa envolvida.</p></div>
-        <div class="val up"><h4>Segurança</h4><p>Preservar a vida da equipe, dos clientes e da comunidade em todas as operações.</p></div>
-        <div class="val up"><h4>Qualidade</h4><p>Soluções consistentes e resultado acima do padrão em cada serviço.</p></div>
-        <div class="val up"><h4>Inovação</h4><p>Busca constante por novas tecnologias e métodos mais práticos e eficientes.</p></div>
-        <div class="val up"><h4>Satisfação do cliente</h4><p>Atendimento próximo e compromisso total com o resultado de quem nos contrata.</p></div>
+  </section>
+
+  <section data-page="qualidade" class="p-vals" aria-label="Valores">
+    <div class="container">
+      <div class="p-vals-head up">
+        <h2 class="subtitle">Conheça os valores da Premium</h2>
+        <p>Nossos valores são as diretrizes que traduzem aquilo em que acreditamos. Confira quais são eles:</p>
       </div>
+      <div class="p-vals-grid"><article class="p-val up"><span class="p-val-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><h3>A vida em primeiro lugar</h3><p>A segurança das pessoas vem antes de qualquer prazo ou resultado. Nenhuma carga sai do lugar sem plano de içamento, área isolada e equipe certificada.</p></article><article class="p-val up"><span class="p-val-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/></svg></span><h3>Agir com transparência</h3><p>Mantemos relações claras e honestas com clientes, parceiros e colaboradores, do orçamento à entrega.</p></article><article class="p-val up"><span class="p-val-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V10"/><path d="M8 14l4-4 4 4"/><path d="M4 4h16"/></svg></span><h3>Humildade para evoluir</h3><p>Ouvimos, aprendemos e melhoramos a cada obra, respeitando cada pessoa envolvida na operação.</p></article><article class="p-val up"><span class="p-val-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.5c2.8 0 5 2.2 5 5"/></svg></span><h3>Valorizar quem faz a Premium</h3><p>Confiamos nas pessoas. Investimos em treinamento, certificação e no cuidado com a saúde da nossa equipe, porque a máquina se compra e a equipe se constrói.</p></article><article class="p-val up"><span class="p-val-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>Resultado acima do padrão</h3><p>Assumimos a responsabilidade pelo serviço inteiro e entregamos com qualidade, prontidão e satisfação total do cliente.</p></article><article class="p-val up"><span class="p-val-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6.5-7-10.5A7 7 0 0 1 12 3a7 7 0 0 1 7 7.5c0 4-3 7.5-7 10.5z"/><path d="M12 13V8"/><path d="M9.5 10.5L12 13l2.5-2.5"/></svg></span><h3>Respeitar o planeta e as comunidades</h3><p>Planejamos rotas e operações para reduzir impactos e cuidar dos lugares e das pessoas por onde passamos.</p></article></div>
     </div>
   </section>
 
-  <section class="clients-sec" id="clientes">
+
+  <section data-page="clientes" class="clients-sec" id="s-clientes">
     <div class="container">
       <span class="title up">Empresas que confiam na Premium</span>
       <h2 class="subtitle up">Clientes</h2>
@@ -377,45 +1424,45 @@ footer .logo img{height:70px;margin-bottom:16px}
     </div>
   </section>
 
-  <section class="obras-sec" id="servico-em-campo">
+  <section data-page="obras" class="obras-sec" id="s-servico-em-campo">
     <div class="container">
       <span class="title up">Remoção industrial · Içamento de cargas · Transporte de cargas indivisíveis</span>
       <h2 class="subtitle up">Obras realizadas</h2>
     </div>
       <div class="mq"><div class="mq-track mq-a">
-          <figure class="mq-item"><img src="obra-carga-indivisivel.jpg" alt="Transformador em carreta extensível"><figcaption><em>Transporte de cargas indivisíveis</em><b>Transformador em carreta extensível</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-viaduto.jpg" alt="Viaduto rodoviário · vigas metálicas"><figcaption><em>Içamento de cargas</em><b>Viaduto rodoviário · vigas metálicas</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-tanque.jpg" alt="Tanque de armazenamento"><figcaption><em>Içamento de cargas</em><b>Tanque de armazenamento</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-silos-agi.jpg" alt="Montagem de silos e correia transportadora"><figcaption><em>Içamento de cargas</em><b>Montagem de silos e correia transportadora</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-secador-agi.jpg" alt="Montagem de secador de grãos"><figcaption><em>Içamento de cargas</em><b>Montagem de secador de grãos</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-estrutura-tanques.jpg" alt="Estrutura metálica em parque de tanques"><figcaption><em>Içamento de cargas</em><b>Estrutura metálica em parque de tanques</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-dois-guindastes.jpg" alt="Operação com dois guindastes"><figcaption><em>Içamento de cargas</em><b>Operação com dois guindastes</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-guindastes-duplo.jpg" alt="Içamento sincronizado em obra"><figcaption><em>Içamento de cargas</em><b>Içamento sincronizado em obra</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-transporte-guindaste.jpg" alt="Mobilização de guindastes"><figcaption><em>Transporte de cargas indivisíveis</em><b>Mobilização de guindastes</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-mobilizacao.jpg" alt="Guindaste a caminho da obra"><figcaption><em>Frota própria</em><b>Guindaste a caminho da obra</b></figcaption></figure>
-          <figure class="mq-item"><img src="frota-dois-sany.jpg" alt="Guindastes SANY de grande porte"><figcaption><em>Frota própria</em><b>Guindastes SANY de grande porte</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/g-maquina-pesada.jpg" alt="Içamento de máquina pesada" loading="lazy"><figcaption><em>Içamento de cargas</em><b>Içamento de máquina pesada</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/frota-sany-232.jpg" alt="Guindaste SANY em preparação"><figcaption><em>Frota própria</em><b>Guindaste SANY em preparação</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-torres.jpg" alt="Montagem de torres metálicas"><figcaption><em>Içamento de cargas</em><b>Montagem de torres metálicas</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-mobilizacao.jpg" alt="Guindaste a caminho da obra"><figcaption><em>Frota própria</em><b>Guindaste a caminho da obra</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-transporte-guindaste.jpg" alt="Mobilização de guindastes"><figcaption><em>Transporte de cargas indivisíveis</em><b>Mobilização de guindastes</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/g-munck-tanques.jpg" alt="Munck e guindaste em parque de tanques" loading="lazy"><figcaption><em>Içamento de cargas</em><b>Munck e guindaste em parque de tanques</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-secador-agi.jpg" alt="Montagem de secador de grãos"><figcaption><em>Içamento de cargas</em><b>Montagem de secador de grãos</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-guindaste-bombeio.jpg" alt="Instalação de equipamento em campo"><figcaption><em>Içamento de cargas</em><b>Instalação de equipamento em campo</b></figcaption></figure>
       </div></div>
       <div class="mq"><div class="mq-track mq-b">
-          <figure class="mq-item"><img src="obra-subestacao-equipe.jpg" alt="Troca de transformador em subestação"><figcaption><em>Remoção industrial</em><b>Troca de transformador em subestação</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-torres.jpg" alt="Montagem de torres metálicas"><figcaption><em>Içamento de cargas</em><b>Montagem de torres metálicas</b></figcaption></figure>
-          <figure class="mq-item"><img src="remocao-subestacao.jpg" alt="Deslizamento de transformador sobre trilhos"><figcaption><em>Remoção industrial</em><b>Deslizamento de transformador sobre trilhos</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-subestacao-movel.jpg" alt="Subestação móvel sobre carreta"><figcaption><em>Transporte de cargas indivisíveis</em><b>Subestação móvel sobre carreta</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-icamento-estrutura.jpg" alt="Estrutura içada em obra"><figcaption><em>Içamento de cargas</em><b>Estrutura içada em obra</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-trafo-base-subestacao.jpg" alt="Transformador posicionado na base"><figcaption><em>Remoção industrial</em><b>Transformador posicionado na base</b></figcaption></figure>
-          <figure class="mq-item"><img src="munck-equatorial.jpg" alt="Acessórios do transformador com munck"><figcaption><em>Içamento de cargas</em><b>Acessórios do transformador com munck</b></figcaption></figure>
-          <figure class="mq-item"><img src="trafo-carreta.jpg" alt="Transformador em carreta prancha"><figcaption><em>Transporte de cargas indivisíveis</em><b>Transformador em carreta prancha</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-ponte-vigas.jpg" alt="Montagem de vigas metálicas de ponte"><figcaption><em>Içamento de cargas</em><b>Montagem de vigas metálicas de ponte</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-xcmg-poco.jpg" alt="Guindaste XCMG em operação industrial"><figcaption><em>Içamento de cargas</em><b>Guindaste XCMG em operação industrial</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-guindaste-bombeio.jpg" alt="Instalação de equipamento em campo"><figcaption><em>Içamento de cargas</em><b>Instalação de equipamento em campo</b></figcaption></figure>
-          <figure class="mq-item"><img src="frota-sany-232.jpg" alt="Guindaste SANY em preparação"><figcaption><em>Frota própria</em><b>Guindaste SANY em preparação</b></figcaption></figure>
-          <figure class="mq-item"><img src="obra-embarcacao-historica.jpg" alt="Transporte de embarcação"><figcaption><em>Nossa história</em><b>Transporte de embarcação</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/g-trafo-munck.jpg" alt="Içamento de transformador com munck" loading="lazy"><figcaption><em>Remoção industrial</em><b>Içamento de transformador com munck</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/g-trafo-prancha.jpg" alt="Transformador sobre prancha" loading="lazy"><figcaption><em>Transporte de cargas indivisíveis</em><b>Transformador sobre prancha</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-subestacao-equipe.jpg" alt="Troca de transformador em subestação" loading="lazy"><figcaption><em>Remoção industrial</em><b>Troca de transformador em subestação</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/g-correia-transportadora.jpg" alt="Manutenção de correia transportadora" loading="lazy"><figcaption><em>Içamento de cargas</em><b>Manutenção de correia transportadora</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/g-gerador-munck.jpg" alt="Descarga de gerador com munck" loading="lazy"><figcaption><em>Içamento de cargas</em><b>Descarga de gerador com munck</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/g-guindaste-tanques.jpg" alt="Guindaste em parque de tanques" loading="lazy"><figcaption><em>Içamento de cargas</em><b>Guindaste em parque de tanques</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-icamento-estrutura.jpg" alt="Estrutura içada em obra"><figcaption><em>Içamento de cargas</em><b>Estrutura içada em obra</b></figcaption></figure>
+      </div></div>
+      <div class="mq"><div class="mq-track mq-c">
+          <figure class="mq-item"><img src="n/g-patola-cais.jpg" alt="Patolamento seguro no cais" loading="lazy"><figcaption><em>Operação portuária</em><b>Patolamento seguro no cais</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-embarcacao-historica.jpg" alt="Transporte de embarcação"><figcaption><em>Nossa história</em><b>Transporte de embarcação</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/g-embarcacao-porto.jpg" alt="Apoio a embarcação no porto" loading="lazy"><figcaption><em>Operação portuária</em><b>Apoio a embarcação no porto</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-ponte-vigas.jpg" alt="Montagem de vigas metálicas de ponte"><figcaption><em>Içamento de cargas</em><b>Montagem de vigas metálicas de ponte</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-guindastes-duplo.jpg" alt="Içamento sincronizado em obra"><figcaption><em>Içamento de cargas</em><b>Içamento sincronizado em obra</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-tanque.jpg" alt="Tanque de armazenamento"><figcaption><em>Içamento de cargas</em><b>Tanque de armazenamento</b></figcaption></figure>
+          <figure class="mq-item"><img src="n/obra-xcmg-poco.jpg" alt="Guindaste XCMG em operação industrial" loading="lazy"><figcaption><em>Içamento de cargas</em><b>Guindaste XCMG em operação industrial</b></figcaption></figure>
       </div></div>
   </section>
 
-  <section class="destaque" id="obras">
+  <section data-page="obras" class="destaque" id="s-obras">
     <div class="container">
       <div class="d-img up">
-        <img src="alcantara-lancamento.jpg" alt="Lançamento de foguete na torre do Centro de Lançamento de Alcântara" loading="lazy"><span class="d-badge">Alcântara · Maranhão</span><span class="d-cred">Imagem: livro “Centro de Lançamento de Alcântara”</span>
+        <img src="n/alcantara-lancamento.jpg" alt="Lançamento de foguete na torre do Centro de Lançamento de Alcântara" loading="lazy"><span class="d-badge">Alcântara · Maranhão</span><span class="d-cred">Imagem: livro “Centro de Lançamento de Alcântara”</span>
       </div>
       <div class="d-tx up">
         <span class="title">Obra em destaque</span>
@@ -430,7 +1477,7 @@ footer .logo img{height:70px;margin-bottom:16px}
     </div>
   </section>
 
-  <section class="teal">
+  <section data-page="servicos" class="teal">
     <div class="container">
       <div class="up">
         <h2>Premium Locação: a solução completa em guindastes e remoção industrial em todo o Brasil</h2>
@@ -440,11 +1487,11 @@ footer .logo img{height:70px;margin-bottom:16px}
         <p>Bases em São Luís/MA e Minas Gerais, com profissionais e equipamentos próximos a você, garantem agilidade e qualidade no atendimento.</p>
         <p>Mais de 15 anos de experiência e o pioneirismo no Maranhão garantem a expertise da Premium Locação em entregar satisfação total ao cliente.</p>
       </div>
-      <img class="up" src="trafo-base.jpg" alt="Transformador instalado pela Premium Locação" loading="lazy">
+      <img class="up" src="n/trafo-base.jpg" alt="Transformador instalado pela Premium Locação" loading="lazy">
     </div>
   </section>
 
-  <section class="bases-sec" id="contato">
+  <section data-page="contato" class="bases-sec" id="s-contato">
     <div class="container">
       <span class="title up">Onde estamos</span>
       <h2 class="subtitle up">Localizados no Maranhão, atendemos todo o Brasil</h2>
@@ -458,7 +1505,7 @@ footer .logo img{height:70px;margin-bottom:16px}
         </div>
         <div class="bases up">
           <div class="base"><h3>Matriz</h3><p>Av. Santos Dumont, nº 80 · Salas 201 a 204<br>Tirirical · São Luís – MA</p></div>
-          <div class="base"><h3>Base Minas Gerais</h3><p>Minas Gerais</p></div>
+          <div class="base"><h3>Base Minas Gerais</h3><p>Possuímos uma base em Minas Gerais</p></div>
           <div class="base"><h3>Atendimento</h3><p>Todo o Nordeste e todos os estados do Brasil</p></div>
           <div class="base"><h3>Comercial</h3><p><a href="https://wa.me/5598991711704" target="_blank" rel="noopener">(98) 9 9171-1704</a><br><a href="mailto:diretoria@premiumlocacao.com.br">diretoria@<wbr>premiumlocacao.com.br</a></p></div>
         </div>
@@ -470,10 +1517,10 @@ footer .logo img{height:70px;margin-bottom:16px}
 <footer>
   <div class="container">
     <div class="fgrid">
-      <div class="f-brand"><a class="logo" href="#home"><img src="logo-navy.png" alt="Premium Locação — Guindastes e Transportes"></a><p>Remoção industrial, içamento de cargas e transporte de cargas indivisíveis.</p></div>
+      <div class="f-brand"><a class="logo" href="#home"><img src="n/logo-navy.png" alt="Premium Locação — Guindastes e Transportes"></a><p>Remoção industrial, içamento de cargas e transporte de cargas indivisíveis.</p></div>
       <div><h4>Endereço</h4><p>Av. Santos Dumont, nº 80<br>Salas 201, 202, 203 e 204<br>Tirirical · São Luís – MA</p></div>
       <div><h4>Contato comercial</h4><p><a href="mailto:diretoria@premiumlocacao.com.br">diretoria@<wbr>premiumlocacao.com.br</a><br><a href="https://wa.me/5598991711704" target="_blank" rel="noopener">(98) 9 9171-1704</a></p></div>
-      <div><h4>Base de apoio</h4><p>Minas Gerais</p><h4 style="margin-top:18px">Redes sociais</h4><p><a href="https://instagram.com/premiumlocacao" target="_blank" rel="noopener">@premiumlocacao</a></p></div>
+      <div><h4>Base de apoio</h4><p>Minas Gerais</p><h4 style="margin-top:18px">Site e redes</h4><p><a href="https://www.premiumguindastes.com" target="_blank" rel="noopener">premiumguindastes.com</a><br><a href="https://instagram.com/premiumlocacao" target="_blank" rel="noopener">@premiumlocacao</a></p></div>
     </div>
     <div class="copy">© 2026 Premium Locação. Todos os direitos reservados.</div>
   </div>
@@ -490,6 +1537,21 @@ footer .logo img{height:70px;margin-bottom:16px}
   addEventListener('scroll',function(){h.classList.toggle('fix',scrollY>200)},{passive:true});
   b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
   m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+
+  // navegação por segmentos
+  var mapa={home:'home',servicos:'servicos','servico-em-campo':'obras',obras:'obras',sobre:'sobre',proposito:'proposito',transparencia:'transparencia','remocao-industrial':'remocao-industrial',icamento:'icamento',transporte:'transporte',frota:'frota','eq-guindastes':'frota','eq-munck':'frota','eq-cavalinhos':'frota','eq-pranchas':'frota',clientes:'clientes',qualidade:'qualidade',contato:'contato'};
+  var links=[].slice.call(document.querySelectorAll('.menu>li>a'));
+  function abrir(){
+    var id=(location.hash||'#home').slice(1), v=mapa[id]||'home';
+    document.body.setAttribute('data-view',v);
+    [].forEach.call(document.querySelectorAll('[data-page="'+v+'"]'),function(el){el.classList.remove('page-in');void el.offsetWidth;el.classList.add('page-in')});
+    links.forEach(function(a){var t=mapa[a.getAttribute('href').slice(1)];a.classList.toggle('on',t===v||(t==='sobre'&&v==='transparencia')||(a.textContent.trim()==='Locação'&&v==='frota')||(t==='servicos'&&a.textContent.trim()==='Serviços'&&/^(remocao-industrial|icamento|transporte)$/.test(v)))});
+    var alvo=/^eq-/.test(id)?document.getElementById(id):null;
+    if(alvo){setTimeout(function(){var y=alvo.getBoundingClientRect().top+scrollY-110;window.scrollTo(0,y)},60)}else window.scrollTo(0,0);
+    if(document.activeElement&&document.activeElement.blur)document.activeElement.blur();
+    dispatchEvent(new Event('resize'));
+  }
+  addEventListener('hashchange',abrir); if('scrollRestoration' in history)history.scrollRestoration='manual'; abrir(); setTimeout(function(){scrollTo(0,0)},50);
   if(!reduce&&'IntersectionObserver' in window){
     var els=[].slice.call(document.querySelectorAll('.up'));
     els.forEach(function(el){if(el.getBoundingClientRect().top>innerHeight)el.classList.add('wait')});
@@ -532,6 +1594,141 @@ footer .logo img{height:70px;margin-bottom:16px}
     }
     requestAnimationFrame(frame);
   })();
+  // plano de içamento animado (estilo CAD)
+  (function(){
+    var svg=document.getElementById('plano'); if(!svg) return;
+    var $=function(id){return document.getElementById(id)};
+    var T=24, P={x:830,y:402}, F={x:1450,y:398}, MM=27200/354;
+    var steps=[[0,'LEVANTAMENTO DO LOCAL','GRADE  ·  LINHA','Especifique o primeiro ponto do terreno'],[2.8,'CHEGADA DA CARGA','INSERIR BLOCO «CARRETA_PRANCHA»','Carga posicionada na área de trabalho'],[5,'POSICIONAMENTO DO GUINDASTE','INSERIR BLOCO «GUINDASTE»  ·  ALINHAR','Vistas lateral e frontal'],[7.2,'PATOLAMENTO','PATOLAS  ·  EXTENSÃO TOTAL','Sapatas apoiadas sobre calços'],[8.6,'CONFIGURAÇÃO DA LANÇA','GIRAR  ·  ESTICAR  ·  COTAR','Lança 27200 mm  ·  ângulo 62,5°  ·  raio R12000'],[12,'AMARRAÇÃO E SEGURANÇA','CABO  ·  CINTAS  ·  NOTAS','Quebra-canto e interferência elétrica verificados'],[14.4,'IÇAMENTO','ELEVAR CARGA','Movimento lento, gradual e controlado'],[16.6,'POSICIONAMENTO NA BASE','POSICIONAR  ·  VERIFICAR','Carga assentada na base  ·  verificação concluída']];
+    var lis=[].slice.call(document.querySelectorAll('#pl-steps li'));
+    var drs=[];
+    function addDr(e,a,b){var L=400;try{L=e.getTotalLength()}catch(x){}e.style.strokeDasharray=L+' '+L;drs.push({e:e,L:L,a:a,b:b})}
+    [].forEach.call(svg.querySelectorAll('.dr'),function(e){addDr(e,+e.dataset.a,+e.dataset.b)});
+    [].forEach.call(svg.querySelectorAll('.dr-g'),function(g){[].forEach.call(g.children,function(e,i){var n=g.children.length,a=+g.dataset.a,b=+g.dataset.b,s=(b-a)*.5;addDr(e,a+s*i/n,a+s*i/n+(b-a)*.5)})});
+    var fds=[].slice.call(svg.querySelectorAll('.fd')).map(function(e){return {e:e,a:+e.dataset.a,b:+e.dataset.b}});
+    (function(){var g=$('pl-grid'),pm=354/27.2,s='';
+      function grid(x0,x1,ox){
+        for(var m=0;;m++){var x=ox+m*pm;if(x>x1)break;var maj=m%5===0;s+='<line x1="'+x.toFixed(1)+'" y1="20" x2="'+x.toFixed(1)+'" y2="590" stroke="#1E3BD8" stroke-opacity="'+(maj?.13:.045)+'" stroke-width="1"/>';if(maj&&m>0)s+='<text x="'+x.toFixed(1)+'" y="32" text-anchor="middle" font-size="11" fill="#1E3BD8" fill-opacity=".45">'+m+' m</text>'}
+        for(var k=0;;k++){var y=470-k*pm;if(y<20)break;var mj=k%5===0;s+='<line x1="'+x0+'" y1="'+y.toFixed(1)+'" x2="'+x1+'" y2="'+y.toFixed(1)+'" stroke="#1E3BD8" stroke-opacity="'+(mj?.13:.045)+'" stroke-width="1"/>';if(mj&&k>0)s+='<text x="'+(x1-6)+'" y="'+(y-4).toFixed(1)+'" text-anchor="end" font-size="11" fill="#1E3BD8" fill-opacity=".45">'+k+' m</text>'}
+        for(var k2=1;;k2++){var y2=470+k2*pm;if(y2>590)break;s+='<line x1="'+x0+'" y1="'+y2.toFixed(1)+'" x2="'+x1+'" y2="'+y2.toFixed(1)+'" stroke="#1E3BD8" stroke-opacity=".045" stroke-width="1"/>'}
+      }
+      grid(10,1050,20);grid(1050,1590,1060);g.innerHTML=s})();
+    function cl(v){return v<0?0:v>1?1:v}
+    function ease(v){return v<.5?4*v*v*v:1-Math.pow(-2*v+2,3)/2}
+    function p(t,a,b){return ease(cl((t-a)/(b-a)))}
+    function op(id,v){$(id).setAttribute('opacity',(+v).toFixed(3))}
+    function f1(v){return v.toFixed(1)}
+    function boomGeom(piv,A,L){var dx=-Math.cos(A),dy=-Math.sin(A);return {dx:dx,dy:dy,nx:-dy,ny:dx,tip:{x:piv.x+dx*L,y:piv.y+dy*L},L:L}}
+    function drawBoom(piv,g,shapeId,secId,inId){
+      function pt(f,w){return f1(piv.x+g.dx*g.L*f+g.nx*w)+','+f1(piv.y+g.dy*g.L*f+g.ny*w)}
+      $(shapeId).setAttribute('points',[pt(0,10),pt(.42,10),pt(.42,8.5),pt(.66,8.5),pt(.66,7),pt(.86,7),pt(.86,5.5),pt(1,5.5),pt(1,-5.5),pt(.86,-5.5),pt(.86,-7),pt(.66,-7),pt(.66,-8.5),pt(.42,-8.5),pt(.42,-10),pt(0,-10)].join(' '));
+      var s='';[.42,.66,.86].forEach(function(f){var w=f<.5?10:f<.7?8.5:7;s+='<line x1="'+f1(piv.x+g.dx*g.L*f+g.nx*w)+'" y1="'+f1(piv.y+g.dy*g.L*f+g.ny*w)+'" x2="'+f1(piv.x+g.dx*g.L*f-g.nx*w)+'" y2="'+f1(piv.y+g.dy*g.L*f-g.ny*w)+'"/>';
+        var f2=f-.03;s+='<line x1="'+f1(piv.x+g.dx*g.L*f2+g.nx*(w+2))+'" y1="'+f1(piv.y+g.dy*g.L*f2+g.ny*(w+2))+'" x2="'+f1(piv.x+g.dx*g.L*f2-g.nx*(w+2))+'" y2="'+f1(piv.y+g.dy*g.L*f2-g.ny*(w+2))+'"/>'});
+      $(secId).innerHTML=s;
+      if(inId){$(inId).setAttribute('d','M'+pt(.04,4)+'L'+pt(.4,4)+'M'+pt(.04,-4)+'L'+pt(.4,-4))}
+    }
+    function dims(piv,g,A,arcId,angId,lineId,lenId,v,side){
+      var R=70,ex=piv.x-R*Math.cos(A),ey=piv.y-R*Math.sin(A);
+      $(arcId).setAttribute('d','M'+(piv.x-R)+' '+piv.y+' A'+R+' '+R+' 0 0 1 '+f1(ex)+' '+f1(ey));op(arcId,v);
+      var am=A/2,a=$(angId);a.setAttribute('text-anchor','end');a.setAttribute('x',f1(piv.x-84*Math.cos(am)));a.setAttribute('y',f1(piv.y-84*Math.sin(am)+6));op(angId,v);
+      var o=34*side,l=$(lineId);l.setAttribute('x1',f1(piv.x-g.nx*o));l.setAttribute('y1',f1(piv.y-g.ny*o));l.setAttribute('x2',f1(g.tip.x-g.nx*o));l.setAttribute('y2',f1(g.tip.y-g.ny*o));op(lineId,v);
+      var mx=piv.x+g.dx*g.L*.55-g.nx*(o+14*side),my=piv.y+g.dy*g.L*.55-g.ny*(o+14*side),deg=Math.atan2(g.dy,g.dx)*180/Math.PI+180,tx=$(lenId);
+      tx.setAttribute('x',f1(mx));tx.setAttribute('y',f1(my));tx.setAttribute('text-anchor','middle');tx.setAttribute('transform','rotate('+f1(deg)+' '+f1(mx)+' '+f1(my)+')');op(lenId,v);
+    }
+    function rig(tip,lift,t,ids,lx,rx,restTop){
+      var drop=p(t,12,12.8), hookY=(tip.y+26)+(300-(tip.y+26))*drop+(t>14?lift:0);
+      [[ids[0],-3],[ids[1],3]].forEach(function(q){var r=$(q[0]);r.setAttribute('x1',f1(tip.x+q[1]));r.setAttribute('y1',f1(tip.y));r.setAttribute('x2',f1(tip.x+q[1]));r.setAttribute('y2',f1(hookY))});
+      var hx=tip.x;$(ids[2]).setAttribute('d','M'+f1(hx-9)+' '+f1(hookY-6)+'h18v16h-18z M'+f1(hx)+' '+f1(hookY+10)+'v6q0 9 -8 9');
+      var sl=p(t,12.8,13.4),top=restTop+lift,hb=hookY+18;
+      var ax=hx+(lx-hx)*sl,ay=hb+(top-hb)*sl,bx=hx+(rx-hx)*sl,by=ay;
+      $(ids[3]).setAttribute('d',sl>0?'M'+f1(hx)+' '+f1(hb)+'L'+f1(ax)+' '+f1(ay)+'M'+f1(hx)+' '+f1(hb)+'L'+f1(bx)+' '+f1(by):'');
+      return {hookY:hookY,hx:hx,top:top,sl:sl,ax:ax,ay:ay,bx:bx};
+    }
+    function out(t,idL,idR,xl0,xr0,ext){
+      var e=p(t,7.2,7.9),j=p(t,7.9,8.5),yj=438+26*j,xl=xl0-ext*e,xr=xr0+ext*e;
+      function d(x0,x){return e>0?'M'+x0+' 436H'+f1(x)+'V'+f1(yj)+(j>.02?'M'+f1(x-12)+' '+f1(yj+3)+'H'+f1(x+12)+'M'+f1(x-14)+' '+f1(yj+6)+'H'+f1(x+14):''):''}
+      $(idL).setAttribute('d',d(xl0,xl));$(idR).setAttribute('d',d(xr0,xr));
+    }
+    var cur=-1, curTxt='', typed=0;
+    var cpos={x:800,y:300};
+    function frame(t,dt){
+      op('pl-sheet',p(t,0,.8));op('pl-table',p(t,1.4,2.0));op('pl-legend',p(t,1.6,2.2));op('pl-scale',p(t,2.0,2.6));
+      [['pl-b1',4.6],['pl-b6',5.0],['pl-b2',6.8],['pl-b3',8.5],['pl-b4',10.9],['pl-b5',13.4],['pl-b7',16.8]].forEach(function(b){op(b[0],p(t,b[1],b[1]+.4)*(b[0]==='pl-b1'?1-p(t,15.2,15.6):1));var n=b[0].slice(4);op('pl-lg'+n,.25+.75*p(t,b[1],b[1]+.4))});
+      [['dv4',8.5],['dv1',10.8],['dv2',10.8],['dv3',11.6],['dv5',13.4],['dv6',14.1]].forEach(function(d){var el=$('pl-'+d[0]);var on=t>=d[1];var txt=on?$('pl-'+d[0]+'v').textContent:'—';if(el.textContent!==txt)el.textContent=txt;el.setAttribute('fill',on?'#1E3BD8':'#999')});
+      op('pl-grid',p(t,0,.8));
+      op('pl-soilf',p(t,2,2.8));
+      drs.forEach(function(d){d.e.style.strokeDashoffset=f1(d.L*(1-p(t,d.a,d.b)))});
+      fds.forEach(function(d){d.e.setAttribute('opacity',p(t,d.a,d.b).toFixed(3))});
+      op('pl-cabhat',p(t,6.3,6.9));op('pl-cm',p(t,6.4,7.0)*(1-p(t,10.4,10.8)));op('pl-basehat',p(t,16.4,16.9));
+      var lift=-90*p(t,14.4,15.5)+80*p(t,16.8,18.2);
+      op('pl-load',p(t,4.4,5));$('pl-load').setAttribute('transform','translate(0 '+f1(lift)+')');
+      op('pl-fload',p(t,4.5,5.1));$('pl-fload').setAttribute('transform','translate(0 '+f1(lift)+')');
+      $('pl-truck').setAttribute('transform','translate('+f1(-820*p(t,15.4,16.7))+' 0)');
+      op('pl-fdeck',1-p(t,15.4,16.2));
+      out(t,'pl-outL','pl-outR',770,1000,34);out(t,'pl-foutL','pl-foutR',1408,1492,38);
+      // lanças
+      var r=p(t,8.8,10.8),A=(172-109.5*r)*Math.PI/180,L=200+154*r,g=boomGeom(P,A,L);
+      drawBoom(P,g,'pl-boomshape','pl-boomsec','pl-boomin');
+      $('pl-cyl').setAttribute('d','M880 420L'+f1(P.x+g.dx*L*.32)+' '+f1(P.y+g.dy*L*.32));
+      $('pl-tipc').setAttribute('cx',f1(g.tip.x));$('pl-tipc').setAttribute('cy',f1(g.tip.y));
+      op('pl-boom',p(t,6.4,7.2));op('pl-pivot',p(t,6.4,7.2));
+      var Af=(84-21.5*r)*Math.PI/180,Lf=70+284*r,gf=boomGeom(F,Af,Lf);
+      drawBoom(F,gf,'pl-fboomshape','pl-fboomsec',null);op('pl-fboom',p(t,6.8,7.4));op('pl-fpivot',p(t,6.8,7.4));
+      var dv=p(t,10.6,11.2);
+      dims(P,g,A,'pl-arc','pl-ang','pl-lenline','pl-len',dv,1);
+      dims(F,gf,Af,'pl-farc','pl-fang','pl-flenline','pl-flen',p(t,10.8,11.4),1);
+      op('pl-rig',p(t,11.9,12.3));op('pl-frig',p(t,12.1,12.5));
+      var R1=rig(g.tip,lift,t,['pl-rope1','pl-rope2','pl-hook','pl-slings'],618,716,352);
+      rig(gf.tip,lift,t,['pl-frope1','pl-frope2','pl-fhook','pl-fslings'],1238,1336,352);
+      var dots='';if(R1.sl>.98){dots='<circle cx="618" cy="'+f1(R1.top)+'" r="3.5"/><circle cx="716" cy="'+f1(R1.top)+'" r="3.5"/>'}$('pl-sl-dots').innerHTML=dots;
+      [['pl-n1',13],['pl-n2',13.35],['pl-n3',13.7]].forEach(function(n){var v=p(t,n[1],n[1]+.45);op(n[0],v)});
+      
+      op('pl-veil',p(t,22.7,23.6));
+      $('pl-prog').setAttribute('width',f1(1600*cl(t/23.6)));
+      // cursor
+      var tg=target(t,g,lift,R1);
+      var s=Math.min(1,(dt||1)*9);cpos.x+=(tg.x-cpos.x)*s;cpos.y+=(tg.y-cpos.y)*s;
+      var cx=cpos.x,cy=cpos.y;
+      $('pl-curh').setAttribute('y1',f1(cy));$('pl-curh').setAttribute('y2',f1(cy));$('pl-curv').setAttribute('x1',f1(cx));$('pl-curv').setAttribute('x2',f1(cx));
+      $('pl-curb').setAttribute('x',f1(cx-6));$('pl-curb').setAttribute('y',f1(cy-6));
+      var X=Math.max(0,(cx-20)*MM),Y=Math.max(0,(470-cy)*MM),label='X '+Math.round(X).toLocaleString('pt-BR')+'  Y '+Math.round(Y).toLocaleString('pt-BR');
+      var tx=cx+14,ty=cy+16;if(tx>1440)tx=cx-164;if(ty>570)ty=cy-34;
+      $('pl-tipbg').setAttribute('x',f1(tx));$('pl-tipbg').setAttribute('y',f1(ty));$('pl-tiptx').setAttribute('x',f1(tx+8));$('pl-tiptx').setAttribute('y',f1(ty+14));$('pl-tiptx').textContent=label;
+      $('pl-coord').textContent='X '+X.toFixed(1).replace('.',',')+'   Y '+Y.toFixed(1).replace('.',',');
+      op('pl-cur',(1-p(t,22.4,22.9))*p(t,.3,.8));
+      // passos e comando
+      var si=0;for(var i=0;i<steps.length;i++)if(t>=steps[i][0])si=i;
+      if(si!==cur){cur=si;curTxt=steps[si][2];typed=0;$('pl-etapa').textContent='ETAPA 0'+(si+1)+'/08 · '+steps[si][1];$('pl-cmd2').textContent=steps[si][3];lis.forEach(function(li,i){li.classList.toggle('on',i===si);li.classList.toggle('done',i<si)})}
+      typed=Math.min(curTxt.length,Math.floor((t-steps[si][0])*38));
+      $('pl-cmd').textContent=curTxt.slice(0,typed)+((Math.floor(t*2.5)%2)?'_':' ');
+    }
+    function lerpPath(t,keys){for(var i=0;i<keys.length-1;i++){var a=keys[i],b=keys[i+1];if(t>=a[0]&&t<=b[0]){var u=ease(cl((t-a[0])/(b[0]-a[0])));return {x:a[1]+(b[1]-a[1])*u,y:a[2]+(b[2]-a[2])*u}}}var l=keys[keys.length-1];return {x:l[1],y:l[2]}}
+    var K=[[0,800,300],[1.2,20,470],[2.4,1040,470],[2.6,1580,470],[2.8,58,384],[3.4,286,444],[4.2,745,450],[4.6,1370,446],[5,752,424],[5.6,1012,430],[6.2,900,388],[6.8,1450,406],[7.2,770,436],[7.9,736,464],[8.5,1034,464],[8.8,1028,374]];
+    function target(t,g,lift,R){
+      if(t<8.8)return lerpPath(t,K);
+      if(t<10.8)return g.tip;
+      if(t<11.6)return lerpPath(t,[[10.8,g.tip.x,g.tip.y],[11.6,748,524]]);
+      if(t<12.8)return {x:R.hx,y:R.hookY};
+      if(t<13.4)return {x:R.bx,y:R.ay};
+      if(t<14.1)return lerpPath(t,[[13.4,716,352],[13.7,40,90],[14.1,40,330]]);
+      if(t<15.5)return {x:667,y:396+lift};
+      if(t<16.8)return lerpPath(t,[[15.5,667,306],[15.8,607,432],[16.6,727,470]]);
+      if(t<18.4)return {x:667,y:396+lift};
+      if(t<19.2)return lerpPath(t,[[18.4,667,386],[19.2,1010,230]]);
+      return lerpPath(t,[[19.2,1010,230],[22.4,1000,560]]);
+    }
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce){frame(20,1);op('pl-cur',0);return}
+    var vis=false,acc=0,last=null;
+    if('IntersectionObserver' in window){new IntersectionObserver(function(es){vis=es[0].isIntersecting},{threshold:.15}).observe(svg)}else vis=true;
+    frame(0,1);
+    function loop(now){
+      if(last===null)last=now;var dt=Math.min(.1,(now-last)/1000);last=now;
+      if(vis&&!document.hidden){acc=(acc+dt)%T;frame(acc,dt)}
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+  })();
   var t=document.getElementById('track'),i=0;
   function per(){return innerWidth<=560?1:innerWidth<=991?2:4}
   if(!reduce)setInterval(function(){var max=t.children.length-per();i=i>=max?0:i+1;t.style.transform='translateX(-'+(i*100/per())+'%)'},3000);
@@ -539,5 +1736,4 @@ footer .logo img{height:70px;margin-bottom:16px}
 })();
 </script>
 
-</body>
-</html>
+</body></html>
