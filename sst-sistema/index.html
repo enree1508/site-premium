@@ -398,7 +398,8 @@ async function init(){
 let pendingRender=false;
 async function salvar(col,id,data){
   data.atualizado=new Date().toISOString(); const old=id?S[col].find(x=>x.id===id):null;
-  data.hist=((old&&old.hist)||data.hist||[]).slice(-19).concat([{q:data.atualizado,u:uid||"",n:sessao?sessao.nome:"",a:old?"editou":"criou"}]); data.atualizadoPor=uid||"";
+  const mud=old?Object.keys(Object.assign({},old,data)).filter(k=>!["id","atualizado","hist","atualizadoPor"].includes(k)&&JSON.stringify(old[k]??"")!==JSON.stringify(data[k]??"")).slice(0,10):[];
+  data.hist=((old&&old.hist)||data.hist||[]).slice(-29).concat([{q:data.atualizado,u:uid||"",n:sessao?sessao.nome:"",a:old?"editou":"criou",f:mud}]); data.atualizadoPor=uid||"";
   if(offline){ if(id){ const i=S[col].findIndex(x=>x.id===id); if(i>=0) S[col][i]=Object.assign({id},data); else S[col].push(Object.assign({id},data)); } else S[col].push(Object.assign({id:"tmp"+Date.now()},data)); return; }
   const ref=id?db.collection(col).doc(id):db.collection(col).doc();
   try{ await ref.set(data); return ref.id; }catch(e){
@@ -407,8 +408,8 @@ async function salvar(col,id,data){
     throw new Error("Não salvou. Verifique a conexão e tente de novo.");
   }
 }
-async function excluir(col,id){ const reg=S[col].find(x=>x.id===id); if(offline){ S[col]=S[col].filter(x=>x.id!==id); if(reg) S.lixeira.push({id:"l"+Date.now(),col,docId:id,dados:reg,quando:new Date().toISOString(),quem:uid||""}); return; }
-  if(reg){ const d=Object.assign({},reg); delete d.id; try{ await db.collection("lixeira").doc().set({col,docId:id,dados:d,quando:new Date().toISOString(),quem:uid||""}); }catch(e){} }
+async function excluir(col,id){ const reg=S[col].find(x=>x.id===id); if(offline){ S[col]=S[col].filter(x=>x.id!==id); if(reg) S.lixeira.push({id:"l"+Date.now(),col,docId:id,dados:reg,quando:new Date().toISOString(),quem:uid||"",quemNome:sessao?sessao.nome:""}); return; }
+  if(reg){ const d=Object.assign({},reg); delete d.id; try{ await db.collection("lixeira").doc().set({col,docId:id,dados:d,quando:new Date().toISOString(),quem:uid||"",quemNome:sessao?sessao.nome:""}); }catch(e){} }
   await db.collection(col).doc(id).delete(); }
 
 /* ===================== UTILITÁRIOS ===================== */
@@ -611,6 +612,16 @@ function filtra(lista,fn){ const q=(busca[tab]||"").toLowerCase().trim(); if(!q)
 const head=(t,btns,ph,sub)=>`<div class="sechead"><div><h2>${t}</h2>${sub?`<div class="sub">${sub}</div>`:""}</div><div class="tools">${ph?`<input class="search" placeholder="${ph}" aria-label="Buscar">`:""}${canWrite&&btns?btns:""}</div></div>`;
 const emptyBox=t=>`<div class="panel empty">${t}</div>`;
 
+/* ===================== HISTÓRICO DE ALTERAÇÕES ===================== */
+const AREA_NOME={acoes:"Plano de ação",cargos:"Cargos e riscos",documentos:"Documentos",colaboradores:"Colaboradores",treinamentos:"Treinamentos",asos:"ASO",veiculos:"Equipamentos e veículos",inspecoes:"Inspeções",dds:"DDS",os:"Ordens de serviço",campanhas:"Campanhas",cipa:"CIPA",acidentes:"Acidentes / CAT",config:"Configurações",epis:"EPIs"};
+const CAMPO_NOME={validade:"validade",emissao:"emissão",elaboracao:"data de elaboração",anexos:"arquivos",situacao:"situação",nome:"nome",funcao:"função",titulo:"título",tipo:"tipo",obs:"observações",data:"data",turma:"turma",curso:"curso",status:"status",prazo:"prazo",responsavel:"responsável",resultado:"resultado",docs:"documentos",fotos:"fotos",problemas:"problemas",texto:"texto",bloqueado:"bloqueio",placa:"placa",cpf:"CPF",exames:"exames",riscos:"riscos",treinos:"treinamentos",epis:"EPIs",meses:"meses",evidencias:"evidências",prioridade:"prioridade",descricao:"descrição"};
+const nomeReg=(c,r)=>r.titulo||r.nome||r.tema||(r.numero?r.numero+" "+(r.titulo||""):"")||(r.colab?nomeColab(r.colab)+(r.curso?" · "+r.curso:r.tipo?" · "+r.tipo:""):"")||(c==="config"&&r.id==="analiseIA"?"Análise por IA":"")||r.id;
+function eventosHist(){ const ev=[]; COLS.filter(c=>!["lixeira","contas"].includes(c)).forEach(c=>S[c].forEach(r=>(r.hist||[]).forEach(x=>ev.push({c,r,x})))); S.lixeira.forEach(l=>ev.push({c:l.col,r:Object.assign({id:l.docId},l.dados||{}),x:{q:l.quando,u:l.quem,n:l.quemNome||"",a:"excluiu",f:[]}})); return ev.sort((a,b)=>(b.x.q||"").localeCompare(a.x.q||"")); }
+const quemHist=x=>x.n?esc(x.n):x.u?`<span data-uid="${esc(x.u)}">…</span>`:"Sistema";
+const campos=x=>(x.f&&x.f.length)?" · "+x.f.map(k=>CAMPO_NOME[k]||k).join(", "):"";
+function haQuanto(q){ const m=Math.round((Date.now()-new Date(q).getTime())/6e4); return m<1?"agora":m<60?"há "+m+" min":m<1440?"há "+Math.round(m/60)+" h":new Date(q).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"}); }
+let histQuem="Todos";
+
 /* ===================== ANÁLISE INTELIGENTE (IA) NO PAINEL ===================== */
 let iaBusy=false, iaLive="", iaAuto=false, iaCtl=null, iaErro="";
 function contextoIA(){
@@ -710,7 +721,9 @@ painel(){
   const ag=pendencias(true).filter(p=>p.s.k==="ok"&&p.s.n<=90);
   h+=`<h3 style="margin-top:22px">Agenda dos próximos 90 dias</h3><p class="note" style="margin:0 0 6px">Exames, treinamentos, trocas de EPI e documentos para programar com antecedência.</p>`;
   h+=ag.length?`<ul class="alist">${ag.map(p=>`<li class="click" data-go='${esc(JSON.stringify(p.go))}' style="cursor:pointer"><div class="what"><b>${esc(p.o)}</b><div class="sub">${esc(p.d)}</div></div><span class="pill sem">${fmt(new Date(hoje.getTime()+p.s.n*864e5).toISOString().slice(0,10))} · em ${p.s.n} dias</span></li>`).join("")}</ul>`:`<p class="note">Nada vence entre 31 e 90 dias.</p>`;
-  h+=`</div><div style="display:flex;flex-direction:column;gap:16px"><div class="panel"><h3>Documentos obrigatórios da empresa</h3><ul class="reqlist">`;
+  { const ul=eventosHist().slice(0,8);
+  h+=`</div><div style="display:flex;flex-direction:column;gap:16px"><div class="panel"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3 style="margin:0">Últimas alterações</h3>${isAdmin?`<button class="btn small" data-go='["tab","admin"]'>Ver tudo</button>`:""}</div><p class="note" style="margin:4px 0 8px">O que a equipe mudou no sistema, em tempo real.</p>${ul.length?`<ul class="alist">${ul.map(e=>`<li><div class="what"><b>${quemHist(e.x)} ${esc(e.x.a)}</b> <span>${esc(nomeReg(e.c,e.r))}</span><div class="sub">${esc(AREA_NOME[e.c]||e.c)}${esc(campos(e.x))}</div></div><span class="sub" style="white-space:nowrap">${haQuanto(e.x.q)}</span></li>`).join("")}</ul>`:`<p class="note">Nenhuma alteração registrada ainda.</p>`}</div>`; setTimeout(fillNames,0); }
+  h+=`<div class="panel"><h3>Documentos obrigatórios da empresa</h3><ul class="reqlist">`;
   DOC_EMPRESA.forEach(t=>{ const d=docsAtuais().filter(x=>x.tipo===t).sort((a,b)=>(b.validade||"").localeCompare(a.validade||""))[0];
     h+=`<li><span>${esc(t)}</span><span class="chips" style="justify-content:flex-end">${d?(d.situacao!==VALID?sitPill(d)+" ":"")+pill(st(d.validade),d.validade?(st(d.validade).k==="ok"?"Até "+fmt(d.validade):null):"Sem validade"):`<span class="pill venc">Falta</span>`}</span></li>`; });
   const m=new Date().getMonth()+1, c=campDoc(new Date().getFullYear())[m]||{};
@@ -943,11 +956,10 @@ admin(){
     <h3 style="margin-top:16px">Dados da empresa</h3><button class="btn small" data-act="cfgEsocial">CNPJ, responsáveis e PCMSO</button></div></div>`;
   const cs=S.contas.slice().sort((a,b)=>(a.nome||"").localeCompare(b.nome||""));
   h+=`<div class="sechead" style="margin-top:20px"><h3 style="margin:0">Usuários e senhas</h3><button class="btn small primary" data-act="novoUsuario">+ Usuário</button></div><div class="tablewrap"><table><thead><tr><th>Nome</th><th>Usuário</th><th>Perfil</th><th>Situação</th><th></th></tr></thead><tbody>${cs.map(c=>`<tr><td><b style="font-weight:500">${esc(c.nome)}</b></td><td class="mono">${esc(c.usuario)}</td><td>${esc(c.perfil)}</td><td>${c.ativo==="Não"?'<span class="pill sem">Desativado</span>':'<span class="pill ok">Ativo</span>'}</td><td class="tools" style="justify-content:flex-end"><button class="btn small" data-conta="${c.id}" data-op="senha">Redefinir senha</button><button class="btn small" data-conta="${c.id}" data-op="editar">Editar</button></td></tr>`).join("")||'<tr><td colspan="5" class="empty">Nenhum usuário.</td></tr>'}</tbody></table></div><p class="note">O login identifica quem usa o sistema e define o que cada perfil vê. A proteção dos dados também depende do botão Compartilhar da página: dê acesso só às pessoas da equipe.</p>`;
-  const ev=[]; COLS.filter(c=>!["lixeira","contas"].includes(c)).forEach(c=>S[c].forEach(r=>(r.hist||[]).forEach(x=>ev.push({c,r,x})))); ev.sort((a,b)=>(b.x.q||"").localeCompare(a.x.q||""));
-  const nomeReg=(c,r)=>r.titulo||r.nome||r.tema||(r.numero?r.numero+" "+(r.titulo||""):"")||(r.colab?nomeColab(r.colab):"")||r.id;
-  h+=`<h3 style="margin-top:20px">Histórico de alterações</h3><div class="tablewrap"><table><thead><tr><th>Quando</th><th>Quem</th><th>Ação</th><th>Área</th><th>Registro</th></tr></thead><tbody>${ev.slice(0,150).map(e=>`<tr><td>${new Date(e.x.q).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"})}</td><td>${e.x.n?esc(e.x.n):`<span data-uid="${esc(e.x.u)}">${e.x.u?"…":"—"}</span>`}</td><td>${esc(e.x.a)}</td><td>${esc(e.c)}</td><td>${esc(nomeReg(e.c,e.r))}</td></tr>`).join("")||'<tr><td colspan="5" class="empty">Sem alterações registradas ainda.</td></tr>'}</tbody></table></div>`;
+  const evAll=eventosHist(), pessoasH=[...new Set(evAll.map(e=>e.x.n).filter(Boolean))], ev=histQuem==="Todos"?evAll:evAll.filter(e=>e.x.n===histQuem);
+  h+=`<h3 style="margin-top:20px" id="historico">Histórico de alterações</h3><p class="note" style="margin:0 0 8px">Tudo o que cada pessoa criou, editou ou excluiu, com data, hora e o que mudou. Atualiza sozinho para todos que estão com o sistema aberto.</p><div class="filters">${["Todos",...pessoasH].map(n=>`<button class="chipbtn" data-hq="${esc(n)}" aria-pressed="${histQuem===n}">${esc(n)}</button>`).join("")}</div><div class="tablewrap"><table><thead><tr><th>Quando</th><th>Quem</th><th>Ação</th><th>Área</th><th>Registro</th><th>O que mudou</th></tr></thead><tbody>${ev.slice(0,300).map(e=>`<tr><td>${new Date(e.x.q).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"})}</td><td>${e.x.n?esc(e.x.n):`<span data-uid="${esc(e.x.u)}">${e.x.u?"…":"—"}</span>`}</td><td><span class="pill ${e.x.a==="excluiu"?"venc":e.x.a==="criou"?"ok":"sem"}">${esc(e.x.a)}</span></td><td>${esc(AREA_NOME[e.c]||e.c)}</td><td>${esc(nomeReg(e.c,e.r))}</td><td class="sub">${esc((e.x.f||[]).map(k=>CAMPO_NOME[k]||k).join(", "))||"—"}</td></tr>`).join("")||'<tr><td colspan="5" class="empty">Sem alterações registradas ainda.</td></tr>'}</tbody></table></div>`;
   const lx=S.lixeira.slice().sort((a,b)=>(b.quando||"").localeCompare(a.quando||""));
-  h+=`<h3 style="margin-top:20px">Lixeira</h3><div class="tablewrap"><table><thead><tr><th>Excluído em</th><th>Por</th><th>Área</th><th>Registro</th><th></th></tr></thead><tbody>${lx.map(x=>`<tr><td>${new Date(x.quando).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"})}</td><td><span data-uid="${esc(x.quem)}">${x.quem?"…":"—"}</span></td><td>${esc(x.col)}</td><td>${esc(nomeReg(x.col,x.dados||{}))}</td><td><button class="btn small" data-restore="${x.id}">Restaurar</button></td></tr>`).join("")||'<tr><td colspan="5" class="empty">Lixeira vazia.</td></tr>'}</tbody></table></div>`;
+  h+=`<h3 style="margin-top:20px">Lixeira</h3><div class="tablewrap"><table><thead><tr><th>Excluído em</th><th>Por</th><th>Área</th><th>Registro</th><th></th></tr></thead><tbody>${lx.map(x=>`<tr><td>${new Date(x.quando).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"})}</td><td>${x.quemNome?esc(x.quemNome):`<span data-uid="${esc(x.quem)}">${x.quem?"…":"—"}</span>`}</td><td>${esc(AREA_NOME[x.col]||x.col)}</td><td>${esc(nomeReg(x.col,x.dados||{}))}</td><td><button class="btn small" data-restore="${x.id}">Restaurar</button></td></tr>`).join("")||'<tr><td colspan="5" class="empty">Lixeira vazia.</td></tr>'}</tbody></table></div>`;
   setTimeout(fillNames,0);
   return h;
 },
@@ -1321,6 +1333,7 @@ document.getElementById("main").addEventListener("click",e=>{
   const ev=e.target.closest("[data-envio]"); if(ev){ abrirEnvio(esCache[+ev.dataset.envio]); return; }
   const dfl=e.target.closest("[data-df]"); if(dfl){ diagFiltro=dfl.dataset.df; render(); return; }
   const dfx=e.target.closest("[data-dfix]"); if(dfx){ const x=diagCache[+dfx.dataset.dfix]; if(x&&x.fix){ dfx.disabled=true; dfx.textContent="Corrigindo…"; x.fix().then(()=>{ toast("Corrigido"); render(); }).catch(er=>{ toast(er.message||"Não foi possível corrigir."); render(); }); } return; }
+  const hq=e.target.closest("[data-hq]"); if(hq){ histQuem=hq.dataset.hq; render(); return; }
   const cv=e.target.closest("[data-cv]"); if(cv){ colabView=cv.dataset.cv; render(); return; }
   const ex=e.target.closest("[data-exp]"); if(ex){ exportar(ex.dataset.exp); return; }
   const cta=e.target.closest("[data-conta]"); if(cta){ formConta(cta.dataset.conta,cta.dataset.op); return; }
