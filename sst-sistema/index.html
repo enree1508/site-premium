@@ -199,12 +199,26 @@ tr.red.click:hover td{background:#FBE7E5}
 .ckbody{padding:0 16px 14px}
 .ckquick{margin-bottom:4px}
 .ckg{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin:12px 0 2px}
-.cki{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.cki{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 12px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line)}
+.ckbox{width:26px;height:26px;border:2px solid #9AA0A6;border-radius:6px;background:#fff;cursor:pointer;position:relative;padding:0;flex:none}
+.ckbox:hover{border-color:var(--ok)}
+.cki.r-ok .ckbox{background:var(--ok);border-color:var(--ok)}
+.cki.r-ok .ckbox::after{content:"";position:absolute;left:7px;top:2px;width:7px;height:13px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.cki.r-nc .ckbox{border-color:var(--bad);background:var(--bad-bg)}
+.cki.r-nc .ckbox::after{content:"✕";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--bad);font-weight:700;font-size:14px}
+.cki.r-na .ckbox{border-color:#C4C7CC;background:var(--hover)}
+.cki.r-na .ckbox::after{content:"";position:absolute;left:5px;right:5px;top:10px;height:2px;background:#9AA0A6}
+.cki .ckt{cursor:pointer}
+.cki.r-na .ckt{color:var(--muted)}
+.ckalt{display:flex;gap:6px}
+.ckx{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;font-size:12px;padding:4px 10px;cursor:pointer;white-space:nowrap}
+.ckx.nc[aria-pressed="true"]{background:var(--bad);border-color:var(--bad);color:#fff}
+.ckx.na[aria-pressed="true"]{background:var(--hover);color:var(--ink);border-color:#C4C7CC}
+@media (max-width:520px){.cki{grid-template-columns:auto minmax(0,1fr)}.ckalt{grid-column:2}}
 .cki:last-child{border-bottom:0}
-.cki.isnc{background:linear-gradient(90deg,#FDF3F2,transparent)}
+.cki.r-nc{background:linear-gradient(90deg,#FDF3F2,transparent)}
 .ckt{font-size:14.5px}
 .ckhint .pill{font-size:11.5px;margin-left:4px}
-.cki .seg button{padding:8px 16px;min-width:48px}
 .ncbox{grid-column:1/-1}
 .ncform{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px 12px;background:#FDF3F2;border:1px solid #F3B8B3;border-radius:10px;padding:12px;margin-top:4px}
 @media (max-width:700px){.ncform{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -751,12 +765,12 @@ function abrirCk(id,pre){
     return `<label class="${o.full?"full":""}">${esc(l)}${o.req?" *":""}<input type="${t||"text"}" data-ck="${k}" value="${esc(v)}" ${o.ph?`placeholder="${esc(o.ph)}"`:""} ${o.step?`step="${o.step}"`:""} ${ro}></label>`; };
   const colabs=S.colaboradores.filter(c=>c.situacao!=="Desligado").sort((a,b)=>(a.nome||"").localeCompare(b.nome||"")).map(c=>[c.id,c.nome+(c.funcao?" · "+c.funcao:"")]);
   const veics=S.veiculos.slice().sort((a,b)=>ehGuind(b)-ehGuind(a)||(a.nome||"").localeCompare(b.nome||"")).map(v=>[v.id,v.nome+(v.placa?" · "+v.placa:"")]);
-  const item=(x)=>{ const r=CK.resp[x.k]||""; return `<div class="cki ${r==="nc"?"isnc":""}" data-key="${x.k}"><div class="ckt">${esc(x.it)}<span class="ckhint" data-hint="${x.k}"></span></div><div class="seg">${[["ok","C"],["nc","NC"],["na","N/A"]].map(([c,l])=>`<button type="button" class="${c}${r===c?" on":""}" data-ckv="${c}" aria-pressed="${r===c}" title="${c==="ok"?"Conforme":c==="nc"?"Não conforme":"Não se aplica"}" ${ro}>${l}</button>`).join("")}</div><div class="ncbox" data-ncbox="${x.k}">${r==="nc"?ncHTML(x.k):""}</div></div>`; };
+  const item=(x)=>{ const r=CK.resp[x.k]||""; return `<div class="cki ${r?"r-"+r:""}" data-key="${x.k}"><button type="button" class="ckbox" data-ckv="ok" role="checkbox" aria-checked="${r==="ok"}" aria-label="${esc(x.it)}" ${ro}></button><div class="ckt" data-ckv="ok">${esc(x.it)}<span class="ckhint" data-hint="${x.k}"></span></div><div class="ckalt"><button type="button" class="ckx nc" data-ckv="nc" aria-pressed="${r==="nc"}" ${ro}>Não conforme</button><button type="button" class="ckx na" data-ckv="na" aria-pressed="${r==="na"}" ${ro}>N/A</button></div><div class="ncbox" data-ncbox="${x.k}">${r==="nc"?ncHTML(x.k):""}</div></div>`; };
   const secHTML=(s,si)=>{ const its=CK_ITENS.filter(x=>x.si===si);
     let body=s.clima?`<div class="ckgrid">${I("clima.vento","Velocidade do vento (km/h)","number")}${I("clima.temp","Temperatura (°C)","number")}${I("clima.chuva","Chuva","select",{opts:["Sem chuva","Garoa","Chuva moderada","Chuva intensa"],none:"—"})}${I("clima.visib","Visibilidade","select",{opts:["Boa","Reduzida","Ruim"],none:"—"})}</div>`:
       s.g.map((g,gi)=>`${g.t?`<div class="ckg">${esc(g.t)}</div>`:""}${its.filter(x=>+x.k.split("-")[1]===gi).map(item).join("")}`).join("");
     if(s.pos) body+=`<div class="ckgrid" style="margin-top:10px">${I("horFinal","Horímetro final (h)","number",{step:"0.1"})}</div>`;
-    return `<details class="cksec" data-sec="${si}" ${si<1||its.some(x=>CK.resp[x.k]==="nc")?"open":""}><summary><span class="ckn">${si+1}</span><b>${esc(s.t)}</b>${s.nota?`<span class="sub">${esc(s.nota)}</span>`:""}<span class="ckcount" data-count="${si}"></span></summary><div class="ckbody">${!s.clima&&canWrite?`<div class="tools ckquick"><button type="button" class="btn small" data-ckall="${si}" data-v="ok">Tudo conforme</button><button type="button" class="btn small" data-ckall="${si}" data-v="na">Não se aplica</button></div>`:""}${body}</div></details>`; };
+    return `<details class="cksec" data-sec="${si}" ${si<1||its.some(x=>CK.resp[x.k]==="nc")?"open":""}><summary><span class="ckn">${si+1}</span><b>${esc(s.t)}</b>${s.nota?`<span class="sub">${esc(s.nota)}</span>`:""}<span class="ckcount" data-count="${si}"></span></summary><div class="ckbody">${!s.clima&&canWrite?`<div class="tools ckquick"><button type="button" class="btn small" data-ckall="${si}" data-v="ok">☑ Marcar todos</button><button type="button" class="btn small" data-ckall="${si}" data-v="na">Não se aplica</button></div>`:""}${body}</div></details>`; };
   const sigBox=(k,l,extra)=>{ const s=CK.sig[k]||{}; return `<div class="sigbox"><div class="ckg">${esc(l)}${k==="inspetor"?" *":""}</div><label>Nome<input type="text" data-sig="${k}" data-f="nome" value="${esc(s.nome||(k==="inspetor"?d.inspetor||"":k==="operador"?d.operadorNome||"":""))}" ${ro}></label>${extra||""}<div class="sigpad"><canvas data-pad="${k}" width="600" height="180" aria-label="Assinatura de ${esc(l)}"></canvas>${s.img?`<img src="${s.img}" alt="Assinatura" data-sigimg="${k}">`:""}</div><div class="tools"><span class="sub" data-sigdata="${k}">${s.data?"Assinado em "+new Date(s.data).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"}):"Assine com o dedo ou o mouse"}</span>${canWrite?`<button type="button" class="btn small" data-sigclr="${k}">Limpar</button>`:""}</div></div>`; };
   const fileBox=(k,l,acc)=>`<div class="ckfiles"><div class="ckg">${esc(l)}</div><div class="files" data-ckfiles="${k}"></div>${canWrite?`<label class="btn small upl">Adicionar<input type="file" data-ckup="${k}" accept="${acc}" multiple hidden></label>`:""}</div>`;
   let root=document.getElementById("ckRoot"); if(!root){ root=document.createElement("div"); root.id="ckRoot"; document.body.appendChild(root); }
@@ -787,7 +801,7 @@ function ckLerNC(){ CK.ov.querySelectorAll("[data-nc]").forEach(el=>{ const k=el
 function ckNCs(){ ckLerNC(); return Object.keys(CK.resp).filter(k=>CK.resp[k]==="nc").map(k=>{ const x=CK_ITEM[k]||{}; return Object.assign({key:k,secao:x.s,grupo:x.g,item:x.it,status:"Aberta",fotos:[]},CK.ncs[k]||{},{key:k}); }); }
 function ckDraw(){ const ov=CK.ov, resp=CK.resp, tot=CK_ITENS.length, feitos=CK_ITENS.filter(x=>resp[x.k]).length, ncs=ckNCs(), sug=ckSug(ncs);
   ov.querySelector("[data-prog]").style.width=Math.round(100*feitos/tot)+"%";
-  ov.querySelector("[data-progtxt]").innerHTML=`${feitos}/${tot} respondidos${ncs.length?` · <b style="color:var(--bad)">${ncs.length} NC</b>`:""}`;
+  ov.querySelector("[data-progtxt]").innerHTML=`${feitos}/${tot} marcados${ncs.length?` · <b style="color:var(--bad)">${ncs.length} NC</b>`:""}`;
   CK_MESTRE.forEach((s,si)=>{ const its=CK_ITENS.filter(x=>x.si===si), el=ov.querySelector(`[data-count="${si}"]`); if(!el) return; if(s.clima){ el.innerHTML=""; return; } const f=its.filter(x=>resp[x.k]).length, n=its.filter(x=>resp[x.k]==="nc").length;
     el.innerHTML=n?`<span class="pill venc">${n} NC</span> <span class="sub">${f}/${its.length}</span>`:f===its.length?'<span class="pill ok">Completo</span>':`<span class="sub">${f}/${its.length}</span>`; });
   let st=CK.manual&&ckRank(CK.manual)>=ckRank(sug)?CK.manual:sug; CK.status=st; const crit=ncs.some(n=>n.gravidade==="Crítica");
@@ -822,9 +836,9 @@ function sigPad(cv){ const k=cv.dataset.pad, ctx=cv.getContext("2d"); let dw=fal
   cv.addEventListener("pointerup",fim); cv.addEventListener("pointercancel",fim); cv.style.touchAction="none"; }
 async function ckClick(e){ const ov=CK.ov, t=e.target;
   if(t===ov){ return; }
-  const b=t.closest("[data-ckv]"); if(b&&canWrite){ const row=b.closest(".cki"), k=row.dataset.key, v=b.dataset.ckv; CK.resp[k]=v; row.querySelectorAll("[data-ckv]").forEach(x=>{ const on=x===b; x.classList.toggle("on",on); x.setAttribute("aria-pressed",on); }); row.classList.toggle("isnc",v==="nc");
+  const b=t.closest("[data-ckv]"); if(b&&canWrite&&!t.closest(".ckhint")){ const row=b.closest(".cki"), k=row.dataset.key; let v=b.dataset.ckv; if(CK.resp[k]===v){ delete CK.resp[k]; v=""; } else CK.resp[k]=v; ckPaint(row,v);
     const nb=row.querySelector("[data-ncbox]"); if(v==="nc"&&!nb.innerHTML){ nb.innerHTML=ncHTML(k); ckDrawFiles("nc:"+k); const s=nb.querySelector("select"); if(s) s.focus(); } else if(v!=="nc"){ ckLerNC(); nb.innerHTML=""; } ckDraw(); return; }
-  const all=t.closest("[data-ckall]"); if(all){ const si=+all.dataset.ckall, v=all.dataset.v; CK_ITENS.filter(x=>x.si===si).forEach(x=>{ if(v==="na"||!CK.resp[x.k]){ if(CK.resp[x.k]==="nc"&&v==="ok") return; CK.resp[x.k]=v; const row=ov.querySelector(`.cki[data-key="${x.k}"]`); row.querySelectorAll("[data-ckv]").forEach(y=>{ const on=y.dataset.ckv===v; y.classList.toggle("on",on); y.setAttribute("aria-pressed",on); }); row.classList.remove("isnc"); row.querySelector("[data-ncbox]").innerHTML=""; } }); ckDraw(); return; }
+  const all=t.closest("[data-ckall]"); if(all){ const si=+all.dataset.ckall, v=all.dataset.v; CK_ITENS.filter(x=>x.si===si).forEach(x=>{ if(v==="na"||!CK.resp[x.k]){ if(CK.resp[x.k]==="nc"&&v==="ok") return; CK.resp[x.k]=v; const row=ov.querySelector(`.cki[data-key="${x.k}"]`); ckPaint(row,v); row.querySelector("[data-ncbox]").innerHTML=""; } }); ckDraw(); return; }
   const sb=t.closest("[data-ckst]"); if(sb&&!sb.disabled){ CK.manual=sb.dataset.ckst; ckDraw(); return; }
   const rm=t.closest("[data-ckrm]"); if(rm){ const k=rm.dataset.ckrm; if(k.startsWith("nc:")){ ckLerNC(); CK.ncs[k.slice(3)].fotos.splice(+rm.dataset.i,1); } else CK.files[k].splice(+rm.dataset.i,1); ckDrawFiles(k); return; }
   const sc=t.closest("[data-sigclr]"); if(sc){ const k=sc.dataset.sigclr, cv=ov.querySelector(`[data-pad="${k}"]`); cv.getContext("2d").clearRect(0,0,cv.width,cv.height); const im=ov.querySelector(`[data-sigimg="${k}"]`); if(im) im.remove(); if(CK.sig[k]){ delete CK.sig[k].img; delete CK.sig[k].data; } ov.querySelector(`[data-sigdata="${k}"]`).textContent="Assine com o dedo ou o mouse"; return; }
@@ -845,7 +859,8 @@ async function ckChange(e){ const t=e.target;
       catch(er){ toast("Não foi possível enviar "+f.name+(er&&er.code==="too_large"?" (acima de 20 MB)":er&&er.code==="unsupported_type"?" (formato não aceito)":"")+"."); } } toast("Arquivos enviados. Salve o checklist para guardar."); } }
 function ckAutoNA(){ const tp=CK.ov.querySelector('[data-ck="tipoEq"]').value; if(!tp) return; const esteira=tp==="Esteira";
   CK_MESTRE.forEach((s,si)=>{ if(!s.cond) return; const na=(s.cond==="pneus"&&esteira)||(s.cond==="esteira"&&!esteira); const its=CK_ITENS.filter(x=>x.si===si); if(!na||its.some(x=>CK.resp[x.k]&&CK.resp[x.k]!=="na")) return;
-    its.forEach(x=>{ CK.resp[x.k]="na"; CK.ov.querySelectorAll(`.cki[data-key="${x.k}"] [data-ckv]`).forEach(y=>{ y.classList.toggle("on",y.dataset.ckv==="na"); }); }); }); ckDraw(); }
+    its.forEach(x=>{ CK.resp[x.k]="na"; ckPaint(CK.ov.querySelector(`.cki[data-key="${x.k}"]`),"na"); }); }); ckDraw(); }
+function ckPaint(row,v){ if(!row) return; row.className="cki"+(v?" r-"+v:""); const cb=row.querySelector(".ckbox"); cb.setAttribute("aria-checked",v==="ok"); row.querySelectorAll(".ckx").forEach(x=>x.setAttribute("aria-pressed",x.dataset.ckv===v)); }
 async function ckSalvar(final){ const ov=CK.ov, d=Object.assign({},CK.d);
   ov.querySelectorAll("[data-ck]").forEach(el=>{ const k=el.dataset.ck; if(k.includes(".")){ const [a,b]=k.split("."); d[a]=Object.assign({},d[a]||{}); d[a][b]=el.value; } else d[k]=el.value; });
   ov.querySelectorAll("[data-sig][data-f]").forEach(el=>{ const k=el.dataset.sig; CK.sig[k]=Object.assign(CK.sig[k]||{},{[el.dataset.f]:el.value}); });
@@ -855,7 +870,7 @@ async function ckSalvar(final){ const ov=CK.ov, d=Object.assign({},CK.d);
   d.proxima=d.data&&CK_PER[d.periodicidade]?addDias(d.data,CK_PER[d.periodicidade]):"";
   if(final){ const er=[], falta=CK_ITENS.filter(x=>!CK.resp[x.k]);
     [["data","Data"],["hora","Hora"],["inspetor","Inspetor"],["operador","Operador"],["veiculo","Equipamento"],["horimetro","Horímetro"]].forEach(([k,l])=>{ if(!d[k]) er.push("Preencha: "+l); });
-    if(falta.length) er.push(falta.length+" item(ns) sem resposta. Primeiro: "+falta[0].s+" › "+falta[0].it);
+    if(falta.length) er.push(falta.length+" item(ns) sem marcar (marque ✓, Não conforme ou N/A). Primeiro: "+falta[0].s+" › "+falta[0].it);
     ncs.forEach(n=>{ if(!n.gravidade||!n.descricao) er.push("Não conformidade “"+n.item+"”: informe gravidade e descrição."); });
     if(status==="Bloqueado"&&!(d.bloqueio||{}).motivo) er.push("Bloqueado: informe o motivo do bloqueio.");
     if(!(CK.sig.inspetor||{}).img) er.push("Falta a assinatura do inspetor.");
@@ -871,7 +886,7 @@ async function ckSalvar(final){ const ov=CK.ov, d=Object.assign({},CK.d);
   render(); }
 
 /* ---------- PDF do checklist ---------- */
-function ckDoc(r){ const R={ok:"Conforme",nc:"NÃO CONFORME",na:"Não se aplica"}, v=S.veiculos.find(x=>x.id===r.veiculo)||{};
+function ckDoc(r){ const R={ok:"[X] Conforme",nc:"NÃO CONFORME",na:"Não se aplica"}, v=S.veiculos.find(x=>x.id===r.veiculo)||{};
   const kv=[["Número",r.numero],["Data e hora",fmt(r.data)+" "+(r.hora||"")],["Periodicidade",r.periodicidade],["Próximo checklist",fmt(r.proxima)],["Inspetor",r.inspetor],["Operador",r.operadorNome],["Matrícula",r.matricula],["Empresa",r.empresa],["Cliente",r.cliente],["Contrato",r.contrato],["Obra",r.obra],["Cidade / UF",[r.cidade,r.estado].filter(Boolean).join(" / ")],["Equipamento",v.nome||""],["Modelo",r.eqModelo],["Fabricante",r.fabricante],["Ano",r.ano],["Número de série",r.serie],["Horímetro",r.horimetro?r.horimetro+" h":""],["Horímetro final",r.horFinal?r.horFinal+" h":""],["Placa",r.placa],["Capacidade nominal",r.capacidade],["Tipo",r.tipoEq]].filter(x=>x[1]);
   const doc={titulo:"Checklist mestre de guindaste "+(r.numero||""),sub:"NR-11 · NR-12 · ABNT NBR ISO 4309 · Premium Locação de Guindastes e Transportes",secoes:[{tipo:"kv",t:"Identificação da inspeção",rows:kv}],assinaturas:[]};
   const cf=ckConf(r); doc.secoes.push({tipo:"resultado",texto:"STATUS GERAL: "+(r.statusGeral||"").toUpperCase()+(cf!=null?" · conformidade "+cf+"%":""),ok:r.statusGeral!=="Bloqueado"});
