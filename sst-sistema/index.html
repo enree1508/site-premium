@@ -166,6 +166,54 @@ tr.red.click:hover td{background:#FBE7E5}
 .rep .stat span{font-size:13px;color:var(--muted)}
 .rep section{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;overflow-x:auto}
 .note{font-size:13px;color:var(--muted)}
+.ckov{padding-top:12px}
+.ckmodal{max-width:1180px;padding-bottom:24px}
+.ckbar{position:sticky;top:0;z-index:2;background:var(--surface);border-bottom:1px solid var(--line);border-radius:16px 16px 0 0;padding:14px 24px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.ckbar-l b{font-size:17px;font-weight:500}
+.ckprog{flex:1 1 200px;display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted);min-width:160px}
+.ckprogbar{height:8px;background:var(--hover);border-radius:99px;overflow:hidden}
+.ckprogbar i{display:block;height:100%;background:var(--ok);border-radius:99px;transition:width .2s}
+.ckerr{margin:12px 24px 0;background:var(--bad-bg);color:var(--bad);border-radius:10px;padding:10px 14px;font-size:14px}
+.ckerr ul{margin:4px 0 0;padding-left:18px}
+.ckwrap{padding:8px 24px 0;display:flex;flex-direction:column;gap:12px}
+.ckblock{border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.ckblock h3{margin:0 0 10px}
+.ckgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 14px}
+.ckgrid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ckgrid label,.ncform label,.sigbox label{display:flex;flex-direction:column;gap:3px;font-size:12.5px;color:var(--muted)}
+.ckgrid label.full,.ncform .full{grid-column:1/-1}
+@media (max-width:900px){.ckgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.ckgrid3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:480px){.ckgrid{grid-template-columns:minmax(0,1fr)}.ckbar,.ckwrap{padding-left:14px;padding-right:14px}.ckblock{padding:12px}}
+.ckstatus{display:flex;gap:8px;flex-wrap:wrap}
+.ckst{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:500;color:var(--muted);cursor:pointer}
+.ckst:disabled{opacity:.4;cursor:not-allowed}
+.ckst.on.l{background:var(--ok-bg);color:var(--ok);border-color:var(--ok)}
+.ckst.on.r{background:var(--warn-bg);color:var(--warn);border-color:#E3B341}
+.ckst.on.b{background:var(--bad);color:#fff;border-color:var(--bad)}
+.cksec{border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cksec summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:12px 16px;flex-wrap:wrap}
+.cksec summary::-webkit-details-marker{display:none}
+.cksec summary b{font-weight:500;font-size:15px}
+.ckn{width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex:none}
+.ckcount{margin-left:auto}
+.ckbody{padding:0 16px 14px}
+.ckquick{margin-bottom:4px}
+.ckg{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin:12px 0 2px}
+.cki{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.cki:last-child{border-bottom:0}
+.cki.isnc{background:linear-gradient(90deg,#FDF3F2,transparent)}
+.ckt{font-size:14.5px}
+.ckhint .pill{font-size:11.5px;margin-left:4px}
+.cki .seg button{padding:8px 16px;min-width:48px}
+.ncbox{grid-column:1/-1}
+.ncform{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px 12px;background:#FDF3F2;border:1px solid #F3B8B3;border-radius:10px;padding:12px;margin-top:4px}
+@media (max-width:700px){.ncform{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sigbox{display:flex;flex-direction:column;gap:8px}
+.sigpad{position:relative;border:1px dashed #B9BEC6;border-radius:10px;background:#FBFBFC;aspect-ratio:10/3}
+.sigpad canvas{position:absolute;inset:0;width:100%;height:100%;border-radius:10px;cursor:crosshair}
+.sigpad img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.ckfiles .files{min-height:8px}
+@media (max-width:600px){.ckbar{padding:10px 14px;gap:8px}.ckbar-l .sub{display:none}.ckbar .tools{width:100%;flex-wrap:nowrap}.ckbar .btn{padding:7px 9px;font-size:12.5px;flex:1 1 auto;white-space:nowrap}.ckprog{flex-basis:100%}}
 .iabal{position:relative;background:#F5F6F8;border:1px solid #ECEEF2;border-radius:20px;padding:22px 26px 16px;margin:6px 0 20px}
 .iabal::before{content:"";position:absolute;top:-9px;left:42px;width:16px;height:16px;background:#F5F6F8;border-left:1px solid #ECEEF2;border-top:1px solid #ECEEF2;transform:rotate(45deg)}
 .iahead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:6px}
@@ -310,6 +358,7 @@ const MESES=["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agos
 const CAMP_TEMAS=["Janeiro Branco — saúde mental","Fevereiro Roxo e Laranja — doenças crônicas e leucemia","Março Lilás — câncer de colo do útero","Abril Verde — segurança e saúde no trabalho","Maio Amarelo — segurança no trânsito","Junho Vermelho — doação de sangue","Julho Amarelo — hepatites virais","Agosto Lilás — combate à violência contra a mulher","Setembro Amarelo — valorização da vida","Outubro Rosa — câncer de mama","Novembro Azul — saúde do homem","Dezembro Vermelho — prevenção ao HIV/aids"];
 const MODELOS=[
  {id:"guindaste",nome:"Guindaste — pré-uso diário",norma:"NR-11 · NR-12",alvo:"Veículo / equipamento",itens:["Limitador de momento de carga (LMI) funcionando","Buzina e alarme sonoro de ré","Patolas e sapatas sem trincas; calços a bordo","Máquina nivelada antes de operar","Cabo de aço sem fios rompidos, amassados ou corrosão","Gancho com trava e sem deformação","Moitão e polias em bom estado","Sem vazamentos hidráulicos","Pneus e freios em condição","Fim de curso do guincho atuando","Tabela de carga na cabine","Extintor carregado e no prazo","Luzes, giroflex e cinto da cabine","Documentos do equipamento a bordo"]},
+ {id:"mestre",nome:"Checklist mestre de guindaste (completo)",norma:"NR-11 · NR-12 · NBR ISO 4309",alvo:"Veículo / equipamento",itens:[]},
  {id:"munck",nome:"Caminhão munck — pré-uso",norma:"NR-11 · NR-12",alvo:"Veículo / equipamento",itens:["Patolas apoiadas sobre calços","Comandos retornando ao neutro","Válvulas de segurança e travas","Sem vazamentos hidráulicos","Gancho com trava e sem deformação","Cabo / corrente sem danos","Tabela de carga visível","Freios, pneus, luzes e alarme de ré","Extintor carregado e no prazo"]},
  {id:"veiculo",nome:"Veículo — inspeção geral",norma:"CTB · NR-11",alvo:"Veículo / equipamento",itens:["Documentos (CRLV, AET quando exigida) a bordo","Pneus e estepe em condição","Freios e freio de estacionamento","Faróis, lanternas, setas e luz de freio","Retrovisores e para-brisa","Cinto de segurança","Tacógrafo funcionando","Extintor, triângulo e macaco","Amarração da carga (cintas, catracas, correntes)","Sem vazamentos de óleo ou combustível"]},
  {id:"acessorios",nome:"Acessórios de içamento",norma:"NR-11 · NR-12",alvo:"Veículo / equipamento",itens:["Etiqueta legível com carga máxima em todas as peças","Cintas sem cortes, costuras rompidas ou queimaduras","Manilhas com pino correto e sem deformação","Laços de cabo sem fios rompidos","Ganchos auxiliares com trava","Balancim / vigas sem trincas","Guardados secos e longe de produtos químicos"]},
@@ -438,7 +487,7 @@ const asoAtual=colabId=>{ const l=S.asos.filter(a=>a.colab===colabId&&a.tipo!=="
 const docsAtuais=()=>ultimo(S.documentos,d=>(d.categoria||"")+"|"+(d.tipo||"")+"|"+(d.vinculo||"")+"|"+(d.tipo==="Outro"||!d.tipo?d.titulo:""));
 function statusColab(c){ const a=asoAtual(c.id); const l=isAdmin?[a?st(a.validade):PEND("ASO não cadastrado")]:[]; if(faltaTreino(c).length) l.push(PEND("Falta registrar treinamento")); treinosAtuais().filter(t=>t.colab===c.id).forEach(t=>l.push(st(t.validade))); return pior(l); }
 function statusVeic(v){ if(v.bloqueado==="Sim") return {k:"venc",t:"BLOQUEADO",n:-2}; const l=docsVeic(v).map(([k])=>(v.docs||{})[k]).filter(x=>x&&x.validade).map(x=>st(x.validade));
-  const ui=S.inspecoes.filter(i=>i.veiculo===v.id).sort((a,b)=>(b.data||"").localeCompare(a.data||""))[0];
+  const ui=S.inspecoes.filter(i=>i.veiculo===v.id&&!i.rascunho).sort((a,b)=>(b.data||"").localeCompare(a.data||""))[0];
   if(ui&&ui.reprovado) return {k:"venc",t:"Reprovado na última inspeção",n:-1};
   return l.length?pior(l):{k:"sem",t:"Sem documentos",n:9e9}; }
 const cargoDe=c=>S.cargos.find(g=>(g.nome||"").toLowerCase()===(c.funcao||"").toLowerCase());
@@ -468,13 +517,13 @@ function stInsp(d){ if(!d) return PEND("Sem inspeção registrada"); const n=Mat
 function modeloDoVeic(v){ const t=v.tipo||""; return t==="Guindaste"?"guindaste":t==="Caminhão munck"?"munck":/^Acessório/.test(t)?"acessorios":/Gerador/.test(t)?"veiculo":"veiculo"; }
 function agendaInsp(){
   const rows=[]; const ult=(fn)=>S.inspecoes.filter(fn).sort((a,b)=>(b.data||"").localeCompare(a.data||""))[0];
-  S.veiculos.filter(v=>v.situacao!=="Fora de uso").forEach(v=>{ const m=modeloDoVeic(v); const u=ult(i=>i.veiculo===v.id&&i.modelo===m);
+  S.veiculos.filter(v=>v.situacao!=="Fora de uso").forEach(v=>{ const m=modeloDoVeic(v); const u=ult(i=>i.veiculo===v.id&&!i.rascunho&&(i.modelo===m||(i.modelo==="mestre"&&(m==="guindaste"||m==="munck"))));
     rows.push({m,alvo:v.nome+(v.placa?" · "+v.placa:""),veic:v.id,ult:u,prox:u?(u.proxima||addDias(u.data,freqDe(m))):""}); });
   [["empresa","Empresa / pátio e oficina"],["epi","EPIs da equipe"]].forEach(([m,l])=>{ const u=ult(i=>i.modelo===m); rows.push({m,alvo:l,ult:u,prox:u?(u.proxima||addDias(u.data,freqDe(m))):""}); });
   rows.forEach(r=>{ r.s=stInsp(r.prox); r.nome=(MODELOS.find(x=>x.id===r.m)||{}).nome; }); return rows.sort((a,b)=>a.s.n-b.s.n);
 }
 function episAtuais(){ const m={}; const ids=new Set(ativos().map(c=>c.id)); S.epis.forEach(r=>(r.itens||[]).forEach(it=>{ if(!ids.has(r.colab)||!it.epi) return; const k=r.colab+"|"+it.epi.toLowerCase(); const x=Object.assign({colab:r.colab,data:r.data,rid:r.id},it); if(!m[k]||(x.data||"")>(m[k].data||"")) m[k]=x; })); return Object.values(m); }
-const acoesAbertas=()=>{ const out=[]; S.inspecoes.forEach(i=>(i.problemas||[]).forEach(p=>{ if(p.status!=="Concluída") out.push(Object.assign({insp:i},p)); })); return out; };
+const acoesAbertas=()=>{ const out=[]; S.inspecoes.filter(i=>!i.rascunho).forEach(i=>(i.problemas||[]).forEach(p=>{ if(p.status!=="Concluída") out.push(Object.assign({insp:i},p)); })); return out; };
 function pendencias(todos){
   const out=[]; const ids=new Set(ativos().map(c=>c.id));
   docsAtuais().forEach(d=>d.validade&&out.push({s:st(d.validade),o:d.titulo,d:"Documento · "+(d.categoria||""),go:["documentos",d.id]}));
@@ -482,6 +531,7 @@ function pendencias(todos){
   ativos().forEach(c=>faltaTreino(c).forEach(t=>out.push({s:PEND("Sem certificado"),o:c.nome,d:"Falta treinamento · "+t,go:["novoTreino",c.id,t]})));
   if(isAdmin) ativos().forEach(c=>{ const a=asoAtual(c.id); out.push(a?{s:st(a.validade),o:c.nome,d:"ASO "+(a.tipo||"").toLowerCase(),go:["asos",a.id]}:{s:PEND("ASO não cadastrado"),o:c.nome,d:"ASO não cadastrado",go:["colaboradores",c.id]}); });
   S.veiculos.filter(v=>v.situacao!=="Fora de uso").forEach(v=>docsVeic(v).forEach(([k,l])=>{ const x=(v.docs||{})[k]; if(x&&x.validade) out.push({s:st(x.validade),o:v.nome,d:l,go:["veicdoc",v.id,k]}); }));
+  S.veiculos.filter(v=>v.situacao!=="Fora de uso").forEach(v=>manutAlerta(v).forEach(m=>out.push({s:m,o:v.nome,d:"Manutenção preventiva",go:["tab","veiculos"]})));
   episAtuais().forEach(x=>{ if(x.troca) out.push({s:st(x.troca),o:nomeColab(x.colab),d:"Troca de EPI · "+x.epi,go:["epis",x.rid]}); if(x.validadeCA&&red(st(x.validadeCA))) out.push({s:st(x.validadeCA),o:x.epi+" (CA "+(x.ca||"?")+")",d:"Certificado de Aprovação · entregue a "+nomeColab(x.colab),go:["epis",x.rid]}); });
   agendaInsp().filter(r=>r.s.k!=="ok").forEach(r=>out.push({s:!r.ult?PEND("Sem inspeção registrada"):r.s,o:r.alvo,d:"Inspeção · "+r.nome+(r.ult?" · última em "+fmt(r.ult.data):""),go:["inspNow",r.m,r.veic||""]}));
   S.acoes.filter(a=>a.situacao!=="Concluída").forEach(a=>out.push({s:a.prazo?st(a.prazo):{k:"alert",t:"Sem prazo",n:0},o:a.titulo,d:"Plano de ação"+(a.origem?" · "+a.origem:"")+(a.situacao?" · "+a.situacao:""),go:["acoes",a.id]}));
@@ -606,11 +656,252 @@ function render(){
   if(!ready&&!offline){ m.innerHTML=h+`<p class="empty">Carregando registros…</p>`; return; }
   h+=VIEWS[tab]();
   m.innerHTML=h;
+  if(pendingCk&&(ready||offline)&&S.veiculos.some(v=>v.id===pendingCk)&&canWrite){ const pv=pendingCk; pendingCk=null; tab="veiculos"; veicView="ck"; setTimeout(()=>abrirCk(null,{veiculo:pv}),200); }
   const si=m.querySelector(".search"); if(si&&busca[tab]) si.value=busca[tab];
 }
 function filtra(lista,fn){ const q=(busca[tab]||"").toLowerCase().trim(); if(!q) return lista; return lista.filter(x=>fn(x).toLowerCase().includes(q)); }
 const head=(t,btns,ph,sub)=>`<div class="sechead"><div><h2>${t}</h2>${sub?`<div class="sub">${sub}</div>`:""}</div><div class="tools">${ph?`<input class="search" placeholder="${ph}" aria-label="Buscar">`:""}${canWrite&&btns?btns:""}</div></div>`;
 const emptyBox=t=>`<div class="panel empty">${t}</div>`;
+
+/* ===================== CHECKLIST MESTRE DE GUINDASTE ===================== */
+const ART_URL="https://claude.ai/artifact/Wi49V33Y2q7B8dAqmw2Vwy";
+const G=(t,...itens)=>({t,itens});
+const CK_MESTRE=[
+ {t:"Documentação",g:[G("Equipamento","CRLV válido","Licenciamento em dia","Manual do fabricante disponível","Plano de manutenção atualizado","Certificado de inspeção vigente","Registro de manutenção","Histórico de falhas"),G("Operador","CNH compatível","Certificado NR-11","Treinamento atualizado","ASO válido","Integração realizada"),G("Segurança","APR","PT","DDS realizado","Plano de rigging","Plano de içamento aprovado")]},
+ {t:"Inspeção externa",g:[G("Estrutura","Sem trincas","Sem deformações","Sem soldas rompidas","Sem corrosão crítica","Pintura preservada"),G("Chassi","Longarinas íntegras","Travessas sem danos","Parafusos apertados","Vazamentos inexistentes")]},
+ {t:"Cabine",g:[G("Interior","Banco firme","Cinto funcionando","Espelhos ajustados","Vidros íntegros","Limpadores funcionando","Buzina","Painel operacional","Ar-condicionado","Extintor válido"),G("Controles","Joysticks","Pedais","Botão de emergência","Indicadores funcionando")]},
+ {t:"Motor",g:[G("Inspeção","Nível do óleo","Vazamentos","Filtro de óleo","Filtro de combustível","Filtro de ar","Correias","Mangueiras","Radiador","Água do radiador","Bateria","Alternador","Partida normal")]},
+ {t:"Sistema hidráulico",g:[G("Vazamentos","Mangueiras","Conexões","Cilindros","Bombas","Válvulas"),G("Funcionamento","Pressão correta","Sem ruídos","Sem superaquecimento")]},
+ {t:"Lança",g:[G("Estrutura","Sem empenamentos","Sem trincas","Sem corrosão","Soldas íntegras"),G("Telescopagem","Estende normalmente","Recolhe normalmente","Sem travamentos")]},
+ {t:"Moitão",g:[G("","Estrutura íntegra","Polias livres","Eixos íntegros","Lubrificação adequada")]},
+ {t:"Gancho",nota:"Conforme normas.",g:[G("","Sem trincas","Sem deformação","Trava funcionando","Giro livre","Identificação legível")]},
+ {t:"Cabo de aço",nota:"Conforme ABNT NBR ISO 4309.",g:[G("Verificação","Arames rompidos","Achatamento","Corrosão","Torção","Gaiola","Lubrificação","Fixação correta")]},
+ {t:"Polias",g:[G("","Livre rotação","Sem desgaste","Canaletas preservadas")]},
+ {t:"Tambor",g:[G("","Enrolamento uniforme","Fixação correta","Sem desgaste excessivo")]},
+ {t:"Contrapeso",g:[G("","Fixação correta","Pinos travados","Sem rachaduras")]},
+ {t:"Estabilizadores",g:[G("Sapatas","Sem deformação","Sem trincas"),G("Cilindros","Sem vazamentos","Funcionamento correto"),G("Patolas","Abrem normalmente","Travam corretamente")]},
+ {t:"Pneus (guindastes móveis)",nota:"Verificar cada pneu.",cond:"pneus",g:[G("","Pressão","Cortes","Bolhas","Desgaste","Porcas apertadas")]},
+ {t:"Esteiras (guindastes sobre esteira)",cond:"esteira",g:[G("","Tensão correta","Roletes","Rodas-guia","Sapatas","Desgaste uniforme")]},
+ {t:"Freios",g:[G("","Freio de serviço","Freio de estacionamento","Freio do guincho")]},
+ {t:"Direção",g:[G("","Folgas","Resposta adequada","Vazamentos")]},
+ {t:"Transmissão",g:[G("","Engates corretos","Ruídos inexistentes","Vazamentos")]},
+ {t:"Iluminação",g:[G("","Farol baixo","Farol alto","Luz de trabalho","Giroflex","Lanternas","Luz de freio","Ré")]},
+ {t:"Sinalização sonora",g:[G("","Buzina","Alarme de ré","Sirene operacional")]},
+ {t:"Sistemas eletrônicos",g:[G("LMI","Funcionando","Sem falhas"),G("Indicadores","Carga","Raio","Ângulo","Comprimento da lança")]},
+ {t:"Limitadores",g:[G("","Sobrecarga","Curso superior","Curso inferior","Anti-duas-bloqueio")]},
+ {t:"Teste operacional",g:[G("Sem carga","Giro","Elevação","Descida","Telescopagem","Guincho"),G("Com carga teste (quando permitido)","Elevação","Estabilidade","Controles suaves")]},
+ {t:"Acessórios de içamento",g:[G("Cintas","Etiqueta legível","Sem cortes","Sem desgaste"),G("Correntes","Sem alongamento","Sem trincas"),G("Manilhas","Pino correto","Sem deformação"),G("Olhais","Íntegros"),G("Balancins","Sem empenamentos")]},
+ {t:"Área de operação",nota:"Antes da operação.",g:[G("","Solo firme","Nivelamento","Distância da rede elétrica","Isolamento da área","Sinalização instalada","Vento dentro do limite","Chuva intensa inexistente","Iluminação suficiente")]},
+ {t:"Rede elétrica",g:[G("","Distância segura respeitada","Plano específico","Observador designado")]},
+ {t:"Condições climáticas",clima:1,g:[]},
+ {t:"EPIs",g:[G("Operador","Capacete","Óculos","Luvas","Botina","Colete","Protetor auricular"),G("Equipe","EPIs completos")]},
+ {t:"Comunicação",g:[G("","Rádio funcionando","Sinaleiro definido","Código de sinais conhecido")]},
+ {t:"Inspeção pós-operação",nota:"Após encerrar.",pos:1,g:[G("","Lança recolhida","Gancho armazenado","Patolas recolhidas","Equipamento limpo","Vazamentos novos inexistentes","Horímetro final registrado")]}
+];
+const CK_ITENS=[]; CK_MESTRE.forEach((s,si)=>s.g.forEach((g,gi)=>g.itens.forEach((it,ii)=>CK_ITENS.push({k:si+"-"+gi+"-"+ii,si,s:(si+1)+". "+s.t,g:g.t,it}))));
+const CK_ITEM=Object.fromEntries(CK_ITENS.map(x=>[x.k,x]));
+const CK_GRAV=["Baixa","Média","Alta","Crítica"], CK_STATUS=["Liberado","Liberado com ressalvas","Bloqueado"];
+const CK_PER={"Diária":1,"Semanal":7,"Mensal":30,"Trimestral":90,"Semestral":180,"Anual":365};
+const CK_GRAV_TXT={"Crítica":"Bloqueio imediato","Alta":"Corrigir antes da operação","Média":"Programar manutenção","Baixa":"Registrar e monitorar"};
+let CK=null, ckVeicFiltro="", veicView="equip", pendingCk=null;
+try{ const m=(location.hash||"").match(/ck=([\w-]+)/); if(m) pendingCk=m[1]; }catch(e){}
+
+const ckFinais=()=>S.inspecoes.filter(i=>i.modelo==="mestre"&&!i.rascunho);
+const ckUlt=vid=>ckFinais().filter(i=>i.veiculo===vid).sort((a,b)=>((b.data||"")+(b.hora||"")).localeCompare((a.data||"")+(a.hora||"")))[0];
+function ckSug(ncs){ const g=ncs.map(n=>n.gravidade); return g.includes("Crítica")||g.includes("Alta")?"Bloqueado":g.length?"Liberado com ressalvas":"Liberado"; }
+const ckRank=s=>CK_STATUS.indexOf(s);
+const ckPill=s=>`<span class="pill ${s==="Bloqueado"?"venc":s==="Liberado com ressalvas"?"alert":s==="Liberado"?"ok":"sem"}">${esc(s||"Sem checklist")}</span>`;
+function ckConf(r){ const v=Object.values(r.respostas||{}), c=v.filter(x=>x==="ok").length, n=v.filter(x=>x==="nc").length; return c+n?Math.round(100*c/(c+n)):null; }
+function proxNumCK(){ const n=S.inspecoes.filter(i=>i.modelo==="mestre").map(i=>parseInt((i.numero||"").replace(/\D/g,""))||0); return "CK-"+String((n.length?Math.max(...n):0)+1).padStart(4,"0"); }
+function manutAlerta(v){ const l=[]; const h=+v.horimetro||0;
+  if(+v.manutHor&&h){ const d=+v.manutHor-h; if(d<=0) l.push({k:"venc",t:"Preventiva passou do horímetro ("+v.manutHor+" h)",n:-1}); else if(d<=50) l.push({k:"alert",t:"Preventiva em "+d+" h (no horímetro "+v.manutHor+")",n:Math.round(d/8)}); }
+  if(v.manutData){ const s=st(v.manutData); if(s.k==="venc"||s.k==="alert") l.push({k:s.k,t:"Preventiva "+(s.k==="venc"?"passou da data":"até "+fmt(v.manutData)),n:s.n}); }
+  return l; }
+const ehGuind=v=>/guindaste|munck/i.test(v.tipo||"");
+
+/* ---------- área de checklists dentro de Equipamentos ---------- */
+function viewChecklists(){
+  const eqs=S.veiculos.filter(v=>v.situacao!=="Fora de uso"&&ehGuind(v)); const lista=eqs.length?eqs:S.veiculos.filter(v=>v.situacao!=="Fora de uso");
+  const ult=lista.map(v=>({v,u:ckUlt(v.id)})); const n=s=>ult.filter(x=>x.u&&x.u.statusGeral===s).length;
+  const d30=new Date(hoje.getTime()-30*864e5).toISOString().slice(0,10), rec=ckFinais().filter(i=>(i.data||"")>=d30);
+  let c=0,nc=0; rec.forEach(r=>Object.values(r.respostas||{}).forEach(x=>{ if(x==="ok") c++; else if(x==="nc") nc++; })); const taxa=c+nc?Math.round(100*c/(c+nc)):null;
+  const ncAb=ckFinais().reduce((t,r)=>t+(r.ncs||[]).filter(x=>x.status!=="Concluída").length,0);
+  const K=(cls,l,v,sub)=>`<div class="kpi ${cls}"><span class="lbl">${l}</span><b>${v}</b><span class="sub">${sub}</span></div>`;
+  let h=`<div class="kpis">${K("okk","Liberados",n("Liberado"),"último checklist")}${K(n("Liberado com ressalvas")?"warn":"okk","Liberados com ressalvas",n("Liberado com ressalvas"),"operar com atenção")}${K(n("Bloqueado")?"bad":"okk","Bloqueados",n("Bloqueado"),"não podem operar")}${K(ncAb?"warn":"okk","Pendências em aberto",ncAb,"não conformidades a corrigir")}${K(taxa==null?"info":taxa>=95?"okk":taxa>=85?"warn":"bad","Taxa de conformidade",taxa==null?"—":taxa+"%","últimos 30 dias · "+rec.length+" checklists")}${K(ult.filter(x=>!x.u).length?"warn":"okk","Sem checklist",ult.filter(x=>!x.u).length,"equipamentos nunca inspecionados")}</div>`;
+  h+=`<div class="panel" style="margin-bottom:18px"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><div><h3 style="margin:0">Checklist mestre por equipamento</h3><div class="sub">Nenhum guindaste é liberado sem inspeção completa. Falha crítica bloqueia o equipamento na hora.</div></div>${canWrite?`<button class="btn primary" data-act="novoCk">+ Novo checklist</button>`:""}</div>
+   <div class="tablewrap" style="margin-top:12px"><table><thead><tr><th>Equipamento</th><th>Último checklist</th><th>Status</th><th>Periodicidade</th><th>Próximo</th><th>Horímetro</th><th>Manutenção preventiva</th><th></th></tr></thead><tbody>${ult.map(({v,u})=>{ const px=u&&u.proxima, sp=px?stInsp(px):PEND("Fazer o primeiro"), ma=manutAlerta(v);
+    return `<tr class="${(u&&u.statusGeral==="Bloqueado")||v.bloqueado==="Sim"?"red":""}"><td><b style="font-weight:500">${esc(v.nome)}</b><div class="sub">${esc([v.tipo,v.placa].filter(Boolean).join(" · "))}</div></td><td>${u?`<a href="#" data-ckopen="${u.id}">${esc(u.numero||"")} · ${fmt(u.data)}</a><div class="sub">${esc(u.inspetor||"")}</div>`:'<span class="sub">Nunca</span>'}</td><td>${v.bloqueado==="Sim"?'<span class="pill venc">BLOQUEADO</span>':ckPill(u&&u.statusGeral)}</td><td>${esc((u&&u.periodicidade)||"—")}</td><td>${px?fmt(px)+" ":""}${pill(sp)}</td><td class="mono">${v.horimetro?esc(v.horimetro)+" h":"—"}</td><td>${ma.length?ma.map(x=>pill(x)).join(" "):(v.manutHor||v.manutData?'<span class="pill ok">Em dia</span>':'<span class="sub">Não programada</span>')}</td><td class="tools" style="justify-content:flex-end;flex-wrap:nowrap">${canWrite?`<button class="btn small primary" data-act="novoCk" data-veic="${v.id}">Checklist</button>`:""}<button class="btn small" data-act="qrCk" data-veic="${v.id}">QR Code</button><button class="btn small" data-ckf="${ckVeicFiltro===v.id?"":v.id}">${ckVeicFiltro===v.id?"Ver todos":"Histórico"}</button></td></tr>`; }).join("")||'<tr><td colspan="8" class="empty">Cadastre os guindastes em “Equipamentos e documentos”.</td></tr>'}</tbody></table></div></div>`;
+  const hist=S.inspecoes.filter(i=>i.modelo==="mestre"&&(!ckVeicFiltro||i.veiculo===ckVeicFiltro)).sort((a,b)=>((b.data||"")+(b.hora||"")).localeCompare((a.data||"")+(a.hora||"")));
+  h+=`<h3>Histórico de checklists${ckVeicFiltro?" · "+esc(nomeVeic(ckVeicFiltro)):""}</h3>`;
+  if(!hist.length) return h+emptyBox("Nenhum checklist mestre registrado ainda. Clique em “+ Novo checklist”. Ele funciona no celular e no tablet.");
+  h+=`<div class="tablewrap"><table><thead><tr><th>Nº</th><th>Data</th><th>Equipamento</th><th>Operador</th><th>Inspetor</th><th>Status</th><th>Não conformidades</th><th>Conformidade</th><th></th></tr></thead><tbody>${hist.map(r=>{ const nc=r.ncs||[], ab=nc.filter(x=>x.status!=="Concluída").length, cf=ckConf(r);
+    return `<tr class="click ${r.statusGeral==="Bloqueado"?"red":""}" data-ckopen="${r.id}"><td class="mono">${esc(r.numero||"")}</td><td>${fmt(r.data)} <span class="sub">${esc(r.hora||"")}</span></td><td>${esc(nomeVeic(r.veiculo))}</td><td>${esc(r.operadorNome||"—")}</td><td>${esc(r.inspetor||"—")}</td><td>${r.rascunho?'<span class="pill pend">Rascunho</span>':ckPill(r.statusGeral)}</td><td>${nc.length?`${nc.length} ${ab?`<span class="pill alert">${ab} em aberto</span>`:'<span class="pill ok">corrigidas</span>'}${nc.some(x=>x.gravidade==="Crítica")?' <span class="pill venc">crítica</span>':""}`:'<span class="sub">Nenhuma</span>'}</td><td>${cf==null?"—":cf+"%"}</td><td><button class="btn small" data-ckpdf="${r.id}">PDF</button></td></tr>`; }).join("")}</tbody></table></div>`;
+  return h; }
+
+/* ---------- formulário ---------- */
+function abrirCk(id,pre){
+  const reg=id?S.inspecoes.find(x=>x.id===id):null; if(id&&!reg){ toast("Checklist não encontrado."); return; }
+  const now=new Date(); const d=reg?JSON.parse(JSON.stringify(reg)):Object.assign({modelo:"mestre",numero:proxNumCK(),data:hojeISO(),hora:String(now.getHours()).padStart(2,"0")+":"+String(now.getMinutes()).padStart(2,"0"),empresa:"Premium Locação de Guindastes e Transportes",estado:"MA",periodicidade:"Diária",inspetor:sessao&&sessao.id!=="demo"?sessao.nome:"",respostas:{},ncs:[],assin:{},clima:{},bloqueio:{}},pre||{});
+  CK={id:id||null,d,resp:Object.assign({},d.respostas||{}),ncs:Object.fromEntries((d.ncs||[]).map(n=>[n.key,n])),files:{fotosAntes:(d.fotosAntes||[]).slice(),fotosDepois:(d.fotosDepois||[]).slice(),videos:(d.videos||[]).slice()},sig:JSON.parse(JSON.stringify(d.assin||{})),manual:d.statusGeral||""};
+  if(!reg&&d.veiculo) ckPreencheVeic(d,d.veiculo);
+  const ro=!canWrite?"disabled":"";
+  const I=(k,l,t,o)=>{ o=o||{}; const v=k.includes(".")?((d[k.split(".")[0]]||{})[k.split(".")[1]]||""):(d[k]==null?"":d[k]);
+    if(t==="select") return `<label class="${o.full?"full":""}">${esc(l)}${o.req?" *":""}<select data-ck="${k}" ${ro}>${o.none!=null?`<option value="">${esc(o.none)}</option>`:""}${o.opts.map(x=>{ const [val,lab]=Array.isArray(x)?x:[x,x]; return `<option value="${esc(val)}"${String(v)===String(val)?" selected":""}>${esc(lab)}</option>`; }).join("")}</select></label>`;
+    if(t==="textarea") return `<label class="full">${esc(l)}${o.req?" *":""}<textarea data-ck="${k}" rows="2" ${ro}>${esc(v)}</textarea></label>`;
+    return `<label class="${o.full?"full":""}">${esc(l)}${o.req?" *":""}<input type="${t||"text"}" data-ck="${k}" value="${esc(v)}" ${o.ph?`placeholder="${esc(o.ph)}"`:""} ${o.step?`step="${o.step}"`:""} ${ro}></label>`; };
+  const colabs=S.colaboradores.filter(c=>c.situacao!=="Desligado").sort((a,b)=>(a.nome||"").localeCompare(b.nome||"")).map(c=>[c.id,c.nome+(c.funcao?" · "+c.funcao:"")]);
+  const veics=S.veiculos.slice().sort((a,b)=>ehGuind(b)-ehGuind(a)||(a.nome||"").localeCompare(b.nome||"")).map(v=>[v.id,v.nome+(v.placa?" · "+v.placa:"")]);
+  const item=(x)=>{ const r=CK.resp[x.k]||""; return `<div class="cki ${r==="nc"?"isnc":""}" data-key="${x.k}"><div class="ckt">${esc(x.it)}<span class="ckhint" data-hint="${x.k}"></span></div><div class="seg">${[["ok","C"],["nc","NC"],["na","N/A"]].map(([c,l])=>`<button type="button" class="${c}${r===c?" on":""}" data-ckv="${c}" aria-pressed="${r===c}" title="${c==="ok"?"Conforme":c==="nc"?"Não conforme":"Não se aplica"}" ${ro}>${l}</button>`).join("")}</div><div class="ncbox" data-ncbox="${x.k}">${r==="nc"?ncHTML(x.k):""}</div></div>`; };
+  const secHTML=(s,si)=>{ const its=CK_ITENS.filter(x=>x.si===si);
+    let body=s.clima?`<div class="ckgrid">${I("clima.vento","Velocidade do vento (km/h)","number")}${I("clima.temp","Temperatura (°C)","number")}${I("clima.chuva","Chuva","select",{opts:["Sem chuva","Garoa","Chuva moderada","Chuva intensa"],none:"—"})}${I("clima.visib","Visibilidade","select",{opts:["Boa","Reduzida","Ruim"],none:"—"})}</div>`:
+      s.g.map((g,gi)=>`${g.t?`<div class="ckg">${esc(g.t)}</div>`:""}${its.filter(x=>+x.k.split("-")[1]===gi).map(item).join("")}`).join("");
+    if(s.pos) body+=`<div class="ckgrid" style="margin-top:10px">${I("horFinal","Horímetro final (h)","number",{step:"0.1"})}</div>`;
+    return `<details class="cksec" data-sec="${si}" ${si<1||its.some(x=>CK.resp[x.k]==="nc")?"open":""}><summary><span class="ckn">${si+1}</span><b>${esc(s.t)}</b>${s.nota?`<span class="sub">${esc(s.nota)}</span>`:""}<span class="ckcount" data-count="${si}"></span></summary><div class="ckbody">${!s.clima&&canWrite?`<div class="tools ckquick"><button type="button" class="btn small" data-ckall="${si}" data-v="ok">Tudo conforme</button><button type="button" class="btn small" data-ckall="${si}" data-v="na">Não se aplica</button></div>`:""}${body}</div></details>`; };
+  const sigBox=(k,l,extra)=>{ const s=CK.sig[k]||{}; return `<div class="sigbox"><div class="ckg">${esc(l)}${k==="inspetor"?" *":""}</div><label>Nome<input type="text" data-sig="${k}" data-f="nome" value="${esc(s.nome||(k==="inspetor"?d.inspetor||"":k==="operador"?d.operadorNome||"":""))}" ${ro}></label>${extra||""}<div class="sigpad"><canvas data-pad="${k}" width="600" height="180" aria-label="Assinatura de ${esc(l)}"></canvas>${s.img?`<img src="${s.img}" alt="Assinatura" data-sigimg="${k}">`:""}</div><div class="tools"><span class="sub" data-sigdata="${k}">${s.data?"Assinado em "+new Date(s.data).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"}):"Assine com o dedo ou o mouse"}</span>${canWrite?`<button type="button" class="btn small" data-sigclr="${k}">Limpar</button>`:""}</div></div>`; };
+  const fileBox=(k,l,acc)=>`<div class="ckfiles"><div class="ckg">${esc(l)}</div><div class="files" data-ckfiles="${k}"></div>${canWrite?`<label class="btn small upl">Adicionar<input type="file" data-ckup="${k}" accept="${acc}" multiple hidden></label>`:""}</div>`;
+  let root=document.getElementById("ckRoot"); if(!root){ root=document.createElement("div"); root.id="ckRoot"; document.body.appendChild(root); }
+  root.innerHTML=`<div class="overlay ckov"><div class="modal wide ckmodal" role="dialog" aria-label="Checklist mestre de guindaste">
+   <div class="ckbar"><div class="ckbar-l"><div class="sub">Checklist mestre de guindaste · NR-11 · NR-12 · NBR ISO 4309</div><b>${esc(d.numero||"")}</b> <span class="sub">${CK_ITENS.length} itens</span></div><div class="ckprog"><div class="ckprogbar"><i data-prog></i></div><span data-progtxt></span></div><div class="tools">${canWrite?`<button type="button" class="btn" data-ckdo="rascunho">Salvar rascunho</button><button type="button" class="btn primary" data-ckdo="concluir">Concluir checklist</button>`:""}${id?`<button type="button" class="btn" data-ckdo="pdf">PDF</button>`:""}<button type="button" class="btn" data-ckdo="fechar" aria-label="Fechar">Fechar</button></div></div>
+   <div class="ckerr" data-ckerr hidden></div>
+   <div class="ckwrap">
+    <section class="ckblock"><h3>Identificação da inspeção</h3><div class="ckgrid">
+     ${I("data","Data","date",{req:1})}${I("hora","Hora","time",{req:1})}${I("numero","Número da inspeção","text")}${I("periodicidade","Periodicidade","select",{opts:Object.keys(CK_PER)})}
+     ${I("inspetor","Inspetor","text",{req:1})}${I("operador","Operador","select",{opts:colabs,none:"Escolher…",req:1})}${I("matricula","Matrícula","text",{ph:"Opcional"})}${I("empresa","Empresa","text")}
+     ${I("cliente","Cliente","text")}${I("contrato","Contrato","text")}${I("obra","Obra","text")}${I("cidade","Cidade","text")}${I("estado","Estado","text")}
+     ${I("veiculo","Equipamento","select",{opts:veics,none:"Escolher…",req:1})}${I("eqModelo","Modelo","text")}${I("fabricante","Fabricante","text")}${I("ano","Ano","text")}${I("serie","Número de série","text")}${I("horimetro","Horímetro (h)","number",{step:"0.1",req:1})}${I("placa","Placa","text")}${I("capacidade","Capacidade nominal","text")}${I("tipoEq","Tipo","select",{opts:["Móvel","Todo terreno","Esteira","Munck","Sobre caminhão","Outro"],none:"—"})}
+    </div><div data-integ></div></section>
+    <section class="ckblock"><h3>Status geral</h3><div class="ckstatus" data-ckstatus></div><div data-bloq class="ckgrid" style="margin-top:10px">${I("bloqueio.motivo","Motivo do bloqueio","text",{full:1})}${I("bloqueio.responsavel","Responsável","text")}${I("bloqueio.acao","Ação corretiva","text",{full:1})}</div><p class="note" style="margin:8px 0 0">Gravidade: <b>Crítica</b> = bloqueio imediato · <b>Alta</b> = corrigir antes da operação · <b>Média</b> = programar manutenção · <b>Baixa</b> = registrar e monitorar.</p></section>
+    ${CK_MESTRE.map(secHTML).join("")}
+    <section class="ckblock"><h3>Fotos e vídeos</h3><div class="ckgrid3">${fileBox("fotosAntes","Fotos antes","image/*")}${fileBox("fotosDepois","Fotos depois","image/*")}${fileBox("videos","Vídeos (até 20 MB cada)","video/*")}</div><div class="ckgrid" style="margin-top:12px">${I("obs","Observações gerais","textarea")}</div></section>
+    <section class="ckblock"><h3>Assinaturas</h3><div class="ckgrid3">${sigBox("operador","Operador")}${sigBox("inspetor","Inspetor")}${sigBox("supervisor","Supervisor",`<label>Aprovação<select data-sig="supervisor" data-f="aprovacao" ${ro}>${["","Aprovado","Reprovado"].map(x=>`<option${(CK.sig.supervisor||{}).aprovacao===x?" selected":""}>${x}</option>`).join("")}</select></label>`)}</div></section>
+   </div></div></div>`;
+  const ov=root.querySelector(".ckov"); CK.ov=ov;
+  ["fotosAntes","fotosDepois","videos"].forEach(ckDrawFiles);
+  ov.querySelectorAll("canvas[data-pad]").forEach(sigPad);
+  ckDraw(); ckInteg();
+  ov.addEventListener("click",ckClick); ov.addEventListener("change",ckChange); ov.addEventListener("input",e=>{ if(e.target.closest("[data-nc]")) return; });
+}
+function ncHTML(k){ const n=CK.ncs[k]||{}, ro=!canWrite?"disabled":"";
+  return `<div class="ncform"><label>Gravidade *<select data-nc="${k}" data-f="gravidade" ${ro}><option value="">Escolher…</option>${CK_GRAV.map(g=>`<option${n.gravidade===g?" selected":""}>${g}</option>`).join("")}</select></label><label>Responsável<input data-nc="${k}" data-f="responsavel" value="${esc(n.responsavel||"")}" ${ro}></label><label>Prazo<input type="date" data-nc="${k}" data-f="prazo" value="${esc(n.prazo||"")}" ${ro}></label><label>Situação<select data-nc="${k}" data-f="status" ${ro}>${["Aberta","Em andamento","Concluída"].map(s=>`<option${(n.status||"Aberta")===s?" selected":""}>${s}</option>`).join("")}</select></label><label class="full">Descrição *<textarea rows="2" data-nc="${k}" data-f="descricao" ${ro}>${esc(n.descricao||"")}</textarea></label><label class="full">Ação imediata<input data-nc="${k}" data-f="acao" value="${esc(n.acao||"")}" ${ro}></label><div class="full"><div class="files" data-ckfiles="nc:${k}"></div>${canWrite?`<label class="btn small upl">Foto da não conformidade<input type="file" data-ckup="nc:${k}" accept="image/*" multiple hidden></label>`:""}</div></div>`; }
+function ckLerNC(){ CK.ov.querySelectorAll("[data-nc]").forEach(el=>{ const k=el.dataset.nc; CK.ncs[k]=CK.ncs[k]||{key:k}; CK.ncs[k][el.dataset.f]=el.value; }); }
+function ckNCs(){ ckLerNC(); return Object.keys(CK.resp).filter(k=>CK.resp[k]==="nc").map(k=>{ const x=CK_ITEM[k]||{}; return Object.assign({key:k,secao:x.s,grupo:x.g,item:x.it,status:"Aberta",fotos:[]},CK.ncs[k]||{},{key:k}); }); }
+function ckDraw(){ const ov=CK.ov, resp=CK.resp, tot=CK_ITENS.length, feitos=CK_ITENS.filter(x=>resp[x.k]).length, ncs=ckNCs(), sug=ckSug(ncs);
+  ov.querySelector("[data-prog]").style.width=Math.round(100*feitos/tot)+"%";
+  ov.querySelector("[data-progtxt]").innerHTML=`${feitos}/${tot} respondidos${ncs.length?` · <b style="color:var(--bad)">${ncs.length} NC</b>`:""}`;
+  CK_MESTRE.forEach((s,si)=>{ const its=CK_ITENS.filter(x=>x.si===si), el=ov.querySelector(`[data-count="${si}"]`); if(!el) return; if(s.clima){ el.innerHTML=""; return; } const f=its.filter(x=>resp[x.k]).length, n=its.filter(x=>resp[x.k]==="nc").length;
+    el.innerHTML=n?`<span class="pill venc">${n} NC</span> <span class="sub">${f}/${its.length}</span>`:f===its.length?'<span class="pill ok">Completo</span>':`<span class="sub">${f}/${its.length}</span>`; });
+  let st=CK.manual&&ckRank(CK.manual)>=ckRank(sug)?CK.manual:sug; CK.status=st; const crit=ncs.some(n=>n.gravidade==="Crítica");
+  ov.querySelector("[data-ckstatus]").innerHTML=CK_STATUS.map(s=>`<button type="button" class="ckst ${s===st?"on":""} ${s==="Bloqueado"?"b":s==="Liberado"?"l":"r"}" data-ckst="${s}" ${ckRank(s)<ckRank(sug)||!canWrite?"disabled":""}>${esc(s)}</button>`).join("")+`<div class="sub" style="flex-basis:100%;margin-top:6px">${crit?"<b style=\"color:var(--bad)\">Falha crítica: equipamento será BLOQUEADO automaticamente ao concluir.</b>":ncs.some(n=>n.gravidade==="Alta")?"Não conformidade de gravidade alta: corrigir antes de operar.":ncs.length?"Há não conformidades. Classifique a gravidade de cada uma.":"Sugestão do sistema com base nas respostas."}</div>`;
+  ov.querySelector("[data-bloq]").hidden=st!=="Bloqueado"; }
+function ckPreencheVeic(d,vid){ const v=S.veiculos.find(x=>x.id===vid); if(!v) return; const u=ckUlt(vid);
+  d.placa=d.placa||v.placa||""; d.ano=d.ano||v.ano||""; d.capacidade=d.capacidade||v.capacidade||""; d.eqModelo=d.eqModelo||v.modeloEq||(u&&u.eqModelo)||""; d.fabricante=d.fabricante||v.fabricante||(u&&u.fabricante)||""; d.serie=d.serie||v.serie||(u&&u.serie)||"";
+  d.horimetro=d.horimetro||v.horimetro||(u&&(u.horFinal||u.horimetro))||""; d.tipoEq=d.tipoEq||(u&&u.tipoEq)||(/munck/i.test(v.tipo||"")?"Munck":""); if(!d.periodicidade&&u) d.periodicidade=u.periodicidade; }
+function ckSetVal(k,v){ const el=CK.ov.querySelector(`[data-ck="${k}"]`); if(el&&!el.value&&v) el.value=v; }
+function ckInteg(){ const ov=CK.ov, vid=ov.querySelector('[data-ck="veiculo"]').value, oid=ov.querySelector('[data-ck="operador"]').value, v=S.veiculos.find(x=>x.id===vid), c=S.colaboradores.find(x=>x.id===oid), out=[];
+  ov.querySelectorAll("[data-hint]").forEach(e=>e.innerHTML="");
+  const H=(k,s)=>{ const e=ov.querySelector(`[data-hint="${k}"]`); if(e) e.innerHTML=" "+pill(s); };
+  const k=(g,i)=>"0-"+g+"-"+i;
+  if(v){ const dc=v.docs||{}; const ds=x=>x&&x.validade?st(x.validade):x&&(x.anexos||[]).length?{k:"ok",t:"Arquivo no sistema",n:999}:PEND("Não cadastrado no sistema");
+    H(k(0,0),ds(dc.crlv)); H(k(0,1),ds(dc.crlv)); H(k(0,3),ds(dc.manutencao)); H(k(0,4),ds(dc.cert));
+    if(v.bloqueado==="Sim") out.push(`<div class="warnbox">Este equipamento está BLOQUEADO: ${esc(v.motivoBloqueio||"")}</div>`);
+    manutAlerta(v).forEach(m=>out.push(`<div class="warnbox" style="background:var(--warn-bg);color:var(--warn)">${esc(m.t)}</div>`)); }
+  if(c){ const tr=treinosAtuais().filter(t=>t.colab===c.id), nr11=tr.find(t=>/NR-?\s?11/i.test(t.curso||""));
+    H(k(1,1),nr11?(nr11.validade?st(nr11.validade):{k:"ok",t:"Registrado",n:999}):PEND("Não registrado"));
+    const ft=faltaTreino(c); H(k(1,2),ft.length?PEND("Falta: "+ft.slice(0,2).join(", ")):{k:"ok",t:"Em dia no sistema",n:999});
+    if(isAdmin){ const a=asoAtual(c.id); H(k(1,3),a?st(a.validade):PEND("Sem ASO no sistema")); }
+    const m=CK.ov.querySelector('[data-ck="matricula"]'); if(m&&!m.value&&c.matricula) m.value=c.matricula; }
+  const dt=ov.querySelector('[data-ck="data"]').value; if(S.dds.some(x=>x.data===dt)) H(k(2,2),{k:"ok",t:"DDS registrado nesta data",n:999});
+  ov.querySelector("[data-integ]").innerHTML=out.length?`<div style="display:flex;flex-direction:column;gap:6px;margin-top:10px">${out.join("")}</div>`:""; }
+function ckDrawFiles(k){ const box=CK.ov.querySelector(`[data-ckfiles="${k}"]`); if(!box) return; const l=k.startsWith("nc:")?((CK.ncs[k.slice(3)]||{}).fotos||[]):CK.files[k];
+  box.innerHTML=l.map((a,i)=>`<span class="file">${isImg(a)?`<img src="${esc(fileURL(a))}" alt="">`:/^video\//.test(a.tipo||"")?`<video src="${esc(fileURL(a))}" controls preload="metadata" style="width:120px;height:68px;border-radius:6px"></video>`:`<a href="${esc(fileURL(a))}" target="_blank" rel="noopener">${esc(a.nome)}</a>`}${canWrite?`<button type="button" data-ckrm="${k}" data-i="${i}" aria-label="Remover">×</button>`:""}</span>`).join(""); }
+function sigPad(cv){ const k=cv.dataset.pad, ctx=cv.getContext("2d"); let dw=false, drew=false; ctx.lineWidth=3.2; ctx.lineCap="round"; ctx.lineJoin="round"; ctx.strokeStyle="#1b1f3b";
+  const P=e=>{ const r=cv.getBoundingClientRect(); return [(e.clientX-r.left)*cv.width/r.width,(e.clientY-r.top)*cv.height/r.height]; };
+  cv.addEventListener("pointerdown",e=>{ if(!canWrite) return; dw=true; cv.setPointerCapture(e.pointerId); const [x,y]=P(e); ctx.beginPath(); ctx.moveTo(x,y); const im=CK.ov.querySelector(`[data-sigimg="${k}"]`); if(im) im.remove(); e.preventDefault(); });
+  cv.addEventListener("pointermove",e=>{ if(!dw) return; const [x,y]=P(e); ctx.lineTo(x,y); ctx.stroke(); drew=true; e.preventDefault(); });
+  const fim=()=>{ if(!dw) return; dw=false; if(drew){ const c2=document.createElement("canvas"); c2.width=300; c2.height=90; c2.getContext("2d").drawImage(cv,0,0,300,90); CK.sig[k]=Object.assign(CK.sig[k]||{},{img:c2.toDataURL("image/png"),data:new Date().toISOString()}); const s=CK.ov.querySelector(`[data-sigdata="${k}"]`); if(s) s.textContent="Assinado agora"; } };
+  cv.addEventListener("pointerup",fim); cv.addEventListener("pointercancel",fim); cv.style.touchAction="none"; }
+async function ckClick(e){ const ov=CK.ov, t=e.target;
+  if(t===ov){ return; }
+  const b=t.closest("[data-ckv]"); if(b&&canWrite){ const row=b.closest(".cki"), k=row.dataset.key, v=b.dataset.ckv; CK.resp[k]=v; row.querySelectorAll("[data-ckv]").forEach(x=>{ const on=x===b; x.classList.toggle("on",on); x.setAttribute("aria-pressed",on); }); row.classList.toggle("isnc",v==="nc");
+    const nb=row.querySelector("[data-ncbox]"); if(v==="nc"&&!nb.innerHTML){ nb.innerHTML=ncHTML(k); ckDrawFiles("nc:"+k); const s=nb.querySelector("select"); if(s) s.focus(); } else if(v!=="nc"){ ckLerNC(); nb.innerHTML=""; } ckDraw(); return; }
+  const all=t.closest("[data-ckall]"); if(all){ const si=+all.dataset.ckall, v=all.dataset.v; CK_ITENS.filter(x=>x.si===si).forEach(x=>{ if(v==="na"||!CK.resp[x.k]){ if(CK.resp[x.k]==="nc"&&v==="ok") return; CK.resp[x.k]=v; const row=ov.querySelector(`.cki[data-key="${x.k}"]`); row.querySelectorAll("[data-ckv]").forEach(y=>{ const on=y.dataset.ckv===v; y.classList.toggle("on",on); y.setAttribute("aria-pressed",on); }); row.classList.remove("isnc"); row.querySelector("[data-ncbox]").innerHTML=""; } }); ckDraw(); return; }
+  const sb=t.closest("[data-ckst]"); if(sb&&!sb.disabled){ CK.manual=sb.dataset.ckst; ckDraw(); return; }
+  const rm=t.closest("[data-ckrm]"); if(rm){ const k=rm.dataset.ckrm; if(k.startsWith("nc:")){ ckLerNC(); CK.ncs[k.slice(3)].fotos.splice(+rm.dataset.i,1); } else CK.files[k].splice(+rm.dataset.i,1); ckDrawFiles(k); return; }
+  const sc=t.closest("[data-sigclr]"); if(sc){ const k=sc.dataset.sigclr, cv=ov.querySelector(`[data-pad="${k}"]`); cv.getContext("2d").clearRect(0,0,cv.width,cv.height); const im=ov.querySelector(`[data-sigimg="${k}"]`); if(im) im.remove(); if(CK.sig[k]){ delete CK.sig[k].img; delete CK.sig[k].data; } ov.querySelector(`[data-sigdata="${k}"]`).textContent="Assine com o dedo ou o mouse"; return; }
+  const dob=t.closest("[data-ckdo]"); if(!dob) return; const a=dob.dataset.ckdo;
+  if(a==="fechar"){ document.getElementById("ckRoot").innerHTML=""; CK=null; return; }
+  if(a==="pdf"){ const r=S.inspecoes.find(x=>x.id===CK.id); if(r) ckPDF(r); return; }
+  if(a==="rascunho"||a==="concluir"){ dob.disabled=true; try{ await ckSalvar(a==="concluir"); }catch(er){ toast(er.message||"Não foi possível salvar."); } if(CK) dob.disabled=false; } }
+async function ckChange(e){ const t=e.target;
+  if(t.dataset.ck==="veiculo"){ const d={}; ckPreencheVeic(d,t.value); ["placa","ano","capacidade","eqModelo","fabricante","serie","horimetro","tipoEq"].forEach(k=>ckSetVal(k,d[k])); ckAutoNA(); ckInteg(); return; }
+  if(t.dataset.ck==="operador"||t.dataset.ck==="data"){ ckInteg(); return; }
+  if(t.dataset.ck==="tipoEq"){ ckAutoNA(); return; }
+  if(t.dataset.nc&&t.dataset.f==="gravidade"){ ckLerNC(); ckDraw(); return; }
+  if(t.dataset.sig){ CK.sig[t.dataset.sig]=Object.assign(CK.sig[t.dataset.sig]||{},{[t.dataset.f]:t.value}); return; }
+  const up=t.closest("input[data-ckup]"); if(up){ const k=up.dataset.ckup, files=[...up.files]; up.value="";
+    if(!assets){ try{ assets=cl?await cl.use("assets"):null; }catch(_){} } if(!assets){ toast("Envio de arquivos não liberado nesta visualização."); return; }
+    for(const f of files){ toast("Enviando "+f.name+"…"); try{ const r=await assets.upload(f); const ref={id:r.id,url:r.url,nome:f.name,tipo:r.contentType||f.type};
+      if(k.startsWith("nc:")){ ckLerNC(); const n=CK.ncs[k.slice(3)]=CK.ncs[k.slice(3)]||{key:k.slice(3)}; (n.fotos=n.fotos||[]).push(ref); } else CK.files[k].push(ref); ckDrawFiles(k); }
+      catch(er){ toast("Não foi possível enviar "+f.name+(er&&er.code==="too_large"?" (acima de 20 MB)":er&&er.code==="unsupported_type"?" (formato não aceito)":"")+"."); } } toast("Arquivos enviados. Salve o checklist para guardar."); } }
+function ckAutoNA(){ const tp=CK.ov.querySelector('[data-ck="tipoEq"]').value; if(!tp) return; const esteira=tp==="Esteira";
+  CK_MESTRE.forEach((s,si)=>{ if(!s.cond) return; const na=(s.cond==="pneus"&&esteira)||(s.cond==="esteira"&&!esteira); const its=CK_ITENS.filter(x=>x.si===si); if(!na||its.some(x=>CK.resp[x.k]&&CK.resp[x.k]!=="na")) return;
+    its.forEach(x=>{ CK.resp[x.k]="na"; CK.ov.querySelectorAll(`.cki[data-key="${x.k}"] [data-ckv]`).forEach(y=>{ y.classList.toggle("on",y.dataset.ckv==="na"); }); }); }); ckDraw(); }
+async function ckSalvar(final){ const ov=CK.ov, d=Object.assign({},CK.d);
+  ov.querySelectorAll("[data-ck]").forEach(el=>{ const k=el.dataset.ck; if(k.includes(".")){ const [a,b]=k.split("."); d[a]=Object.assign({},d[a]||{}); d[a][b]=el.value; } else d[k]=el.value; });
+  ov.querySelectorAll("[data-sig][data-f]").forEach(el=>{ const k=el.dataset.sig; CK.sig[k]=Object.assign(CK.sig[k]||{},{[el.dataset.f]:el.value}); });
+  const ncs=ckNCs(), sug=ckSug(ncs), status=CK.status||sug, op=S.colaboradores.find(c=>c.id===d.operador);
+  Object.assign(d,{modelo:"mestre",respostas:Object.assign({},CK.resp),ncs,statusGeral:status,reprovado:status==="Bloqueado",alvo:"Veículo / equipamento",fotos:CK.files.fotosAntes.concat(CK.files.fotosDepois),fotosAntes:CK.files.fotosAntes,fotosDepois:CK.files.fotosDepois,videos:CK.files.videos,assin:CK.sig,operadorNome:op?op.nome:"",local:[d.obra,d.cidade].filter(Boolean).join(" · "),rascunho:!final,
+    problemas:ncs.map(n=>({desc:n.item+" ("+n.secao+")"+(n.descricao?": "+n.descricao:"")+" · gravidade "+(n.gravidade||"—"),acao:n.acao||"",resp:n.responsavel||"",prazo:n.prazo||"",status:n.status||"Aberta"}))});
+  d.proxima=d.data&&CK_PER[d.periodicidade]?addDias(d.data,CK_PER[d.periodicidade]):"";
+  if(final){ const er=[], falta=CK_ITENS.filter(x=>!CK.resp[x.k]);
+    [["data","Data"],["hora","Hora"],["inspetor","Inspetor"],["operador","Operador"],["veiculo","Equipamento"],["horimetro","Horímetro"]].forEach(([k,l])=>{ if(!d[k]) er.push("Preencha: "+l); });
+    if(falta.length) er.push(falta.length+" item(ns) sem resposta. Primeiro: "+falta[0].s+" › "+falta[0].it);
+    ncs.forEach(n=>{ if(!n.gravidade||!n.descricao) er.push("Não conformidade “"+n.item+"”: informe gravidade e descrição."); });
+    if(status==="Bloqueado"&&!(d.bloqueio||{}).motivo) er.push("Bloqueado: informe o motivo do bloqueio.");
+    if(!(CK.sig.inspetor||{}).img) er.push("Falta a assinatura do inspetor.");
+    const box=ov.querySelector("[data-ckerr]"); if(er.length){ box.hidden=false; box.innerHTML="<b>Antes de concluir:</b><ul>"+er.slice(0,8).map(x=>"<li>"+esc(x)+"</li>").join("")+(er.length>8?"<li>e mais "+(er.length-8)+"…</li>":"")+"</ul>"; box.scrollIntoView({block:"nearest"}); if(falta.length){ const sec=ov.querySelector(`.cksec[data-sec="${falta[0].si}"]`); if(sec) sec.open=true; } return; } box.hidden=true; }
+  delete d.id; ["hist","atualizado","atualizadoPor"].forEach(k=>delete d[k]);
+  const nid=await salvar("inspecoes",CK.id,d); CK.id=CK.id||nid;
+  if(final&&d.veiculo){ const v=S.veiculos.find(x=>x.id===d.veiculo); if(v){ const b=Object.assign({},v); delete b.id; let mud=false; const hf=+(d.horFinal||d.horimetro)||0;
+    if(hf&&hf>(+v.horimetro||0)){ b.horimetro=String(hf); mud=true; }
+    if(status==="Bloqueado"&&v.bloqueado!=="Sim"){ b.bloqueado="Sim"; b.motivoBloqueio="Checklist "+d.numero+" de "+fmt(d.data)+": "+((d.bloqueio||{}).motivo||"falha crítica"); mud=true; }
+    if(mud) await salvar("veiculos",v.id,b); } }
+  toast(final?(status==="Bloqueado"?"Checklist concluído: equipamento BLOQUEADO":"Checklist concluído: "+status.toLowerCase()):"Rascunho salvo");
+  if(final){ document.getElementById("ckRoot").innerHTML=""; CK=null; } else { CK.d=Object.assign(d,{}); }
+  render(); }
+
+/* ---------- PDF do checklist ---------- */
+function ckDoc(r){ const R={ok:"Conforme",nc:"NÃO CONFORME",na:"Não se aplica"}, v=S.veiculos.find(x=>x.id===r.veiculo)||{};
+  const kv=[["Número",r.numero],["Data e hora",fmt(r.data)+" "+(r.hora||"")],["Periodicidade",r.periodicidade],["Próximo checklist",fmt(r.proxima)],["Inspetor",r.inspetor],["Operador",r.operadorNome],["Matrícula",r.matricula],["Empresa",r.empresa],["Cliente",r.cliente],["Contrato",r.contrato],["Obra",r.obra],["Cidade / UF",[r.cidade,r.estado].filter(Boolean).join(" / ")],["Equipamento",v.nome||""],["Modelo",r.eqModelo],["Fabricante",r.fabricante],["Ano",r.ano],["Número de série",r.serie],["Horímetro",r.horimetro?r.horimetro+" h":""],["Horímetro final",r.horFinal?r.horFinal+" h":""],["Placa",r.placa],["Capacidade nominal",r.capacidade],["Tipo",r.tipoEq]].filter(x=>x[1]);
+  const doc={titulo:"Checklist mestre de guindaste "+(r.numero||""),sub:"NR-11 · NR-12 · ABNT NBR ISO 4309 · Premium Locação de Guindastes e Transportes",secoes:[{tipo:"kv",t:"Identificação da inspeção",rows:kv}],assinaturas:[]};
+  const cf=ckConf(r); doc.secoes.push({tipo:"resultado",texto:"STATUS GERAL: "+(r.statusGeral||"").toUpperCase()+(cf!=null?" · conformidade "+cf+"%":""),ok:r.statusGeral!=="Bloqueado"});
+  if(r.statusGeral==="Bloqueado") doc.secoes.push({tipo:"kv",t:"Bloqueio",rows:[["Motivo",(r.bloqueio||{}).motivo||""],["Responsável",(r.bloqueio||{}).responsavel||""],["Ação corretiva",(r.bloqueio||{}).acao||""]]});
+  if((r.ncs||[]).length) doc.secoes.push({tipo:"tabela",t:"Não conformidades",cols:["Item","Gravidade","Descrição","Ação imediata","Responsável","Prazo","Situação"],rows:r.ncs.map(n=>[n.secao+" › "+n.item,n.gravidade||"",n.descricao||"",n.acao||"",n.responsavel||"",fmt(n.prazo),n.status||"Aberta"])});
+  CK_MESTRE.forEach((s,si)=>{ if(s.clima){ const c=r.clima||{}; doc.secoes.push({tipo:"kv",t:(si+1)+". Condições climáticas",rows:[["Velocidade do vento",c.vento?c.vento+" km/h":"—"],["Temperatura",c.temp?c.temp+" °C":"—"],["Chuva",c.chuva||"—"],["Visibilidade",c.visib||"—"]]}); return; }
+    const its=CK_ITENS.filter(x=>x.si===si); if(its.every(x=>(r.respostas||{})[x.k]==="na")){ doc.secoes.push({tipo:"tabela",t:(si+1)+". "+s.t,cols:["Item","Resultado"],rows:[["Seção inteira","Não se aplica"]]}); return; }
+    doc.secoes.push({tipo:"tabela",t:(si+1)+". "+s.t+(s.nota?" ("+s.nota+")":""),cols:s.g.some(g=>g.t)?["Grupo","Item","Resultado"]:["Item","Resultado"],rows:its.map(x=>(s.g.some(g=>g.t)?[x.g]:[]).concat([x.it,R[(r.respostas||{})[x.k]]||"Sem resposta"]))}); });
+  if(r.obs) doc.secoes.push({tipo:"texto",t:"Observações gerais",texto:r.obs});
+  const fotos=(r.fotosAntes||[]).concat(r.fotosDepois||[]).concat(...(r.ncs||[]).map(n=>n.fotos||[])).filter(isImg); if(fotos.length) doc.secoes.push({tipo:"fotos",t:"Registro fotográfico",files:fotos});
+  if((r.videos||[]).length) doc.secoes.push({tipo:"tabela",t:"Vídeos anexados no sistema",cols:["Arquivo"],rows:r.videos.map(x=>[x.nome||"vídeo"])});
+  const A=r.assin||{}; doc.secoes.push({tipo:"assin",t:"Assinaturas",itens:[["Operador",A.operador],["Inspetor",A.inspetor],["Supervisor",A.supervisor]].map(([p,s])=>({papel:p,nome:(s||{}).nome||"",img:(s||{}).img||"",data:(s||{}).data||"",extra:(s||{}).aprovacao||""}))});
+  return doc; }
+function ckPDF(r){ previewDoc(ckDoc(r),{nome:nomeArq("Checklist "+(r.numero||"")+" "+nomeVeic(r.veiculo)),nota:"Revise e edite antes de gerar. O PDF também fica guardado na pasta “Checklist” do equipamento.",onPdf:async(blob,nome)=>{ const ref=await guardarPDF(blob,nome);
+  if(ref&&canWrite){ try{ const i=S.inspecoes.find(x=>x.id===r.id); if(i){ const c=Object.assign({},i); delete c.id; c.pdf=ref; await salvar("inspecoes",i.id,c); }
+    const v=S.veiculos.find(x=>x.id===r.veiculo); if(v){ const b=Object.assign({},v); delete b.id; b.docs=Object.assign({},b.docs||{}); const x=Object.assign({},b.docs.checklist||{}); x.anexos=(x.anexos||[]).concat([ref]); x.emissao=r.data; b.docs.checklist=x; await salvar("veiculos",v.id,b); } }catch(e){} }
+  toast(ref?"PDF baixado e guardado no equipamento.":"PDF gerado."); }}); }
+
+/* ---------- QR Code ---------- */
+let qrLibP=null;
+function loadQR(){ if(qrLibP) return qrLibP; qrLibP=new Promise((res,rej)=>{ const s=document.createElement("script"); s.src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"; s.onload=()=>res(window.QRCode); s.onerror=()=>{ qrLibP=null; rej(new Error("lib")); }; document.head.appendChild(s); }); return qrLibP; }
+async function qrCk(vid){ const v=S.veiculos.find(x=>x.id===vid); if(!v) return; const url=ART_URL+"#ck="+vid;
+  let root=document.getElementById("ckRoot"); if(!root){ root=document.createElement("div"); root.id="ckRoot"; document.body.appendChild(root); }
+  root.innerHTML=`<div class="overlay qrov"><div class="modal" style="max-width:420px" role="dialog" aria-label="QR Code"><header><div class="sub">QR Code do equipamento</div><h2>${esc(v.nome)}</h2><div class="sub">${esc([v.tipo,v.placa].filter(Boolean).join(" · "))}</div></header><div style="display:flex;justify-content:center;padding:16px"><div id="qrbox" style="background:#fff;padding:12px;border-radius:12px;border:1px solid var(--line)">Gerando…</div></div><p class="note" style="padding:0 24px">Cole a etiqueta no guindaste. Ao escanear, o celular abre o sistema da Premium já identificando este equipamento para o checklist (é preciso entrar com usuário e senha).</p><footer><button type="button" class="btn" data-qr="fechar">Fechar</button><button type="button" class="btn primary" data-qr="pdf">Baixar etiqueta em PDF</button></footer></div></div>`;
+  const ov=root.querySelector(".qrov"); let dataURL="";
+  try{ const Q=await loadQR(); const box=ov.querySelector("#qrbox"); box.innerHTML=""; new Q(box,{text:url,width:220,height:220,correctLevel:Q.CorrectLevel.M}); await new Promise(r=>setTimeout(r,120)); const cv=box.querySelector("canvas"); dataURL=cv?cv.toDataURL("image/png"):(box.querySelector("img")||{}).src||""; }catch(e){ ov.querySelector("#qrbox").textContent="Não foi possível gerar o QR agora."; }
+  ov.addEventListener("click",async e=>{ const a=e.target.closest("[data-qr]"); if(e.target===ov||(a&&a.dataset.qr==="fechar")){ root.innerHTML=""; return; }
+    if(a&&a.dataset.qr==="pdf"&&dataURL){ try{ const J=await loadPDF(); const d=new J({unit:"mm",format:[100,140]}); const logo=document.querySelector(".brandrow img"); try{ d.addImage(logo.src,"PNG",30,8,40,19.6); }catch(_){}
+      d.addImage(dataURL,"PNG",15,32,70,70); d.setFont("helvetica","bold"); d.setFontSize(13); d.text(d.splitTextToSize(clean(v.nome),86),50,112,{align:"center"}); d.setFont("helvetica","normal"); d.setFontSize(9); d.text(clean([v.tipo,v.placa].filter(Boolean).join(" - ")),50,124,{align:"center"}); d.setFontSize(8); d.text("Escaneie para o checklist mestre - Seguranca do Trabalho",50,131,{align:"center"});
+      const dl=cl?await cl.use("downloads").catch(()=>null):null; if(dl) await dl.save({filename:"Etiqueta QR - "+clean(v.nome)+".pdf",data:d.output("blob")}); else toast("Download disponível abrindo pelo claude.ai."); }catch(er){ toast("Não foi possível gerar a etiqueta."); } } }); }
 
 /* ===================== HISTÓRICO DE ALTERAÇÕES ===================== */
 const AREA_NOME={acoes:"Plano de ação",cargos:"Cargos e riscos",documentos:"Documentos",colaboradores:"Colaboradores",treinamentos:"Treinamentos",asos:"ASO",veiculos:"Equipamentos e veículos",inspecoes:"Inspeções",dds:"DDS",os:"Ordens de serviço",campanhas:"Campanhas",cipa:"CIPA",acidentes:"Acidentes / CAT",config:"Configurações",epis:"EPIs"};
@@ -814,6 +1105,8 @@ epi(){
 },
 veiculos(){
   let h=head("Equipamentos e veículos",`<button class="btn primary" data-act="novoVeic">+ Equipamento ou veículo</button>`,"Buscar por nome, placa ou patrimônio","Cada equipamento tem o próprio cadastro com as pastas de documentos: certificação, CRLV, laudo de opacidade, checklist, plano de manutenção e AET, além de outros que você incluir.");
+  h+=`<div class="filters"><button class="chipbtn" data-vv="equip" aria-pressed="${veicView==="equip"}">Equipamentos e documentos</button><button class="chipbtn" data-vv="ck" aria-pressed="${veicView==="ck"}">Checklist mestre de guindaste</button></div>`;
+  if(veicView==="ck") return h+viewChecklists();
   const l=filtra(S.veiculos,v=>[v.nome,v.placa,v.tipo,v.patrimonio].join(" ")).sort((a,b)=>(a.nome||"").localeCompare(b.nome||""));
   if(!l.length) return h+emptyBox("Nenhum veículo cadastrado.");
   h+=`<div class="cards">`;
@@ -821,7 +1114,7 @@ veiculos(){
     h+=`<div class="card ${red(s)?"red":""}"><div class="chead"><div><b>${esc(v.nome)}</b><div class="sub">${esc([v.tipo,v.placa,v.ano,v.capacidade,v.situacao].filter(Boolean).join(" · "))}</div></div>${pill(s,s.k==="ok"?"Documentação em dia":null)}</div>
     <div class="slots">${docsVeic(v).map(([k,lb])=>{ const x=(v.docs||{})[k]||{}; const ss=st(x.validade); return `<button class="slot ${x.validade&&red(ss)?"red":""}" data-veicdoc="${v.id}" data-k="${k}"><span class="n">${esc(lb)}</span><span>${x.validade?pill(ss,ss.k==="ok"?"Até "+fmt(x.validade):null):((x.anexos||[]).length?'':'<span class="pill sem">Pendente</span>')} ${(x.anexos||[]).length||x.validade?sitPill(x):""} ${nAnexos(x.anexos)}</span></button>`; }).join("")}</div>
     ${osChips("veiculos",v.id)}
-    ${v.bloqueado==="Sim"?`<div class="warnbox" style="grid-column:auto"><b>BLOQUEADO para uso.</b> ${esc(v.motivoBloqueio||"")}</div>`:""}<div class="tools">${canWrite?`<button class="btn small" data-act="outroDoc" data-veic="${v.id}">+ Outro documento</button>`:""}<button class="btn small" data-open="veiculos" data-id="${v.id}">Dados do equipamento</button>${isAdmin&&v.bloqueado==="Sim"?`<button class="btn small" data-act="liberar" data-veic="${v.id}">Liberar após correção</button>`:""}${canWrite?`<button class="btn small" data-act="inspVeic" data-veic="${v.id}">+ Inspeção</button>`:""}</div></div>`; });
+    ${v.bloqueado==="Sim"?`<div class="warnbox" style="grid-column:auto"><b>BLOQUEADO para uso.</b> ${esc(v.motivoBloqueio||"")}</div>`:""}${manutAlerta(v).map(m=>`<div class="warnbox" style="grid-column:auto;background:var(--warn-bg);color:var(--warn)">${esc(m.t)}</div>`).join("")}${ehGuind(v)?(()=>{ const u=ckUlt(v.id); return `<div class="sub">Checklist mestre: ${u?`${ckPill(u.statusGeral)} ${esc(u.numero||"")} de ${fmt(u.data)}${u.proxima?" · próximo "+fmt(u.proxima):""}`:'<span class="pill pend">Nenhum ainda</span>'}${v.horimetro?" · horímetro "+esc(v.horimetro)+" h":""}</div>`; })():""}<div class="tools">${canWrite&&ehGuind(v)?`<button class="btn small primary" data-act="novoCk" data-veic="${v.id}">Checklist mestre</button>`:""}${canWrite?`<button class="btn small" data-act="outroDoc" data-veic="${v.id}">+ Outro documento</button>`:""}<button class="btn small" data-open="veiculos" data-id="${v.id}">Dados do equipamento</button>${isAdmin&&v.bloqueado==="Sim"?`<button class="btn small" data-act="liberar" data-veic="${v.id}">Liberar após correção</button>`:""}${canWrite?`<button class="btn small" data-act="inspVeic" data-veic="${v.id}">+ Inspeção</button>`:""}</div></div>`; });
   return h+`</div>`;
 },
 inspecoes(){
@@ -835,7 +1128,7 @@ inspecoes(){
   if(!l.length) return h+emptyBox("Nenhuma inspeção ainda.");
   h+=`<div class="tablewrap"><table><thead><tr><th>Data</th><th>Próxima</th><th>Checklist</th><th>Alvo</th><th>Fotos</th><th>Resultado</th><th>Plano de ação</th><th>Inspetor</th></tr></thead><tbody>`;
   l.forEach(i=>{ const pr=i.problemas||[], ab=pr.filter(p=>p.status!=="Concluída").length; const px=i.proxima||(FREQ_PADRAO[i.modelo]?addDias(i.data,freqDe(i.modelo)):"");
-    h+=`<tr class="click ${ab?"red":""}" data-open="inspecoes" data-id="${i.id}"><td>${fmt(i.data)}</td><td>${px?fmt(px):'<span class="sub">—</span>'}</td><td>${esc((MODELOS.find(m=>m.id===i.modelo)||{}).nome||"—")}</td><td>${esc(i.alvo||"")}<div class="sub">${esc(i.veiculo?nomeVeic(i.veiculo):(i.local||""))}</div></td><td><div class="thumbs">${thumbs(i.fotos).replace(/<img /g,'<img style="width:40px;height:40px" ')}</div></td><td>${i.modelo==="livre"?'<span class="pill sem">Livre</span>':(i.reprovado?'<span class="pill venc">Reprovado</span>':'<span class="pill ok">Aprovado</span>')}</td><td>${pr.length?(ab?`<span class="pill alert">${ab} em aberto</span>`:'<span class="pill ok">Concluído</span>'):'<span class="sub">—</span>'}</td><td class="sub">${esc(i.inspetor||"—")}</td></tr>`; });
+    h+=`<tr class="click ${ab?"red":""}" data-open="inspecoes" data-id="${i.id}"><td>${fmt(i.data)}</td><td>${px?fmt(px):'<span class="sub">—</span>'}</td><td>${esc((MODELOS.find(m=>m.id===i.modelo)||{}).nome||"—")}</td><td>${esc(i.alvo||"")}<div class="sub">${esc(i.veiculo?nomeVeic(i.veiculo):(i.local||""))}</div></td><td><div class="thumbs">${thumbs(i.fotos).replace(/<img /g,'<img style="width:40px;height:40px" ')}</div></td><td>${i.modelo==="mestre"?(i.rascunho?'<span class="pill pend">Rascunho</span>':ckPill(i.statusGeral)):i.modelo==="livre"?'<span class="pill sem">Livre</span>':(i.reprovado?'<span class="pill venc">Reprovado</span>':'<span class="pill ok">Aprovado</span>')}</td><td>${pr.length?(ab?`<span class="pill alert">${ab} em aberto</span>`:'<span class="pill ok">Concluído</span>'):'<span class="sub">—</span>'}</td><td class="sub">${esc(i.inspetor||"—")}</td></tr>`; });
   return h+`</tbody></table></div>`;
 },
 dds(){
@@ -1153,6 +1446,8 @@ const F={
   {k:"ano",l:"Ano",t:"text"},{k:"capacidade",l:"Capacidade",t:"text"},
   {k:"situacao",l:"Situação",t:"select",o:["Em operação","Disponível","Em manutenção","Fora de uso"]},
   {k:"patrimonio",l:"Identificação patrimonial",t:"text"},
+  {k:"fabricante",l:"Fabricante",t:"text"},{k:"modeloEq",l:"Modelo",t:"text"},{k:"serie",l:"Número de série",t:"text"},
+  {k:"horimetro",l:"Horímetro atual (h)",t:"number",h:"Atualizado sozinho pelo checklist mestre"},{k:"manutHor",l:"Próxima preventiva no horímetro (h)",t:"number",h:"Alerta 50 h antes"},{k:"manutData",l:"Próxima preventiva (data)",t:"date",h:"Alerta 30 dias antes"},
   {k:"bloqueado",l:"Bloqueado para uso?",t:"select",o:["Não","Sim"]},{k:"motivoBloqueio",l:"Motivo do bloqueio",t:"text"},
   {k:"obs",l:"Observações",t:"textarea"}],
  cargos:[
@@ -1210,6 +1505,7 @@ function abrir(col,id,pre){
   openForm({col,id,data:reg,fields,keep,title:(id?"Editar ":"Novo ")+T[col]});
 }
 function abrirInsp(modeloId,id,reg){
+  if(modeloId==="mestre") return abrirCk(id,id?null:reg);
   const m=MODELOS.find(x=>x.id===modeloId)||MODELOS[MODELOS.length-1]; reg=reg||{};
   const fields=[
    {k:"data",l:"Data da inspeção",t:"date",req:1},{k:"inspetor",l:"Inspetor",t:"text",req:1},
@@ -1334,6 +1630,9 @@ document.getElementById("main").addEventListener("click",e=>{
   const dfl=e.target.closest("[data-df]"); if(dfl){ diagFiltro=dfl.dataset.df; render(); return; }
   const dfx=e.target.closest("[data-dfix]"); if(dfx){ const x=diagCache[+dfx.dataset.dfix]; if(x&&x.fix){ dfx.disabled=true; dfx.textContent="Corrigindo…"; x.fix().then(()=>{ toast("Corrigido"); render(); }).catch(er=>{ toast(er.message||"Não foi possível corrigir."); render(); }); } return; }
   const hq=e.target.closest("[data-hq]"); if(hq){ histQuem=hq.dataset.hq; render(); return; }
+  const vv=e.target.closest("[data-vv]"); if(vv){ veicView=vv.dataset.vv; render(); return; }
+  const cko=e.target.closest("[data-ckopen]"); const ckp=e.target.closest("[data-ckpdf]"); if(ckp){ e.preventDefault(); e.stopPropagation(); const r=S.inspecoes.find(x=>x.id===ckp.dataset.ckpdf); if(r) ckPDF(r); return; } if(cko){ e.preventDefault(); abrirCk(cko.dataset.ckopen); return; }
+  const ckf=e.target.closest("[data-ckf]"); if(ckf){ ckVeicFiltro=ckf.dataset.ckf; render(); return; }
   const cv=e.target.closest("[data-cv]"); if(cv){ colabView=cv.dataset.cv; render(); return; }
   const ex=e.target.closest("[data-exp]"); if(ex){ exportar(ex.dataset.exp); return; }
   const cta=e.target.closest("[data-conta]"); if(cta){ formConta(cta.dataset.conta,cta.dataset.op); return; }
@@ -1342,6 +1641,8 @@ document.getElementById("main").addEventListener("click",e=>{
   const a=e.target.closest("[data-act]"); if(!a) return;
   const act=a.dataset.act;
   if(act==="gerarIA"){ gerarIA(); return; }
+  if(act==="novoCk"){ abrirCk(null,a.dataset.veic?{veiculo:a.dataset.veic}:{}); return; }
+  if(act==="qrCk"){ qrCk(a.dataset.veic); return; }
   if(act==="novoDoc") abrir("documentos",null,{categoria:docCat!=="Todos"?docCat:"Empresa"});
   else if(act==="elaborar") abrirElab();
   else if(act==="novoColab") abrir("colaboradores",null,{situacao:"Ativo"});
@@ -1453,7 +1754,8 @@ async function renderPDF(doc){
     else if(x.tipo==="tabela"){ pSec(P,x.t); pTab(P,x.cols,x.rows,{didParseCell:h=>{ if(h.section==="body"&&/^(NÃO CONFORME|Erro|Vencido|Crítico|Pendente|Com pendências)/.test(String(h.cell.raw))){ h.cell.styles.textColor=[197,34,31]; h.cell.styles.fontStyle="bold"; } }}); }
     else if(x.tipo==="texto"){ if(x.t) pSec(P,x.t); P.y+=2; pTexto(P,x.texto); }
     else if(x.tipo==="resultado"){ if(P.y>275){ P.doc.addPage(); P.y=20; } P.doc.setFont("helvetica","bold"); P.doc.setFontSize(10.5); P.doc.setTextColor(...(x.ok?[24,128,56]:[197,34,31])); P.doc.text(clean(x.texto),14,P.y); P.doc.setTextColor(32,33,36); P.doc.setFont("helvetica","normal"); P.y+=9; }
-    else if(x.tipo==="fotos"&&(x.files||[]).length){ await pFotos(P,x.files); } }
+    else if(x.tipo==="fotos"&&(x.files||[]).length){ await pFotos(P,x.files); }
+    else if(x.tipo==="assin"){ if(P.y>230){ P.doc.addPage(); P.y=20; } pSec(P,x.t||"Assinaturas"); P.y+=4; (x.itens||[]).slice(0,3).forEach((s,i)=>{ const x0=14+i*62; if(s.img){ try{ P.doc.addImage(s.img,"PNG",x0,P.y,54,16.2); }catch(e){} } P.doc.setDrawColor(150); P.doc.line(x0,P.y+18,x0+56,P.y+18); P.doc.setFontSize(8.5); P.doc.setFont("helvetica","bold"); P.doc.text(clean(s.papel),x0,P.y+22); P.doc.setFont("helvetica","normal"); P.doc.text(clean(s.nome||""),x0,P.y+26); P.doc.setTextColor(95,99,104); P.doc.text(clean((s.data?new Date(s.data).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"}):"")+(s.extra?" - "+s.extra:"")),x0,P.y+30); P.doc.setTextColor(32,33,36); }); P.y+=36; } }
   if((doc.assinaturas||[]).length){ P.y=Math.max(P.y,250); if(P.y>262){ P.doc.addPage(); P.y=40; } P.doc.setFontSize(9); doc.assinaturas.slice(0,2).forEach((t,i)=>{ const x0=i?120:14; P.doc.line(x0,P.y+8,x0+76,P.y+8); P.doc.text(clean(t),x0,P.y+13); }); }
   pRodape(P); return P.doc.output("blob"); }
 function docWord(doc){
@@ -1463,6 +1765,7 @@ function docWord(doc){
     if(x.tipo==="tabela") return `<h2>${T(x.t)}</h2><table border="1" cellpadding="5" style="border-collapse:collapse;width:100%"><tr style="background:#2E2A45;color:#fff">${x.cols.map(c=>`<th>${T(c)}</th>`).join("")}</tr>${x.rows.map(r=>`<tr>${r.map(c=>`<td>${T(c)}</td>`).join("")}</tr>`).join("")}</table>`;
     if(x.tipo==="texto") return (x.t?`<h2>${T(x.t)}</h2>`:"")+T(x.texto).split("\n").map(l=>`<p>${l}</p>`).join("");
     if(x.tipo==="resultado") return `<p><b>${T(x.texto)}</b></p>`;
+    if(x.tipo==="assin") return `<h2>${T(x.t||"Assinaturas")}</h2><table style="width:100%;margin-top:10pt"><tr>${x.itens.map(s=>`<td>${s.img?`<img src="${s.img}" width="160">`:""}<br>_____________________________<br><b>${T(s.papel)}</b><br>${T(s.nome||"")}</td>`).join("")}</tr></table>`;
     return ""; }).join("");
   const ass=(doc.assinaturas||[]).length?`<table style="width:100%;margin-top:40pt"><tr>${doc.assinaturas.map(a=>`<td>_____________________________<br>${T(a)}</td>`).join("")}</tr></table>`:"";
   return `<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><title>${T(doc.titulo)}</title><style>body{font-family:Arial;font-size:10.5pt}h1{font-size:15pt;margin:0}h2{font-size:11.5pt;color:#1163B0;margin-top:14pt}th{text-align:left}</style></head><body><h1>${T(doc.titulo)}</h1><p style="color:#5F6368">${T(doc.sub||"")}</p>${body}${ass}</body></html>`; }
@@ -1477,6 +1780,7 @@ function previewDoc(doc,opts){
     else if(x.tipo==="tabela") c=`<div style="overflow-x:auto"><table class="pvt"><thead><tr>${x.cols.map(h=>`<th ${ce}>${esc(h)}</th>`).join("")}<th></th></tr></thead><tbody>${x.rows.map(r=>`<tr>${r.map(v=>`<td ${ce}>${esc(v)}</td>`).join("")}<td class="pvx"><button type="button" data-pvrow aria-label="Remover linha">×</button></td></tr>`).join("")}</tbody></table></div><button type="button" class="btn small" data-pvadd="${i}">+ Linha</button>`;
     else if(x.tipo==="texto") c=`<div class="pvtxt" ${ce}>${esc(x.texto)}</div>`;
     else if(x.tipo==="resultado") c=`<p class="pvres ${x.ok?"ok":""}" ${ce}>${esc(x.texto)}</p>`;
+    else if(x.tipo==="assin") c=`<div class="pvass">${x.itens.map(s=>`<div>${s.img?`<img src="${s.img}" alt="" style="height:54px;display:block">`:""}<span></span><b>${esc(s.papel)}</b><div class="sub">${esc(s.nome||"")}${s.extra?" · "+esc(s.extra):""}</div></div>`).join("")}</div>`;
     else if(x.tipo==="fotos") c=`<div class="pvfotos">${x.files.map((a,k)=>`<span class="file"><img src="${esc(fileURL(a))}" alt=""><button type="button" data-pvfoto="${k}" aria-label="Remover foto">×</button></span>`).join("")}</div>`;
     return `<section class="pvsec" data-i="${i}" data-tipo="${x.tipo}"><div class="pvhead">${x.tipo==="resultado"?"<span class=\"sub\">Resultado</span>":`<h3 ${ce}>${esc(x.t||"")}</h3>`}<button type="button" class="btn small danger" data-pvrm>Remover seção</button></div>${c}</section>`; };
   root.innerHTML=`<div class="overlay pvov"><div class="modal wide pvdoc" role="dialog" aria-label="Prévia editável">
@@ -1491,6 +1795,7 @@ function previewDoc(doc,opts){
       else if(tp==="tabela"){ x.cols=[...el.querySelectorAll("thead th[contenteditable]")].map(th=>th.innerText.trim()); x.rows=[...el.querySelectorAll("tbody tr")].map(tr=>[...tr.querySelectorAll("td[contenteditable]")].map(td=>td.innerText.trim())); }
       else if(tp==="texto") x.texto=el.querySelector(".pvtxt").innerText;
       else if(tp==="resultado"){ x.texto=el.querySelector(".pvres").innerText.trim(); x.ok=orig.ok; }
+      else if(tp==="assin") x.itens=orig.itens;
       else if(tp==="fotos") x.files=orig.files.filter((_,k)=>el.querySelector(`[data-pvfoto="${k}"]`));
       d.secoes.push(x); }); return d; };
   ov.addEventListener("click",async e=>{
